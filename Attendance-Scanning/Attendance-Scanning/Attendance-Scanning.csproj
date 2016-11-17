@@ -99,13 +99,29 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordEditor.Designer.cs">
+      <DependentUpon>PasswordEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleStudent.cs" />
+    <Compile Include="TeacherManagementValidater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherManagementValidater.Designer.cs">
+      <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EmailEditorDialog.resx">
       <DependentUpon>EmailEditorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordEditor.resx">
+      <DependentUpon>PasswordEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +132,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TeacherManagementValidater.resx">
+      <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
