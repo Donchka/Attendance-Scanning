@@ -35,5 +35,10 @@ namespace Attendance_Scanning
         {
             FileSaver.ShowDialog();
         }
+
+        private void Button_SetAbsent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
