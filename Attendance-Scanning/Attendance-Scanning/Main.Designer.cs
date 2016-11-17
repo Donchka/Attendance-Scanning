@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Attend Time", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Attend Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
             this.TeacherManageMent = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,8 +47,9 @@
             this.Button_SetUncheck = new System.Windows.Forms.Button();
             this.Button_SetAbsent = new System.Windows.Forms.Button();
             this.Button_SetTime = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.Button_SpecialDayEdition = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Button_EditEmailFormat = new System.Windows.Forms.Button();
             this.TeacherManagementLabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.B_LoadFile = new System.Windows.Forms.ToolStripButton();
@@ -62,7 +63,6 @@
             this.Box_StudentIndex = new System.Windows.Forms.TextBox();
             this.Label_StudentIndex = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.FileOpener = new System.Windows.Forms.OpenFileDialog();
             this.FileSaver = new System.Windows.Forms.SaveFileDialog();
             this.StudentListPanel = new System.Windows.Forms.Panel();
@@ -77,18 +77,18 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Course_Index = new System.Windows.Forms.Label();
-            this.Button_EditEmailFormat = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.TeacherManageMent.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.StudentListPanel.SuspendLayout();
             this.UncheckPanel.SuspendLayout();
             this.UncheckToolStrip.SuspendLayout();
             this.CheckedPanel.SuspendLayout();
             this.CheckToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -118,14 +118,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(315, 96);
+            this.textBox2.Location = new System.Drawing.Point(249, 96);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 28);
             this.textBox2.TabIndex = 5;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 96);
+            this.textBox1.Location = new System.Drawing.Point(70, 96);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 28);
             this.textBox1.TabIndex = 4;
@@ -133,7 +133,7 @@
             // MinuteLabel
             // 
             this.MinuteLabel.AutoSize = true;
-            this.MinuteLabel.Location = new System.Drawing.Point(242, 103);
+            this.MinuteLabel.Location = new System.Drawing.Point(176, 103);
             this.MinuteLabel.Name = "MinuteLabel";
             this.MinuteLabel.Size = new System.Drawing.Size(80, 18);
             this.MinuteLabel.TabIndex = 3;
@@ -142,7 +142,7 @@
             // HourLabel
             // 
             this.HourLabel.AutoSize = true;
-            this.HourLabel.Location = new System.Drawing.Point(82, 102);
+            this.HourLabel.Location = new System.Drawing.Point(16, 102);
             this.HourLabel.Name = "HourLabel";
             this.HourLabel.Size = new System.Drawing.Size(62, 18);
             this.HourLabel.TabIndex = 2;
@@ -152,7 +152,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
             this.tableLayoutPanel2.Controls.Add(this.Button_SetUncheck, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Button_SetAbsent, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.Button_SetTime, 0, 2);
@@ -160,14 +160,14 @@
             this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.Button_EditEmailFormat, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(421, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(355, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.93548F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.06452F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(377, 141);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(443, 141);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // Button_SetUncheck
@@ -178,6 +178,7 @@
             this.Button_SetUncheck.TabIndex = 0;
             this.Button_SetUncheck.Text = "Set All as Unchecked";
             this.Button_SetUncheck.UseVisualStyleBackColor = true;
+            this.Button_SetUncheck.Click += new System.EventHandler(this.Button_SetAllCheckedStudentsAsUncheck_Click);
             // 
             // Button_SetAbsent
             // 
@@ -187,7 +188,7 @@
             this.Button_SetAbsent.TabIndex = 1;
             this.Button_SetAbsent.Text = "Set All unchecked as Absent";
             this.Button_SetAbsent.UseVisualStyleBackColor = true;
-            this.Button_SetAbsent.Click += new System.EventHandler(this.Button_SetAbsent_Click);
+            this.Button_SetAbsent.Click += new System.EventHandler(this.Button_SetAllUncheckedStudentAsAbsent_Click);
             // 
             // Button_SetTime
             // 
@@ -198,23 +199,32 @@
             this.Button_SetTime.Text = "Set this as late time";
             this.Button_SetTime.UseVisualStyleBackColor = true;
             // 
+            // Button_SpecialDayEdition
+            // 
+            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(214, 39);
+            this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
+            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(226, 44);
+            this.Button_SpecialDayEdition.TabIndex = 4;
+            this.Button_SpecialDayEdition.Text = "Edit Special Days";
+            this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(215, 3);
+            this.button2.Location = new System.Drawing.Point(214, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 30);
+            this.button2.Size = new System.Drawing.Size(226, 30);
             this.button2.TabIndex = 3;
             this.button2.Text = "Send Email";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Button_SpecialDayEdition
+            // Button_EditEmailFormat
             // 
-            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(215, 39);
-            this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
-            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(159, 44);
-            this.Button_SpecialDayEdition.TabIndex = 4;
-            this.Button_SpecialDayEdition.Text = "Edit Special Days";
-            this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
+            this.Button_EditEmailFormat.Location = new System.Drawing.Point(214, 89);
+            this.Button_EditEmailFormat.Name = "Button_EditEmailFormat";
+            this.Button_EditEmailFormat.Size = new System.Drawing.Size(226, 49);
+            this.Button_EditEmailFormat.TabIndex = 5;
+            this.Button_EditEmailFormat.Text = "Edit Email Format";
+            this.Button_EditEmailFormat.UseVisualStyleBackColor = true;
             // 
             // TeacherManagementLabel
             // 
@@ -398,16 +408,16 @@
             this.ListView_Uncheck.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ListView_Uncheck.FullRowSelect = true;
             this.ListView_Uncheck.GridLines = true;
-            listViewGroup1.Header = "First Name";
-            listViewGroup1.Name = "First_Name";
-            listViewGroup2.Header = "Last Name";
-            listViewGroup2.Name = "Last_Name";
-            listViewGroup3.Header = "Index";
-            listViewGroup3.Name = "Index";
+            listViewGroup8.Header = "First Name";
+            listViewGroup8.Name = "First_Name";
+            listViewGroup9.Header = "Last Name";
+            listViewGroup9.Name = "Last_Name";
+            listViewGroup10.Header = "Index";
+            listViewGroup10.Name = "Index";
             this.ListView_Uncheck.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3});
+            listViewGroup8,
+            listViewGroup9,
+            listViewGroup10});
             this.ListView_Uncheck.Location = new System.Drawing.Point(0, 30);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
@@ -458,19 +468,19 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup4.Header = "First Name";
-            listViewGroup4.Name = "First_Name";
-            listViewGroup5.Header = "Last Name";
-            listViewGroup5.Name = "Last_Name";
-            listViewGroup6.Header = "Index";
-            listViewGroup6.Name = "Index";
-            listViewGroup7.Header = "Attend Time";
-            listViewGroup7.Name = "Attend_Time";
+            listViewGroup11.Header = "First Name";
+            listViewGroup11.Name = "First_Name";
+            listViewGroup12.Header = "Last Name";
+            listViewGroup12.Name = "Last_Name";
+            listViewGroup13.Header = "Index";
+            listViewGroup13.Name = "Index";
+            listViewGroup14.Header = "Attend Time";
+            listViewGroup14.Name = "Attend_Time";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7});
+            listViewGroup11,
+            listViewGroup12,
+            listViewGroup13,
+            listViewGroup14});
             this.listView1.Location = new System.Drawing.Point(0, 30);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
@@ -487,15 +497,6 @@
             this.Course_Index.Size = new System.Drawing.Size(134, 18);
             this.Course_Index.TabIndex = 2;
             this.Course_Index.Text = "Course Index: ";
-            // 
-            // Button_EditEmailFormat
-            // 
-            this.Button_EditEmailFormat.Location = new System.Drawing.Point(215, 89);
-            this.Button_EditEmailFormat.Name = "Button_EditEmailFormat";
-            this.Button_EditEmailFormat.Size = new System.Drawing.Size(159, 49);
-            this.Button_EditEmailFormat.TabIndex = 5;
-            this.Button_EditEmailFormat.Text = "Edit Email Format";
-            this.Button_EditEmailFormat.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -517,7 +518,6 @@
             this.toolStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.StudentListPanel.ResumeLayout(false);
             this.UncheckPanel.ResumeLayout(false);
             this.UncheckToolStrip.ResumeLayout(false);
@@ -525,6 +525,7 @@
             this.CheckedPanel.ResumeLayout(false);
             this.CheckToolStrip.ResumeLayout(false);
             this.CheckToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
