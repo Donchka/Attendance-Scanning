@@ -47,6 +47,8 @@
             this.Button_SetUncheck = new System.Windows.Forms.Button();
             this.Button_SetAbsent = new System.Windows.Forms.Button();
             this.Button_SetTime = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Button_SpecialDayEdition = new System.Windows.Forms.Button();
             this.TeacherManagementLabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.B_LoadFile = new System.Windows.Forms.ToolStripButton();
@@ -75,8 +77,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Course_Index = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Button_SpecialDayEdition = new System.Windows.Forms.Button();
+            this.Button_EditEmailFormat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.TeacherManageMent.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -155,15 +156,16 @@
             this.tableLayoutPanel2.Controls.Add(this.Button_SetUncheck, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Button_SetAbsent, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.Button_SetTime, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.Button_SpecialDayEdition, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Button_EditEmailFormat, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(421, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.05263F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.94737F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.93548F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.06452F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(377, 141);
             this.tableLayoutPanel2.TabIndex = 1;
@@ -172,16 +174,16 @@
             // 
             this.Button_SetUncheck.Location = new System.Drawing.Point(3, 3);
             this.Button_SetUncheck.Name = "Button_SetUncheck";
-            this.Button_SetUncheck.Size = new System.Drawing.Size(205, 37);
+            this.Button_SetUncheck.Size = new System.Drawing.Size(205, 30);
             this.Button_SetUncheck.TabIndex = 0;
             this.Button_SetUncheck.Text = "Set All as Unchecked";
             this.Button_SetUncheck.UseVisualStyleBackColor = true;
             // 
             // Button_SetAbsent
             // 
-            this.Button_SetAbsent.Location = new System.Drawing.Point(3, 48);
+            this.Button_SetAbsent.Location = new System.Drawing.Point(3, 39);
             this.Button_SetAbsent.Name = "Button_SetAbsent";
-            this.Button_SetAbsent.Size = new System.Drawing.Size(205, 45);
+            this.Button_SetAbsent.Size = new System.Drawing.Size(205, 44);
             this.Button_SetAbsent.TabIndex = 1;
             this.Button_SetAbsent.Text = "Set All unchecked as Absent";
             this.Button_SetAbsent.UseVisualStyleBackColor = true;
@@ -189,12 +191,30 @@
             // 
             // Button_SetTime
             // 
-            this.Button_SetTime.Location = new System.Drawing.Point(3, 100);
+            this.Button_SetTime.Location = new System.Drawing.Point(3, 89);
             this.Button_SetTime.Name = "Button_SetTime";
-            this.Button_SetTime.Size = new System.Drawing.Size(205, 38);
+            this.Button_SetTime.Size = new System.Drawing.Size(205, 49);
             this.Button_SetTime.TabIndex = 2;
             this.Button_SetTime.Text = "Set this as late time";
             this.Button_SetTime.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(215, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 30);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Send Email";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Button_SpecialDayEdition
+            // 
+            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(215, 39);
+            this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
+            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(159, 44);
+            this.Button_SpecialDayEdition.TabIndex = 4;
+            this.Button_SpecialDayEdition.Text = "Edit Special Days";
+            this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
             // 
             // TeacherManagementLabel
             // 
@@ -468,23 +488,14 @@
             this.Course_Index.TabIndex = 2;
             this.Course_Index.Text = "Course Index: ";
             // 
-            // button2
+            // Button_EditEmailFormat
             // 
-            this.button2.Location = new System.Drawing.Point(215, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 39);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Send Email";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // Button_SpecialDayEdition
-            // 
-            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(215, 48);
-            this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
-            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(159, 46);
-            this.Button_SpecialDayEdition.TabIndex = 4;
-            this.Button_SpecialDayEdition.Text = "Edit Special Days";
-            this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
+            this.Button_EditEmailFormat.Location = new System.Drawing.Point(215, 89);
+            this.Button_EditEmailFormat.Name = "Button_EditEmailFormat";
+            this.Button_EditEmailFormat.Size = new System.Drawing.Size(159, 49);
+            this.Button_EditEmailFormat.TabIndex = 5;
+            this.Button_EditEmailFormat.Text = "Edit Email Format";
+            this.Button_EditEmailFormat.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -561,6 +572,7 @@
         private System.Windows.Forms.Label Course_Index;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Button_SpecialDayEdition;
+        private System.Windows.Forms.Button Button_EditEmailFormat;
     }
 }
 
