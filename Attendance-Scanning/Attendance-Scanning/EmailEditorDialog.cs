@@ -16,5 +16,52 @@ namespace Attendance_Scanning
         {
             InitializeComponent();
         }
+
+        private void StudentNameLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            正文.AppendText("<StudentName>");
+        }
+
+        private void StudentLateTimeLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            正文.AppendText("<StudentLateTime>");
+        }
+
+        private void ClassNameLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            正文.AppendText("<ClassName>");
+        }
+
+        private void TeacherNameLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            正文.AppendText("<TeacherName>");
+        }
+        /// <summary>
+        /// By clicking this, clear the title and main body paragraph
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClearAllButton_Click(object sender, EventArgs e)
+        {
+            正文.Clear();
+            TitleTextBox.Clear();
+        }
+        /// <summary>
+        /// Apply an example mail to help teachers make their own solution.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ExapmleApplier_Click(object sender, EventArgs e)
+        {
+            正文.Text = "Hello! \r\n This is <TeacherName> from <ClassName>, your child <StudentName> was not here today. Please check your child's status. Thank you! ";
+            TitleTextBox.Text = "Absent Alarm";
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.EmailFormatMain = 正文.Text;
+            Properties.Settings.Default.EmailFormatTitle = TitleTextBox.Text;
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

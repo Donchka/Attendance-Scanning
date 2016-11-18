@@ -12,6 +12,7 @@ namespace Attendance_Scanning
 {
     public partial class Main : Form
     {
+        public string PassWord;
         public Main()
         {
             InitializeComponent();

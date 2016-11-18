@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Password_Label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PasswordBox = new System.Windows.Forms.TextBox();
             this.Cancel_Button = new System.Windows.Forms.Button();
             this.Enter_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,13 +43,13 @@
             this.Password_Label.TabIndex = 0;
             this.Password_Label.Text = "Password:";
             // 
-            // textBox1
+            // PasswordBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(258, 28);
-            this.textBox1.TabIndex = 1;
+            this.PasswordBox.Location = new System.Drawing.Point(16, 34);
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.PasswordChar = '*';
+            this.PasswordBox.Size = new System.Drawing.Size(258, 28);
+            this.PasswordBox.TabIndex = 1;
             // 
             // Cancel_Button
             // 
@@ -68,6 +68,7 @@
             this.Enter_Button.TabIndex = 3;
             this.Enter_Button.Text = "Enter";
             this.Enter_Button.UseVisualStyleBackColor = true;
+            this.Enter_Button.Click += new System.EventHandler(this.Enter_Button_Click);
             // 
             // TeacherManagementValidater
             // 
@@ -76,7 +77,7 @@
             this.ClientSize = new System.Drawing.Size(278, 108);
             this.Controls.Add(this.Enter_Button);
             this.Controls.Add(this.Cancel_Button);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.Password_Label);
             this.Name = "TeacherManagementValidater";
             this.Text = "TeacherManagementValidater";
@@ -88,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label Password_Label;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Button Cancel_Button;
         private System.Windows.Forms.Button Enter_Button;
     }
