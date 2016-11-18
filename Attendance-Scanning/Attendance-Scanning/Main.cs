@@ -12,6 +12,7 @@ namespace Attendance_Scanning
 {
     public partial class Main : Form
     {
+        public string PassWord;
         public Main()
         {
             InitializeComponent();
@@ -34,6 +35,24 @@ namespace Attendance_Scanning
         private void FileSaverButtonClicked(object sender, EventArgs e)
         {
             FileSaver.ShowDialog();
+        }
+        /// <summary>
+        /// Set All unchecked students as absent
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_SetAllUncheckedStudentAsAbsent_Click(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Set all students(even checked) as unchecked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_SetAllCheckedStudentsAsUncheck_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
