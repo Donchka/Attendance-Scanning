@@ -17,7 +17,7 @@ namespace Attendance_Scanning
     {
         static string ApplicationName = "Gmail API .NET Quickstart";
 
-        static void Main(string[] args)
+        static void EmailMain(string[] args)
         {
            // UserCredential credential;
             // Create Gmail API service.

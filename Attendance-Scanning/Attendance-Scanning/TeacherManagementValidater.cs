@@ -30,12 +30,20 @@ namespace Attendance_Scanning
 
         private void Enter_Button_Click(object sender, EventArgs e)
         {
-            if(PasswordBox.Text == theMain.PassWord)
+            String TemperalPasswordDecryptor = "";
+            MessageBox.Show(((char)110).ToString());
+            foreach (char SingleLetter in Properties.Settings.Default.Passwordencrypted.ToCharArray())
+            {
+                TemperalPasswordDecryptor += (SingleLetter - 13);
+            }
+            if(PasswordBox.Text == TemperalPasswordDecryptor)
             {
                 this.DialogResult = DialogResult.OK;
+                this.Hide();
             }
             else
             {
+                TemperalPasswordDecryptor = "Safauawjefuehfhdsugbauwefuefiaeufbiaewbuifbaewuifbuawefewafergaergwg";
                 MessageBox.Show("Incorrect Password!");
             }
         }

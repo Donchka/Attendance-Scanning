@@ -58,5 +58,17 @@ namespace Attendance_Scanning.Properties {
                 this["EmailAddress"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("nnnn")]
+        public string Passwordencrypted {
+            get {
+                return ((string)(this["Passwordencrypted"]));
+            }
+            set {
+                this["Passwordencrypted"] = value;
+            }
+        }
     }
 }

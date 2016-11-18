@@ -38,7 +38,7 @@
             System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Attend Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TeacherManageMent = new System.Windows.Forms.Panel();
+            this.TeacherManagementPanel = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.MinuteLabel = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.Course_Index = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
-            this.TeacherManageMent.SuspendLayout();
+            this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -93,7 +93,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.TeacherManageMent);
+            this.panel1.Controls.Add(this.TeacherManagementPanel);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -102,19 +102,19 @@
             this.panel1.Size = new System.Drawing.Size(1073, 172);
             this.panel1.TabIndex = 0;
             // 
-            // TeacherManageMent
+            // TeacherManagementPanel
             // 
-            this.TeacherManageMent.Controls.Add(this.textBox2);
-            this.TeacherManageMent.Controls.Add(this.textBox1);
-            this.TeacherManageMent.Controls.Add(this.MinuteLabel);
-            this.TeacherManageMent.Controls.Add(this.HourLabel);
-            this.TeacherManageMent.Controls.Add(this.tableLayoutPanel2);
-            this.TeacherManageMent.Controls.Add(this.TeacherManagementLabel);
-            this.TeacherManageMent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.TeacherManageMent.Location = new System.Drawing.Point(275, 31);
-            this.TeacherManageMent.Name = "TeacherManageMent";
-            this.TeacherManageMent.Size = new System.Drawing.Size(798, 141);
-            this.TeacherManageMent.TabIndex = 3;
+            this.TeacherManagementPanel.Controls.Add(this.textBox2);
+            this.TeacherManagementPanel.Controls.Add(this.textBox1);
+            this.TeacherManagementPanel.Controls.Add(this.MinuteLabel);
+            this.TeacherManagementPanel.Controls.Add(this.HourLabel);
+            this.TeacherManagementPanel.Controls.Add(this.tableLayoutPanel2);
+            this.TeacherManagementPanel.Controls.Add(this.TeacherManagementLabel);
+            this.TeacherManagementPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.TeacherManagementPanel.Location = new System.Drawing.Point(275, 31);
+            this.TeacherManagementPanel.Name = "TeacherManagementPanel";
+            this.TeacherManagementPanel.Size = new System.Drawing.Size(798, 141);
+            this.TeacherManagementPanel.TabIndex = 3;
             // 
             // textBox2
             // 
@@ -225,6 +225,7 @@
             this.Button_EditEmailFormat.TabIndex = 5;
             this.Button_EditEmailFormat.Text = "Edit Email Format";
             this.Button_EditEmailFormat.UseVisualStyleBackColor = true;
+            this.Button_EditEmailFormat.Click += new System.EventHandler(this.Button_EditEmailFormat_Click);
             // 
             // TeacherManagementLabel
             // 
@@ -302,6 +303,7 @@
             this.Button_TeacherManagement.Name = "Button_TeacherManagement";
             this.Button_TeacherManagement.Size = new System.Drawing.Size(202, 28);
             this.Button_TeacherManagement.Text = "Teacher Management";
+            this.Button_TeacherManagement.Click += new System.EventHandler(this.Button_TeacherManagement_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -511,8 +513,8 @@
             this.Text = "Student Attendance Manager";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.TeacherManageMent.ResumeLayout(false);
-            this.TeacherManageMent.PerformLayout();
+            this.TeacherManagementPanel.ResumeLayout(false);
+            this.TeacherManagementPanel.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -555,7 +557,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton Button_TeacherManagement;
-        private System.Windows.Forms.Panel TeacherManageMent;
+        private System.Windows.Forms.Panel TeacherManagementPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button Button_SetUncheck;
         private System.Windows.Forms.Button Button_SetAbsent;

@@ -20,5 +20,9 @@ namespace Attendance_Scanning
             SecondName = MySecondName;
             EmailAddress = MyEmail;
         }
+        public bool IsMe(String ThyIndex)
+        {
+            return (ThyIndex.Equals(Index));
+        }
     }
 }

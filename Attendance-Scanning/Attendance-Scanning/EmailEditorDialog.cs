@@ -15,6 +15,8 @@ namespace Attendance_Scanning
         public EmailEditorDialog()
         {
             InitializeComponent();
+            正文.Text = Properties.Settings.Default.EmailFormatMain;
+            TitleTextBox.Text = Properties.Settings.Default.EmailFormatTitle;
         }
 
         private void StudentNameLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

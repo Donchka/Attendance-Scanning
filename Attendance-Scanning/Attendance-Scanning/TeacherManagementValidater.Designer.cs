@@ -39,9 +39,9 @@
             this.Password_Label.AutoSize = true;
             this.Password_Label.Location = new System.Drawing.Point(13, 13);
             this.Password_Label.Name = "Password_Label";
-            this.Password_Label.Size = new System.Drawing.Size(89, 18);
+            this.Password_Label.Size = new System.Drawing.Size(251, 18);
             this.Password_Label.TabIndex = 0;
-            this.Password_Label.Text = "Password:";
+            this.Password_Label.Text = "Password: (Defaule is aaaa)";
             // 
             // PasswordBox
             // 

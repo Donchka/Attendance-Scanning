@@ -12,7 +12,11 @@ namespace Attendance_Scanning
 {
     public partial class Main : Form
     {
-        public string PassWord;
+        /// <summary>
+        /// Ensure that the teacher management window is opened or closed
+        /// </summary>
+        public bool IsTeacherManagementOpened = false;
+
         public Main()
         {
             InitializeComponent();
@@ -53,6 +57,36 @@ namespace Attendance_Scanning
         private void Button_SetAllCheckedStudentsAsUncheck_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_EditEmailFormat_Click(object sender, EventArgs e)
+        {
+            EmailEditorDialog EED = new EmailEditorDialog();
+            if(EED.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void Button_TeacherManagement_Click(object sender, EventArgs e)
+        {
+            if(IsTeacherManagementOpened)
+            {
+                TeacherManagementPanel.Hide();
+                Button_TeacherManagement.Text = "Show Teacher Management";
+                IsTeacherManagementOpened = false;
+            }
+            else
+            {
+                TeacherManagementValidater TMV = new TeacherManagementValidater();
+                if(TMV.ShowDialog() == DialogResult.OK)
+                {
+                    TeacherManagementPanel.Show();
+                    Button_TeacherManagement.Text = "Hide Teacher Management";
+                    IsTeacherManagementOpened = true;
+                    TMV.Close();
+                }
+            }
         }
     }
 }
