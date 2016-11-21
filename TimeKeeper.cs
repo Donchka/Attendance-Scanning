@@ -11,7 +11,6 @@ namespace Attendance_Scanning
     //This class will take the students time and say if they are on time or not
     class TimeKeeper 
     { 
-       
        //this will call the functions below
        //call TimeBracket
     }
@@ -24,9 +23,9 @@ namespace Attendance_Scanning
 
         ClassTime = hh:mm/ dd:mm:yy;
 
-        TimeLIMIT = StopWatch;
+        this.StopWatch();
         
-        
+        //resets every period
     }
 
     public class StopWatch{
@@ -36,38 +35,46 @@ namespace Attendance_Scanning
         Period3_Time = 10:50 - 12:00;
         Period4_Time = 12:05 - 01:15;
         Period5_Time = 01:20 - 02:45;
-
+        
         //TimeLimit will check with these times and TimeBracket will send the data to TimeLog
-       
+        Timer timeLIMIT = new Timer;
+        //preset time limit before being marked absent; teachers can set their own time limit
 
+        
     }
 
     public class TimeLog
     {
         //This logs the students into the system when they scan their cards
-        var TimeIN; 
-        var TimeLATE;
-        var TimeABSENT;
+        //after being logged, the data is sent to a student array
+        int TimeIN; 
+        
            
-        if(TimeLATE > TimeIN){
-            Console.WriteLine = StudentID + "is late to class by" + hh:mm;
+        if(TimeIN <= StopWatch){
+            Console.WriteLine(StudentID + " is late for class on " + dd:mm:yy + " by " + hh:mm);
         }
-
-        else if(TimeABSENT > TimeLIMIT){
-            Console.WriteLine = StudentID + "is absent from class on" + mm:dd:yy;
+        if(TimeIN > StopWatch){
+            Console.WriteLine(StudentID + " is absent for class on " + dd:mm:yy);
         }
-
         else{
-            Console.WriteLine = StudentID + "is on time for class";
+            Console.WriteLine(StudentID + " is on time for class on " + dd:mm:yy);
         }
-
     }
 
     public enum ScanIn
     {
         //extends to the scanning feature Charlie is working on
-        TimeIN;
-        TimeLATE;
-        TimeABSENT;
+        int TimeIN;
+        int TimeLATE;
+        int TimeABSENT;
     }
+
+    //this is where teachers are allowed to manipulate the software to their rules
+    public class TeacherSettings{
+        
+        //increase or decrease time 
+
+
+    }
+
 }
