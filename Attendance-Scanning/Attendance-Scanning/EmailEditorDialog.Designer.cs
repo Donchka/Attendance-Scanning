@@ -219,6 +219,7 @@
             this.passwordText.Name = "passwordText";
             this.passwordText.Size = new System.Drawing.Size(120, 20);
             this.passwordText.TabIndex = 21;
+            this.passwordText.UseSystemPasswordChar = true;
             // 
             // userAddress
             // 
