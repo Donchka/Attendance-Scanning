@@ -53,5 +53,11 @@ namespace Attendance_Scanning
         {
 
         }
+
+        private void Button_EditEmailFormat_Click(object sender, EventArgs e)
+        {
+            EmailEditorDialog ema = new EmailEditorDialog();
+            ema.Show();
+        }
     }
 }
