@@ -86,6 +86,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Email Account Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email Account Editor.Designer.cs">
+      <DependentUpon>Email Account Editor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Email.cs" />
     <Compile Include="EmailEditorDialog.cs">
       <SubType>Form</SubType>
@@ -114,6 +120,9 @@
     <Compile Include="TeacherManagementValidater.Designer.cs">
       <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Email Account Editor.resx">
+      <DependentUpon>Email Account Editor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmailEditorDialog.resx">
       <DependentUpon>EmailEditorDialog.cs</DependentUpon>
     </EmbeddedResource>

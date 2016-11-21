@@ -78,6 +78,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.Course_Index = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Button_EditEmailAccount = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -118,14 +119,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(249, 96);
+            this.textBox2.Location = new System.Drawing.Point(89, 97);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 28);
+            this.textBox2.Size = new System.Drawing.Size(85, 28);
             this.textBox2.TabIndex = 5;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 96);
+            this.textBox1.Location = new System.Drawing.Point(70, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 28);
             this.textBox1.TabIndex = 4;
@@ -133,7 +134,7 @@
             // MinuteLabel
             // 
             this.MinuteLabel.AutoSize = true;
-            this.MinuteLabel.Location = new System.Drawing.Point(176, 103);
+            this.MinuteLabel.Location = new System.Drawing.Point(16, 104);
             this.MinuteLabel.Name = "MinuteLabel";
             this.MinuteLabel.Size = new System.Drawing.Size(80, 18);
             this.MinuteLabel.TabIndex = 3;
@@ -142,7 +143,7 @@
             // HourLabel
             // 
             this.HourLabel.AutoSize = true;
-            this.HourLabel.Location = new System.Drawing.Point(16, 102);
+            this.HourLabel.Location = new System.Drawing.Point(16, 45);
             this.HourLabel.Name = "HourLabel";
             this.HourLabel.Size = new System.Drawing.Size(62, 18);
             this.HourLabel.TabIndex = 2;
@@ -150,31 +151,33 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel2.Controls.Add(this.Button_SetUncheck, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Button_SetAbsent, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.Button_SetTime, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.Button_SpecialDayEdition, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.Button_EditEmailFormat, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Button_EditEmailAccount, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.Button_SpecialDayEdition, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(355, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(238, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.93548F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.06452F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.69767F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.30233F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(443, 141);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(560, 141);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // Button_SetUncheck
             // 
             this.Button_SetUncheck.Location = new System.Drawing.Point(3, 3);
             this.Button_SetUncheck.Name = "Button_SetUncheck";
-            this.Button_SetUncheck.Size = new System.Drawing.Size(205, 30);
+            this.Button_SetUncheck.Size = new System.Drawing.Size(203, 29);
             this.Button_SetUncheck.TabIndex = 0;
             this.Button_SetUncheck.Text = "Set All as Unchecked";
             this.Button_SetUncheck.UseVisualStyleBackColor = true;
@@ -182,9 +185,9 @@
             // 
             // Button_SetAbsent
             // 
-            this.Button_SetAbsent.Location = new System.Drawing.Point(3, 39);
+            this.Button_SetAbsent.Location = new System.Drawing.Point(3, 38);
             this.Button_SetAbsent.Name = "Button_SetAbsent";
-            this.Button_SetAbsent.Size = new System.Drawing.Size(205, 44);
+            this.Button_SetAbsent.Size = new System.Drawing.Size(203, 44);
             this.Button_SetAbsent.TabIndex = 1;
             this.Button_SetAbsent.Text = "Set All unchecked as Absent";
             this.Button_SetAbsent.UseVisualStyleBackColor = true;
@@ -194,34 +197,34 @@
             // 
             this.Button_SetTime.Location = new System.Drawing.Point(3, 89);
             this.Button_SetTime.Name = "Button_SetTime";
-            this.Button_SetTime.Size = new System.Drawing.Size(205, 49);
+            this.Button_SetTime.Size = new System.Drawing.Size(203, 49);
             this.Button_SetTime.TabIndex = 2;
             this.Button_SetTime.Text = "Set this as late time";
             this.Button_SetTime.UseVisualStyleBackColor = true;
             // 
             // Button_SpecialDayEdition
             // 
-            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(214, 39);
+            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(212, 3);
             this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
-            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(226, 44);
+            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(173, 29);
             this.Button_SpecialDayEdition.TabIndex = 4;
             this.Button_SpecialDayEdition.Text = "Edit Special Days";
             this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(214, 3);
+            this.button2.Location = new System.Drawing.Point(391, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 30);
+            this.button2.Size = new System.Drawing.Size(166, 29);
             this.button2.TabIndex = 3;
             this.button2.Text = "Send Email";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Button_EditEmailFormat
             // 
-            this.Button_EditEmailFormat.Location = new System.Drawing.Point(214, 89);
+            this.Button_EditEmailFormat.Location = new System.Drawing.Point(212, 89);
             this.Button_EditEmailFormat.Name = "Button_EditEmailFormat";
-            this.Button_EditEmailFormat.Size = new System.Drawing.Size(226, 49);
+            this.Button_EditEmailFormat.Size = new System.Drawing.Size(173, 49);
             this.Button_EditEmailFormat.TabIndex = 5;
             this.Button_EditEmailFormat.Text = "Edit Email Format";
             this.Button_EditEmailFormat.UseVisualStyleBackColor = true;
@@ -353,6 +356,7 @@
             // 
             this.FileOpener.Filter = "Comma Split Value File|*.csv";
             this.FileOpener.Title = "Load Student data";
+            this.FileOpener.FileOk += new System.ComponentModel.CancelEventHandler(this.FileOpener_FileOk);
             // 
             // FileSaver
             // 
@@ -500,6 +504,15 @@
             this.Course_Index.TabIndex = 2;
             this.Course_Index.Text = "Course Index: ";
             // 
+            // Button_EditEmailAccount
+            // 
+            this.Button_EditEmailAccount.Location = new System.Drawing.Point(212, 38);
+            this.Button_EditEmailAccount.Name = "Button_EditEmailAccount";
+            this.Button_EditEmailAccount.Size = new System.Drawing.Size(173, 44);
+            this.Button_EditEmailAccount.TabIndex = 6;
+            this.Button_EditEmailAccount.Text = "Edit Email Account";
+            this.Button_EditEmailAccount.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -576,6 +589,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Button_SpecialDayEdition;
         private System.Windows.Forms.Button Button_EditEmailFormat;
+        private System.Windows.Forms.Button Button_EditEmailAccount;
     }
 }
 

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Attendance_Scanning
@@ -16,10 +17,13 @@ namespace Attendance_Scanning
         /// Ensure that the teacher management window is opened or closed
         /// </summary>
         public bool IsTeacherManagementOpened = false;
+        public List<SingleStudent> NotCheckedSingleStudents = new List<SingleStudent>();
+        public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>();
 
         public Main()
         {
             InitializeComponent();
+            TeacherManagementPanel.Hide();
         }
 
         /// <summary>
@@ -87,6 +91,18 @@ namespace Attendance_Scanning
                     TMV.Close();
                 }
             }
+        }
+
+        private void FileOpener_FileOk(object sender, CancelEventArgs e)
+        {
+            if(FileOpener.SafeFileName.Split('_')[0].Length != 6)
+            {
+                MessageBox.Show(FileOpener.SafeFileName.Split('_')[0]);
+                MessageBox.Show("Not a valid data file! Please check the file name so it contains the class code!");
+                return;
+            }
+            string[] Data = File.ReadAllLines((FileOpener.FileName));
+            MessageBox.Show("Load Complete!");
         }
     }
 }
