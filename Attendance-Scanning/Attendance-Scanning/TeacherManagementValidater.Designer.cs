@@ -41,13 +41,13 @@
             this.Password_Label.Name = "Password_Label";
             this.Password_Label.Size = new System.Drawing.Size(251, 18);
             this.Password_Label.TabIndex = 0;
-            this.Password_Label.Text = "Password: (Defaule is aaaa)";
+            this.Password_Label.Text = "Password: (Default is aaaa)";
             // 
             // PasswordBox
             // 
             this.PasswordBox.Location = new System.Drawing.Point(16, 34);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.PasswordChar = '*';
+            this.PasswordBox.PasswordChar = '·';
             this.PasswordBox.Size = new System.Drawing.Size(258, 28);
             this.PasswordBox.TabIndex = 1;
             // 
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 108);
+            this.ClientSize = new System.Drawing.Size(278, 119);
             this.Controls.Add(this.Enter_Button);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.PasswordBox);

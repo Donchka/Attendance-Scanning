@@ -31,10 +31,9 @@ namespace Attendance_Scanning
         private void Enter_Button_Click(object sender, EventArgs e)
         {
             String TemperalPasswordDecryptor = "";
-            MessageBox.Show(((char)110).ToString());
             foreach (char SingleLetter in Properties.Settings.Default.Passwordencrypted.ToCharArray())
             {
-                TemperalPasswordDecryptor += (SingleLetter - 13);
+                TemperalPasswordDecryptor += (char)(SingleLetter - 13);
             }
             if(PasswordBox.Text == TemperalPasswordDecryptor)
             {
