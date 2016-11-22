@@ -86,6 +86,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Course Code Selector Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Code Selector Dialog.Designer.cs">
+      <DependentUpon>Course Code Selector Dialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Email Account Editor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="TeacherManagementValidater.Designer.cs">
       <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Course Code Selector Dialog.resx">
+      <DependentUpon>Course Code Selector Dialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Email Account Editor.resx">
       <DependentUpon>Email Account Editor.cs</DependentUpon>
     </EmbeddedResource>

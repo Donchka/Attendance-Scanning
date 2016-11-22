@@ -102,7 +102,11 @@ namespace Attendance_Scanning
                 return;
             }
             string[] Data = File.ReadAllLines((FileOpener.FileName));
-            MessageBox.Show("Load Complete!");
+            Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
+            if(CCSD.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

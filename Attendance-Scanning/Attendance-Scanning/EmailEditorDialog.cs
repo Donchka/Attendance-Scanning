@@ -63,6 +63,7 @@ namespace Attendance_Scanning
         {
             Properties.Settings.Default.EmailFormatMain = 正文.Text;
             Properties.Settings.Default.EmailFormatTitle = TitleTextBox.Text;
+            Properties.Settings.Default.Save();
             this.DialogResult = DialogResult.OK;
         }
     }
