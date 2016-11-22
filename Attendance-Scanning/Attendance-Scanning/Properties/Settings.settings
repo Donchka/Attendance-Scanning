@@ -11,8 +11,17 @@
     <Setting Name="EmailAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Passwordencrypted" Type="System.String" Scope="User">
+    <Setting Name="TeacherPasswordencrypted" Type="System.String" Scope="User">
       <Value Profile="(Default)">nnnn</Value>
+    </Setting>
+    <Setting Name="EmailPosswordEncrypted" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TeacherName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ClassCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

@@ -62,12 +62,48 @@ namespace Attendance_Scanning.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("nnnn")]
-        public string Passwordencrypted {
+        public string TeacherPasswordencrypted {
             get {
-                return ((string)(this["Passwordencrypted"]));
+                return ((string)(this["TeacherPasswordencrypted"]));
             }
             set {
-                this["Passwordencrypted"] = value;
+                this["TeacherPasswordencrypted"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string EmailPosswordEncrypted {
+            get {
+                return ((string)(this["EmailPosswordEncrypted"]));
+            }
+            set {
+                this["EmailPosswordEncrypted"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TeacherName {
+            get {
+                return ((string)(this["TeacherName"]));
+            }
+            set {
+                this["TeacherName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ClassCode {
+            get {
+                return ((string)(this["ClassCode"]));
+            }
+            set {
+                this["ClassCode"] = value;
             }
         }
     }
