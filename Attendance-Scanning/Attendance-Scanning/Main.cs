@@ -167,7 +167,8 @@ namespace Attendance_Scanning
 
         private void Button_EditEmailAccount_Click(object sender, EventArgs e)
         {
-
+            Email_Account_Editor ema = new Email_Account_Editor();
+            ema.Show();
         }
     }
 }
