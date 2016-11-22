@@ -93,6 +93,7 @@
     <Compile Include="Course Code Selector Dialog.Designer.cs">
       <DependentUpon>Course Code Selector Dialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data Processor.cs" />
     <Compile Include="Email Account Editor.cs">
       <SubType>Form</SubType>
     </Compile>

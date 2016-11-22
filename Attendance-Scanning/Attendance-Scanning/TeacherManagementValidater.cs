@@ -13,6 +13,7 @@ namespace Attendance_Scanning
     public partial class TeacherManagementValidater : Form
     {
         public Main theMain;
+        public Data_Processor DP;
         public TeacherManagementValidater()
         {
             InitializeComponent();
@@ -31,10 +32,7 @@ namespace Attendance_Scanning
         private void Enter_Button_Click(object sender, EventArgs e)
         {
             String TemperalPasswordDecryptor = "";
-            foreach (char SingleLetter in Properties.Settings.Default.Passwordencrypted.ToCharArray())
-            {
-                TemperalPasswordDecryptor += (char)(SingleLetter - 13);
-            }
+            TemperalPasswordDecryptor = DP.PasswordDecryptor(Properties.Settings.Default.TeacherPasswordencrypted, 13);
             if(PasswordBox.Text == TemperalPasswordDecryptor)
             {
                 this.DialogResult = DialogResult.OK;
