@@ -53,5 +53,50 @@ namespace Attendance_Scanning
             }
             return FinalReturner;
         }
+
+
+        /// <summary>
+        /// Covert a csv file into list of single students
+        /// </summary>
+        /// <param name="Data">file data</param>
+        /// <returns>List of single students</returns>
+        public List<SingleStudent> CSVCovertor (string[] Data)
+        {
+            List<SingleStudent> MultipleStudents = new List<SingleStudent>();
+            List<string> RealData = Data.ToList();
+            RealData.RemoveAt(0);
+            foreach (string str in Data)
+            {
+                List<string> strList = str.Split(',').ToList();
+                SingleStudent ST = new SingleStudent(strList[3], strList[0], strList[1], strList[12]/*,strList[14]*/);
+                MultipleStudents.Add(ST);
+            }
+            return MultipleStudents;
+        }
+
+        public List<string> CourseCodeCollector(List<SingleStudent> StudentList)
+        {
+            List<string> FinalReturner = new List<string>();
+            foreach (SingleStudent stu in StudentList)
+            {
+                foreach (String CourseCode in stu.CourseCodes)
+                {
+                    bool ItContains = false;
+                    foreach (String Goule in FinalReturner)
+                    {
+                        if (Goule == CourseCode)
+                        {
+                            ItContains = true;
+                            break;
+                        }
+                    }
+                    if(!ItContains)
+                    {
+                        FinalReturner.Add(CourseCode);
+                    }
+                }
+            }
+            return FinalReturner;
+        }
     }
 }
