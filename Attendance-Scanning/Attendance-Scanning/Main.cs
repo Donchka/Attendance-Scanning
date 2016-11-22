@@ -117,6 +117,7 @@ namespace Attendance_Scanning
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             userLogin = new NetworkCredential(userAddress.Text, passwordText.Text);//user's email address and password
             smtpc = new SmtpClient("smtp.gmail.com");
             smtpc.Port = 587;//normal port 
@@ -154,7 +155,8 @@ namespace Attendance_Scanning
 
         private void Button_EditEmailAccount_Click(object sender, EventArgs e)
         {
-
+            Email_Account_Editor ema = new Email_Account_Editor();
+            ema.Show();
         }
     }
 }
