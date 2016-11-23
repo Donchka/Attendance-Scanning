@@ -105,11 +105,19 @@ namespace Attendance_Scanning
                 return;
             }
             string[] Data = File.ReadAllLines((FileOpener.FileName));
-            Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
-            if(CCSD.ShowDialog() == DialogResult.OK)
+            ListView_Uncheck.ShowGroups = true;
+            //ListView_Uncheck.
+            foreach (SingleStudent SS in DP.CSVCovertor(Data))
             {
-
+                ListView_Uncheck.Items.Add(SS.FirstName + " " + SS.SecondName);
+                MessageBox.Show(SS.FirstName);
             }
+
+            //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
+            //if(CCSD.ShowDialog() == DialogResult.OK)
+            //{
+
+            //}
         }
 
         NetworkCredential userLogin;
