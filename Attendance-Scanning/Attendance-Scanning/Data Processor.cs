@@ -82,6 +82,11 @@ namespace Attendance_Scanning
                 foreach (String CourseCode in stu.CourseCodes)
                 {
                     bool ItContains = false;
+                    //if (FinalReturner.Find(x => x == CourseCode) != null)
+                    //{
+                    //    ItContains = true;
+                    //    break;
+                    //}
                     foreach (String Goule in FinalReturner)
                     {
                         if (Goule == CourseCode)
