@@ -149,7 +149,14 @@ namespace Attendance_Scanning
             }
             else if (e.Error != null)
             {
-                MessageBox.Show(e.Error.ToString());
+                if (e.Error.ToString().Contains("secure"))
+                {
+                    MessageBox.Show("Your account may not have Less Secure App Access enabled, see google setting to turn on that.:)\n OR\n Your login info is invalid,check it out!");
+                }
+                else
+                {
+                    MessageBox.Show(e.Error.ToString());
+                }
             }
             else
             {

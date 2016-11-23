@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Attend Time", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("First Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Last Name", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Index", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Attend Time", System.Windows.Forms.HorizontalAlignment.Left);
             this.panel1 = new System.Windows.Forms.Panel();
             this.TeacherManagementPanel = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -99,7 +99,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 124);
             this.panel1.TabIndex = 0;
@@ -114,7 +114,7 @@
             this.TeacherManagementPanel.Controls.Add(this.TeacherManagementLabel);
             this.TeacherManagementPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.TeacherManagementPanel.Location = new System.Drawing.Point(183, 25);
-            this.TeacherManagementPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherManagementPanel.Margin = new System.Windows.Forms.Padding(2);
             this.TeacherManagementPanel.Name = "TeacherManagementPanel";
             this.TeacherManagementPanel.Size = new System.Drawing.Size(532, 99);
             this.TeacherManagementPanel.TabIndex = 3;
@@ -122,7 +122,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(59, 70);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(58, 20);
             this.textBox2.TabIndex = 5;
@@ -130,7 +130,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(47, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 20);
             this.textBox1.TabIndex = 4;
@@ -170,12 +170,12 @@
             this.tableLayoutPanel2.Controls.Add(this.Button_SpecialDayEdition, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(159, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.69767F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.30233F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(373, 99);
             this.tableLayoutPanel2.TabIndex = 1;
@@ -183,9 +183,9 @@
             // Button_SetUncheck
             // 
             this.Button_SetUncheck.Location = new System.Drawing.Point(2, 2);
-            this.Button_SetUncheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SetUncheck.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SetUncheck.Name = "Button_SetUncheck";
-            this.Button_SetUncheck.Size = new System.Drawing.Size(135, 20);
+            this.Button_SetUncheck.Size = new System.Drawing.Size(135, 22);
             this.Button_SetUncheck.TabIndex = 0;
             this.Button_SetUncheck.Text = "Set All as Unchecked";
             this.Button_SetUncheck.UseVisualStyleBackColor = true;
@@ -193,10 +193,10 @@
             // 
             // Button_SetAbsent
             // 
-            this.Button_SetAbsent.Location = new System.Drawing.Point(2, 26);
-            this.Button_SetAbsent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SetAbsent.Location = new System.Drawing.Point(2, 28);
+            this.Button_SetAbsent.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SetAbsent.Name = "Button_SetAbsent";
-            this.Button_SetAbsent.Size = new System.Drawing.Size(135, 31);
+            this.Button_SetAbsent.Size = new System.Drawing.Size(135, 34);
             this.Button_SetAbsent.TabIndex = 1;
             this.Button_SetAbsent.Text = "Set All unchecked as Absent";
             this.Button_SetAbsent.UseVisualStyleBackColor = true;
@@ -204,20 +204,20 @@
             // 
             // Button_SetTime
             // 
-            this.Button_SetTime.Location = new System.Drawing.Point(2, 61);
-            this.Button_SetTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SetTime.Location = new System.Drawing.Point(2, 66);
+            this.Button_SetTime.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SetTime.Name = "Button_SetTime";
-            this.Button_SetTime.Size = new System.Drawing.Size(135, 35);
+            this.Button_SetTime.Size = new System.Drawing.Size(135, 31);
             this.Button_SetTime.TabIndex = 2;
             this.Button_SetTime.Text = "Set this as late time";
             this.Button_SetTime.UseVisualStyleBackColor = true;
             // 
             // Button_EditEmailFormat
             // 
-            this.Button_EditEmailFormat.Location = new System.Drawing.Point(141, 61);
-            this.Button_EditEmailFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_EditEmailFormat.Location = new System.Drawing.Point(141, 66);
+            this.Button_EditEmailFormat.Margin = new System.Windows.Forms.Padding(2);
             this.Button_EditEmailFormat.Name = "Button_EditEmailFormat";
-            this.Button_EditEmailFormat.Size = new System.Drawing.Size(115, 35);
+            this.Button_EditEmailFormat.Size = new System.Drawing.Size(115, 31);
             this.Button_EditEmailFormat.TabIndex = 5;
             this.Button_EditEmailFormat.Text = "Edit Email Format";
             this.Button_EditEmailFormat.UseVisualStyleBackColor = true;
@@ -226,9 +226,9 @@
             // sendEmail
             // 
             this.sendEmail.Location = new System.Drawing.Point(260, 2);
-            this.sendEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sendEmail.Margin = new System.Windows.Forms.Padding(2);
             this.sendEmail.Name = "sendEmail";
-            this.sendEmail.Size = new System.Drawing.Size(111, 20);
+            this.sendEmail.Size = new System.Drawing.Size(111, 22);
             this.sendEmail.TabIndex = 3;
             this.sendEmail.Text = "Send Email";
             this.sendEmail.UseVisualStyleBackColor = true;
@@ -236,10 +236,10 @@
             // 
             // Button_EditEmailAccount
             // 
-            this.Button_EditEmailAccount.Location = new System.Drawing.Point(141, 26);
-            this.Button_EditEmailAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_EditEmailAccount.Location = new System.Drawing.Point(141, 28);
+            this.Button_EditEmailAccount.Margin = new System.Windows.Forms.Padding(2);
             this.Button_EditEmailAccount.Name = "Button_EditEmailAccount";
-            this.Button_EditEmailAccount.Size = new System.Drawing.Size(115, 31);
+            this.Button_EditEmailAccount.Size = new System.Drawing.Size(115, 34);
             this.Button_EditEmailAccount.TabIndex = 6;
             this.Button_EditEmailAccount.Text = "Edit Email Account";
             this.Button_EditEmailAccount.UseVisualStyleBackColor = true;
@@ -248,9 +248,9 @@
             // Button_SpecialDayEdition
             // 
             this.Button_SpecialDayEdition.Location = new System.Drawing.Point(141, 2);
-            this.Button_SpecialDayEdition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SpecialDayEdition.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
-            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(115, 20);
+            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(115, 22);
             this.Button_SpecialDayEdition.TabIndex = 4;
             this.Button_SpecialDayEdition.Text = "Edit Special Days";
             this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
@@ -344,7 +344,7 @@
             this.tableLayoutPanel1.Controls.Add(this.Label_StudentIndex, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 28);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
@@ -356,7 +356,7 @@
             // Box_StudentIndex
             // 
             this.Box_StudentIndex.Location = new System.Drawing.Point(2, 25);
-            this.Box_StudentIndex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Box_StudentIndex.Margin = new System.Windows.Forms.Padding(2);
             this.Box_StudentIndex.Name = "Box_StudentIndex";
             this.Box_StudentIndex.Size = new System.Drawing.Size(139, 20);
             this.Box_StudentIndex.TabIndex = 0;
@@ -375,7 +375,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(2, 52);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 35);
             this.button1.TabIndex = 2;
@@ -398,7 +398,7 @@
             this.StudentListPanel.Controls.Add(this.CheckedPanel);
             this.StudentListPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.StudentListPanel.Location = new System.Drawing.Point(183, 124);
-            this.StudentListPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentListPanel.Margin = new System.Windows.Forms.Padding(2);
             this.StudentListPanel.Name = "StudentListPanel";
             this.StudentListPanel.Size = new System.Drawing.Size(532, 411);
             this.StudentListPanel.TabIndex = 1;
@@ -409,7 +409,7 @@
             this.UncheckPanel.Controls.Add(this.ListView_Uncheck);
             this.UncheckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UncheckPanel.Location = new System.Drawing.Point(0, 0);
-            this.UncheckPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UncheckPanel.Margin = new System.Windows.Forms.Padding(2);
             this.UncheckPanel.Name = "UncheckPanel";
             this.UncheckPanel.Size = new System.Drawing.Size(260, 411);
             this.UncheckPanel.TabIndex = 3;
@@ -446,18 +446,18 @@
             this.ListView_Uncheck.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ListView_Uncheck.FullRowSelect = true;
             this.ListView_Uncheck.GridLines = true;
-            listViewGroup8.Header = "First Name";
-            listViewGroup8.Name = "First_Name";
-            listViewGroup9.Header = "Last Name";
-            listViewGroup9.Name = "Last_Name";
-            listViewGroup10.Header = "Index";
-            listViewGroup10.Name = "Index";
+            listViewGroup1.Header = "First Name";
+            listViewGroup1.Name = "First_Name";
+            listViewGroup2.Header = "Last Name";
+            listViewGroup2.Name = "Last_Name";
+            listViewGroup3.Header = "Index";
+            listViewGroup3.Name = "Index";
             this.ListView_Uncheck.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup8,
-            listViewGroup9,
-            listViewGroup10});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
             this.ListView_Uncheck.Location = new System.Drawing.Point(0, 1);
-            this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(2);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
             this.ListView_Uncheck.Size = new System.Drawing.Size(260, 410);
@@ -471,7 +471,7 @@
             this.CheckedPanel.Controls.Add(this.listView1);
             this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.CheckedPanel.Location = new System.Drawing.Point(260, 0);
-            this.CheckedPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckedPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CheckedPanel.Name = "CheckedPanel";
             this.CheckedPanel.Size = new System.Drawing.Size(272, 411);
             this.CheckedPanel.TabIndex = 2;
@@ -508,21 +508,21 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            listViewGroup11.Header = "First Name";
-            listViewGroup11.Name = "First_Name";
-            listViewGroup12.Header = "Last Name";
-            listViewGroup12.Name = "Last_Name";
-            listViewGroup13.Header = "Index";
-            listViewGroup13.Name = "Index";
-            listViewGroup14.Header = "Attend Time";
-            listViewGroup14.Name = "Attend_Time";
+            listViewGroup4.Header = "First Name";
+            listViewGroup4.Name = "First_Name";
+            listViewGroup5.Header = "Last Name";
+            listViewGroup5.Name = "Last_Name";
+            listViewGroup6.Header = "Index";
+            listViewGroup6.Name = "Index";
+            listViewGroup7.Header = "Attend Time";
+            listViewGroup7.Name = "Attend_Time";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup11,
-            listViewGroup12,
-            listViewGroup13,
-            listViewGroup14});
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7});
             this.listView1.Location = new System.Drawing.Point(0, 1);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(272, 410);
@@ -549,7 +549,7 @@
             this.Controls.Add(this.Course_Index);
             this.Controls.Add(this.StudentListPanel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.Text = "Student Attendance Manager";
             this.panel1.ResumeLayout(false);
