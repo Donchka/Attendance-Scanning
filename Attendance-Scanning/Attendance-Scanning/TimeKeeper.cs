@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using System.Diagnostics;
 
 
 namespace Attendance_Scanning
@@ -21,26 +22,25 @@ namespace Attendance_Scanning
         //will use TimeLog and SwipeIn 
         //hh:mm is the hour and minute; dd:mm:yy is date, month, and year
 
-        ClassTime = hh:mm/ dd:mm:yy;
-
-        this.StopWatch();
+        DateTime date1 = DateTime.Now;
+        StopWatch start;
         
         //resets every period
     }
 
     public class StopWatch{
         //this starts a timer after the class begins and tells TimeBracket how much time the student was late of absent
-        Period1_Time = 08:10 - 09:25;
-        Period2_Time = 09:30 - 10:45;
-        Period3_Time = 10:50 - 12:00;
-        Period4_Time = 12:05 - 01:15;
-        Period5_Time = 01:20 - 02:45;
+        int Period1_Time = 08:10 - 09:25;
+        int Period2_Time = 09:30 - 10:45;
+        int Period3_Time = 10:50 - 12:00;
+        int Period4_Time = 12:05 - 01:15;
+        int Period5_Time = 01:20 - 02:45;
         
         //TimeLimit will check with these times and TimeBracket will send the data to TimeLog
         Timer timeLIMIT = new Timer;
-        //preset time limit before being marked absent; teachers can set their own time limit
+        string timeLIMIT = 00:30; //30 minute time limit preset; teacher can change limit in TeacherSettings
+       
 
-        
     }
 
     public class TimeLog
@@ -51,13 +51,13 @@ namespace Attendance_Scanning
         
            
         if(TimeIN <= StopWatch){
-            Console.WriteLine(StudentID + " is late for class on " + dd:mm:yy + " by " + hh:mm);
+            Console.WriteLine(StudentID + " is late for class on " Current + " by " + Current);
         }
         if(TimeIN > StopWatch){
-            Console.WriteLine(StudentID + " is absent for class on " + dd:mm:yy);
+            Console.WriteLine(StudentID + " is absent for class on " + Current);
         }
         else{
-            Console.WriteLine(StudentID + " is on time for class on " + dd:mm:yy);
+            Console.WriteLine(StudentID + " is on time for class on " + Current);
         }
     }
 
@@ -72,8 +72,8 @@ namespace Attendance_Scanning
     //this is where teachers are allowed to manipulate the software to their rules
     public class TeacherSettings{
         
-        //increase or decrease time 
-
+        //increase or decrease time limit
+        //I need the form in order to connect this setting                
 
     }
 
