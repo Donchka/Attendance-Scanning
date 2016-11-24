@@ -85,7 +85,7 @@ namespace Attendance_Scanning
             }
             else
             {
-                TeacherManagementValidater TMV = new TeacherManagementValidater();
+                TeacherManagementValidater TMV = new TeacherManagementValidater(DP);
                 if(TMV.ShowDialog() == DialogResult.OK)
                 {
                     TeacherManagementPanel.Show();
@@ -109,7 +109,14 @@ namespace Attendance_Scanning
             //ListView_Uncheck.
             foreach (SingleStudent SS in DP.CSVCovertor(Data))
             {
-                ListView_Uncheck.Items.Add(SS.FirstName + " " + SS.SecondName);
+                //ListView_Uncheck.Items.Add(SS.FirstName + " " + SS.SecondName);
+                List<String> Meow = new List<string>();
+                Meow.Add(SS.FirstName);
+                Meow.Add(SS.SecondName);
+                Meow.Add(SS.Index);
+
+                ListView_Uncheck.Items.Add(new ListViewItem(Meow.ToArray()));
+                ListView_Uncheck.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 MessageBox.Show(SS.FirstName);
             }
 
@@ -176,6 +183,16 @@ namespace Attendance_Scanning
         {
             Email_Account_Editor ema = new Email_Account_Editor();
             ema.Show();
+        }
+
+        private void button_CallPasswordEditor_Click(object sender, EventArgs e)
+        {
+            PasswordEditor PWE = new PasswordEditor(DP);
+            if (PWE.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Done!");
+                PWE.Close();
+            }
         }
     }
 }
