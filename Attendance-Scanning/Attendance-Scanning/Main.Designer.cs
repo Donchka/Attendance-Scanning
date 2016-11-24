@@ -37,13 +37,14 @@
             this.MinuteLabel = new System.Windows.Forms.Label();
             this.HourLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Button_SetUncheck = new System.Windows.Forms.Button();
-            this.Button_SetAbsent = new System.Windows.Forms.Button();
-            this.Button_SetTime = new System.Windows.Forms.Button();
-            this.Button_EditEmailFormat = new System.Windows.Forms.Button();
             this.sendEmail_Button = new System.Windows.Forms.Button();
-            this.Button_EditEmailAccount = new System.Windows.Forms.Button();
+            this.Button_SetUncheck = new System.Windows.Forms.Button();
             this.Button_SpecialDayEdition = new System.Windows.Forms.Button();
+            this.Button_EditEmailFormat = new System.Windows.Forms.Button();
+            this.Button_EditEmailAccount = new System.Windows.Forms.Button();
+            this.Button_SetTime = new System.Windows.Forms.Button();
+            this.Button_SetAbsent = new System.Windows.Forms.Button();
+            this.button_CallPasswordEditor = new System.Windows.Forms.Button();
             this.TeacherManagementLabel = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.B_LoadFile = new System.Windows.Forms.ToolStripButton();
@@ -53,10 +54,10 @@
             this.Label_Current_File = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Button_TeacherManagement = new System.Windows.Forms.ToolStripButton();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.BarCodeInputLabel = new System.Windows.Forms.TableLayoutPanel();
             this.Box_StudentIndex = new System.Windows.Forms.TextBox();
             this.Label_StudentIndex = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CheckButton = new System.Windows.Forms.Button();
             this.FileOpener = new System.Windows.Forms.OpenFileDialog();
             this.FileSaver = new System.Windows.Forms.SaveFileDialog();
             this.StudentListPanel = new System.Windows.Forms.Panel();
@@ -79,12 +80,11 @@
             this.AttendedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Course_Index = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button_CallPasswordEditor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.BarCodeInputLabel.SuspendLayout();
             this.StudentListPanel.SuspendLayout();
             this.UncheckPanel.SuspendLayout();
             this.UncheckToolStrip.SuspendLayout();
@@ -97,7 +97,7 @@
             // 
             this.panel1.Controls.Add(this.TeacherManagementPanel);
             this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.BarCodeInputLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -175,6 +175,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(560, 163);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
+            // sendEmail_Button
+            // 
+            this.sendEmail_Button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sendEmail_Button.Location = new System.Drawing.Point(391, 3);
+            this.sendEmail_Button.Name = "sendEmail_Button";
+            this.sendEmail_Button.Size = new System.Drawing.Size(166, 38);
+            this.sendEmail_Button.TabIndex = 3;
+            this.sendEmail_Button.Text = "Send Email";
+            this.sendEmail_Button.UseVisualStyleBackColor = true;
+            this.sendEmail_Button.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Button_SetUncheck
             // 
             this.Button_SetUncheck.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -186,26 +197,15 @@
             this.Button_SetUncheck.UseVisualStyleBackColor = true;
             this.Button_SetUncheck.Click += new System.EventHandler(this.Button_SetAllCheckedStudentsAsUncheck_Click);
             // 
-            // Button_SetAbsent
+            // Button_SpecialDayEdition
             // 
-            this.Button_SetAbsent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_SetAbsent.Location = new System.Drawing.Point(213, 47);
-            this.Button_SetAbsent.Name = "Button_SetAbsent";
-            this.Button_SetAbsent.Size = new System.Drawing.Size(172, 58);
-            this.Button_SetAbsent.TabIndex = 1;
-            this.Button_SetAbsent.Text = "Set All unchecked as Absent";
-            this.Button_SetAbsent.UseVisualStyleBackColor = true;
-            this.Button_SetAbsent.Click += new System.EventHandler(this.Button_SetAllUncheckedStudentAsAbsent_Click);
-            // 
-            // Button_SetTime
-            // 
-            this.Button_SetTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_SetTime.Location = new System.Drawing.Point(3, 47);
-            this.Button_SetTime.Name = "Button_SetTime";
-            this.Button_SetTime.Size = new System.Drawing.Size(204, 58);
-            this.Button_SetTime.TabIndex = 2;
-            this.Button_SetTime.Text = "Set this as late time";
-            this.Button_SetTime.UseVisualStyleBackColor = true;
+            this.Button_SpecialDayEdition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(391, 111);
+            this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
+            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(166, 49);
+            this.Button_SpecialDayEdition.TabIndex = 4;
+            this.Button_SpecialDayEdition.Text = "Edit Special Days";
+            this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
             // 
             // Button_EditEmailFormat
             // 
@@ -218,17 +218,6 @@
             this.Button_EditEmailFormat.UseVisualStyleBackColor = true;
             this.Button_EditEmailFormat.Click += new System.EventHandler(this.Button_EditEmailFormat_Click);
             // 
-            // sendEmail_Button
-            // 
-            this.sendEmail_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sendEmail_Button.Location = new System.Drawing.Point(391, 3);
-            this.sendEmail_Button.Name = "sendEmail_Button";
-            this.sendEmail_Button.Size = new System.Drawing.Size(166, 38);
-            this.sendEmail_Button.TabIndex = 3;
-            this.sendEmail_Button.Text = "Send Email";
-            this.sendEmail_Button.UseVisualStyleBackColor = true;
-            this.sendEmail_Button.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Button_EditEmailAccount
             // 
             this.Button_EditEmailAccount.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -240,15 +229,37 @@
             this.Button_EditEmailAccount.UseVisualStyleBackColor = true;
             this.Button_EditEmailAccount.Click += new System.EventHandler(this.Button_EditEmailAccount_Click);
             // 
-            // Button_SpecialDayEdition
+            // Button_SetTime
             // 
-            this.Button_SpecialDayEdition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_SpecialDayEdition.Location = new System.Drawing.Point(391, 111);
-            this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
-            this.Button_SpecialDayEdition.Size = new System.Drawing.Size(166, 49);
-            this.Button_SpecialDayEdition.TabIndex = 4;
-            this.Button_SpecialDayEdition.Text = "Edit Special Days";
-            this.Button_SpecialDayEdition.UseVisualStyleBackColor = true;
+            this.Button_SetTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_SetTime.Location = new System.Drawing.Point(3, 47);
+            this.Button_SetTime.Name = "Button_SetTime";
+            this.Button_SetTime.Size = new System.Drawing.Size(204, 58);
+            this.Button_SetTime.TabIndex = 2;
+            this.Button_SetTime.Text = "Set this as late time";
+            this.Button_SetTime.UseVisualStyleBackColor = true;
+            // 
+            // Button_SetAbsent
+            // 
+            this.Button_SetAbsent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Button_SetAbsent.Location = new System.Drawing.Point(213, 47);
+            this.Button_SetAbsent.Name = "Button_SetAbsent";
+            this.Button_SetAbsent.Size = new System.Drawing.Size(172, 58);
+            this.Button_SetAbsent.TabIndex = 1;
+            this.Button_SetAbsent.Text = "Set All unchecked as Absent";
+            this.Button_SetAbsent.UseVisualStyleBackColor = true;
+            this.Button_SetAbsent.Click += new System.EventHandler(this.Button_SetAllUncheckedStudentAsAbsent_Click);
+            // 
+            // button_CallPasswordEditor
+            // 
+            this.button_CallPasswordEditor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_CallPasswordEditor.Location = new System.Drawing.Point(213, 111);
+            this.button_CallPasswordEditor.Name = "button_CallPasswordEditor";
+            this.button_CallPasswordEditor.Size = new System.Drawing.Size(172, 49);
+            this.button_CallPasswordEditor.TabIndex = 7;
+            this.button_CallPasswordEditor.Text = "Edit Management Password";
+            this.button_CallPasswordEditor.UseVisualStyleBackColor = true;
+            this.button_CallPasswordEditor.Click += new System.EventHandler(this.button_CallPasswordEditor_Click);
             // 
             // TeacherManagementLabel
             // 
@@ -329,23 +340,23 @@
             this.Button_TeacherManagement.Text = "Teacher Management";
             this.Button_TeacherManagement.Click += new System.EventHandler(this.Button_TeacherManagement_Click);
             // 
-            // tableLayoutPanel1
+            // BarCodeInputLabel
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BarCodeInputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.Box_StudentIndex, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Label_StudentIndex, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 39);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.62319F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(214, 152);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.BarCodeInputLabel.ColumnCount = 1;
+            this.BarCodeInputLabel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.BarCodeInputLabel.Controls.Add(this.Box_StudentIndex, 0, 1);
+            this.BarCodeInputLabel.Controls.Add(this.Label_StudentIndex, 0, 0);
+            this.BarCodeInputLabel.Controls.Add(this.CheckButton, 0, 2);
+            this.BarCodeInputLabel.Location = new System.Drawing.Point(12, 39);
+            this.BarCodeInputLabel.Name = "BarCodeInputLabel";
+            this.BarCodeInputLabel.RowCount = 3;
+            this.BarCodeInputLabel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
+            this.BarCodeInputLabel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.62319F));
+            this.BarCodeInputLabel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.BarCodeInputLabel.Size = new System.Drawing.Size(214, 152);
+            this.BarCodeInputLabel.TabIndex = 1;
             // 
             // Box_StudentIndex
             // 
@@ -364,14 +375,15 @@
             this.Label_StudentIndex.TabIndex = 1;
             this.Label_StudentIndex.Text = "Student Index: ";
             // 
-            // button1
+            // CheckButton
             // 
-            this.button1.Location = new System.Drawing.Point(3, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 48);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Check This Index";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CheckButton.Location = new System.Drawing.Point(3, 94);
+            this.CheckButton.Name = "CheckButton";
+            this.CheckButton.Size = new System.Drawing.Size(208, 48);
+            this.CheckButton.TabIndex = 2;
+            this.CheckButton.Text = "Check This Index";
+            this.CheckButton.UseVisualStyleBackColor = true;
+            this.CheckButton.Click += new System.EventHandler(this.Check_Click);
             // 
             // FileOpener
             // 
@@ -423,13 +435,13 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(186, 0);
+            this.toolStripLabel1.Size = new System.Drawing.Size(186, 42);
             this.toolStripLabel1.Text = "Unchecked Students";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 3);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 45);
             // 
             // ListView_Uncheck
             // 
@@ -493,13 +505,13 @@
             // CStudentLabel
             // 
             this.CStudentLabel.Name = "CStudentLabel";
-            this.CStudentLabel.Size = new System.Drawing.Size(165, 0);
+            this.CStudentLabel.Size = new System.Drawing.Size(165, 42);
             this.CStudentLabel.Text = "Checked Students";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 3);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 45);
             // 
             // CheckedListView
             // 
@@ -548,17 +560,6 @@
             this.Course_Index.TabIndex = 2;
             this.Course_Index.Text = "Course Index: ";
             // 
-            // button_CallPasswordEditor
-            // 
-            this.button_CallPasswordEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_CallPasswordEditor.Location = new System.Drawing.Point(213, 111);
-            this.button_CallPasswordEditor.Name = "button_CallPasswordEditor";
-            this.button_CallPasswordEditor.Size = new System.Drawing.Size(172, 49);
-            this.button_CallPasswordEditor.TabIndex = 7;
-            this.button_CallPasswordEditor.Text = "Edit Management Password";
-            this.button_CallPasswordEditor.UseVisualStyleBackColor = true;
-            this.button_CallPasswordEditor.Click += new System.EventHandler(this.button_CallPasswordEditor_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -577,8 +578,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.BarCodeInputLabel.ResumeLayout(false);
+            this.BarCodeInputLabel.PerformLayout();
             this.StudentListPanel.ResumeLayout(false);
             this.UncheckPanel.ResumeLayout(false);
             this.UncheckToolStrip.ResumeLayout(false);
@@ -597,7 +598,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Label_StudentIndex;
         private System.Windows.Forms.TextBox Box_StudentIndex;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel BarCodeInputLabel;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton B_LoadFile;
         private System.Windows.Forms.ToolStripButton B_DataSave;
@@ -613,7 +614,7 @@
         private System.Windows.Forms.ToolStrip CheckToolStrip;
         private System.Windows.Forms.ToolStripLabel CStudentLabel;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CheckButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton Button_TeacherManagement;
         private System.Windows.Forms.Panel TeacherManagementPanel;
