@@ -85,7 +85,7 @@ namespace Attendance_Scanning
             }
             else
             {
-                TeacherManagementValidater TMV = new TeacherManagementValidater();
+                TeacherManagementValidater TMV = new TeacherManagementValidater(DP);
                 if(TMV.ShowDialog() == DialogResult.OK)
                 {
                     TeacherManagementPanel.Show();
@@ -109,8 +109,16 @@ namespace Attendance_Scanning
             //ListView_Uncheck.
             foreach (SingleStudent SS in DP.CSVCovertor(Data))
             {
-                ListView_Uncheck.Items.Add(SS.FirstName + " " + SS.SecondName);
-                MessageBox.Show(SS.FirstName);
+
+                //ListView_Uncheck.Items.Add(SS.FirstName + " " + SS.SecondName);
+                NotCheckedSingleStudents.Add(SS);
+                List<String> Meow = new List<string>();
+                Meow.Add(SS.FirstName);
+                Meow.Add(SS.SecondName);
+                Meow.Add(SS.Index);
+
+                ListView_Uncheck.Items.Add(new ListViewItem(Meow.ToArray()));
+                ListView_Uncheck.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
 
             //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
@@ -178,15 +186,46 @@ namespace Attendance_Scanning
             ema.Show();
         }
 
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        private void button_CallPasswordEditor_Click(object sender, EventArgs e)
         {
-
+            PasswordEditor PWE = new PasswordEditor(DP);
+            if (PWE.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Done!");
+                PWE.Close();
+            }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void Check_Click(object sender, EventArgs e)
         {
-            TimeKeeper t = new TimeKeeper();
-            t.StopWatch();
+            foreach(SingleStudent stu in NotCheckedSingleStudents)
+            {
+                if (stu.IsMe(Box_StudentIndex.Text))
+                {
+                    foreach (object OBJ in ListView_Uncheck.Items)
+                    {
+                        if (OBJ.ToString().Contains(stu.FirstName))
+                        {
+                            List<String> Meow = new List<string>();
+                            Meow.Add(stu.FirstName);
+                            Meow.Add(stu.SecondName);
+                            Meow.Add(stu.Index);
+                            //Meow.Add(DateTime.Now.TimeOfDay.ToString("00:00"));
+                            CheckedListView.Items.Add(new ListViewItem(Meow.ToArray()));
+                            CheckedSingleStudents.Add(stu);
+                            NotCheckedSingleStudents.Remove(stu);
+                            ListView_Uncheck.Items.Remove((ListViewItem)OBJ);
+                            Box_StudentIndex.Text = "";
+                            return;
+                        }
+                    }
+                }
+                //else
+                //{
+                //    MessageBox.Show(stu.Index + "    " + Box_StudentIndex.Text);
+                //}
+            }
         }
+        
     }
 }

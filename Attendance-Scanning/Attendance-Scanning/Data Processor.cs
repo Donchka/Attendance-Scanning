@@ -8,12 +8,34 @@ namespace Attendance_Scanning
 {
     public class Data_Processor
     {
+        /// <summary>
+        /// Decrypte a string by char jumps
+        /// </summary>
+        /// <param name="EncyptedWord">the string that needs to be decrypated</param>
+        /// <param name="Jump">the char jump</param>
+        /// <returns>Decrypted string</returns>
         public string PasswordDecryptor(string EncyptedWord, int Jump)
         {
             string FinalResult = "";
             foreach (char SingleLetter in EncyptedWord.ToCharArray())
             {
                 FinalResult += (char)(SingleLetter - Jump);
+            }
+            return FinalResult;
+        }
+
+        /// <summary>
+        /// Encrypated a string by char jumps
+        /// </summary>
+        /// <param name="EncyptedWord">the string that needs to be encrypated</param>
+        /// <param name="Jump">the char jump</param>
+        /// <returns>Encrypated string</returns>
+        public string PasswordEncryptor(string EncyptedWord, int Jump)
+        {
+            string FinalResult = "";
+            foreach (char SingleLetter in EncyptedWord.ToCharArray())
+            {
+                FinalResult += (char)(SingleLetter + Jump);
             }
             return FinalResult;
         }
@@ -65,6 +87,7 @@ namespace Attendance_Scanning
             List<SingleStudent> MultipleStudents = new List<SingleStudent>();
             List<string> RealData = Data.ToList();
             RealData.RemoveAt(0);
+            RealData.RemoveAt(1);
             foreach (string str in Data)
             {
                 List<string> strList = str.Split(',').ToList();

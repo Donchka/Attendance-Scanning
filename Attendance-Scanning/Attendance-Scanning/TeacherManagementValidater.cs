@@ -14,9 +14,10 @@ namespace Attendance_Scanning
     {
         public Main theMain;
         public Data_Processor DP;
-        public TeacherManagementValidater()
+        public TeacherManagementValidater(Data_Processor DDP)
         {
             InitializeComponent();
+            DP = DDP;
             Cancel_Button.DialogResult = DialogResult.Cancel;
             PasswordBox.TextChanged += PasswordBox_TextChanged; ;
         }
