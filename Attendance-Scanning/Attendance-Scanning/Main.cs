@@ -177,5 +177,16 @@ namespace Attendance_Scanning
             Email_Account_Editor ema = new Email_Account_Editor();
             ema.Show();
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            TimeKeeper t = new TimeKeeper();
+            t.StopWatch();
+        }
     }
 }

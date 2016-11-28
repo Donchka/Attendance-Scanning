@@ -128,6 +128,7 @@
     <Compile Include="TeacherManagementValidater.Designer.cs">
       <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimeKeeper.cs" />
     <EmbeddedResource Include="Course Code Selector Dialog.resx">
       <DependentUpon>Course Code Selector Dialog.cs</DependentUpon>
     </EmbeddedResource>
