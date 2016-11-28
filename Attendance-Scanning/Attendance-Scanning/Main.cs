@@ -132,11 +132,25 @@ namespace Attendance_Scanning
         SmtpClient smtpc;
         MailMessage mail;
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SendMailButtonClick(object sender, EventArgs e)
         {
-            
+            foreach(ListViewItem LVI in ListView_Uncheck.Items)
+            {
+                foreach (SingleStudent SS in NotCheckedSingleStudents) {
+                    if (SS.IsMe(LVI.SubItems[2].ToString())) {
+                        MessageBox.Show(DP.MailReplacer(DateTime.Now, "AAA", SS, Properties.Settings.Default.EmailFormatTitle));
+                        MessageBox.Show(DP.MailReplacer(DateTime.Now, "AAA", SS, Properties.Settings.Default.EmailFormatMain));
+                        MailSender(SS,DateTime.Now,"AAA");
+                    }
+                }
+            }
         }
-
+        /// <summary>
+        /// Send a mail to a specific student with late data
+        /// </summary>
+        /// <param name="Student">A SingleStudent Instance</param>
+        /// <param name="time">Time now</param>
+        /// <param name="LateData">Late Data</param>
         public void MailSender(SingleStudent Student, DateTime time, String LateData)
         {
             userLogin = new NetworkCredential(Properties.Settings.Default.EmailAddress, DP.PasswordDecryptor(Properties.Settings.Default.EmailPosswordEncrypted, 13));//user's email address and password

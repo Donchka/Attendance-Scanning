@@ -68,19 +68,19 @@
             // 正文
             // 
             this.正文.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.正文.Location = new System.Drawing.Point(0, -179);
-            this.正文.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.正文.Location = new System.Drawing.Point(0, 36);
+            this.正文.Margin = new System.Windows.Forms.Padding(4);
             this.正文.Multiline = true;
             this.正文.Name = "正文";
             this.正文.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.正文.Size = new System.Drawing.Size(710, 562);
+            this.正文.Size = new System.Drawing.Size(710, 347);
             this.正文.TabIndex = 2;
             // 
             // TitleTextBox
             // 
             this.TitleTextBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleTextBox.Location = new System.Drawing.Point(0, 0);
-            this.TitleTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TitleTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(710, 28);
             this.TitleTextBox.TabIndex = 3;
@@ -159,7 +159,7 @@
             this.SelectionPanel.Controls.Add(this.TeacherNameLabel, 0, 3);
             this.SelectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SelectionPanel.Location = new System.Drawing.Point(0, 0);
-            this.SelectionPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SelectionPanel.Margin = new System.Windows.Forms.Padding(4);
             this.SelectionPanel.Name = "SelectionPanel";
             this.SelectionPanel.RowCount = 4;
             this.SelectionPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.22222F));
@@ -174,7 +174,7 @@
             this.TextPanel.Controls.Add(this.TitleTextBox);
             this.TextPanel.Controls.Add(this.正文);
             this.TextPanel.Location = new System.Drawing.Point(6, 189);
-            this.TextPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TextPanel.Name = "TextPanel";
             this.TextPanel.Size = new System.Drawing.Size(710, 383);
             this.TextPanel.TabIndex = 11;

@@ -184,7 +184,7 @@
             this.sendEmail_Button.TabIndex = 3;
             this.sendEmail_Button.Text = "Send Email";
             this.sendEmail_Button.UseVisualStyleBackColor = true;
-            this.sendEmail_Button.Click += new System.EventHandler(this.button2_Click);
+            this.sendEmail_Button.Click += new System.EventHandler(this.SendMailButtonClick);
             // 
             // Button_SetUncheck
             // 
