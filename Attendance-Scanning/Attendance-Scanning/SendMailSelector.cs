@@ -16,5 +16,16 @@ namespace Attendance_Scanning
         {
             InitializeComponent();
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void Send_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
     }
 }
