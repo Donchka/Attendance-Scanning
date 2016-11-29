@@ -137,6 +137,11 @@ namespace Attendance_Scanning
 
         private void SendMailButtonClick(object sender, EventArgs e)
         {
+            SendMailSelector SMS = new SendMailSelector();
+            if(SMS.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
+                bool ToAbsent = SMS.Absent_Student_Checkbox.Checked;
+                bool ToLate = SMS.Late_Students_Checkbox.Checked;
+                bool ToUnc = SMS.Unchecked_Students_Checkbox.Checked;
             foreach(ListViewItem LVI in ListView_Uncheck.Items)
             {
                 foreach (SingleStudent SS in NotCheckedSingleStudents) {
@@ -146,6 +151,7 @@ namespace Attendance_Scanning
                         MailSender(SS,DateTime.Now,"AAA");
                     }
                 }
+            }
             }
         }
         /// <summary>
