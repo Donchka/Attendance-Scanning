@@ -54,7 +54,10 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void Button_SetAllUncheckedStudentAsAbsent_Click(object sender, EventArgs e)
         {
-
+            foreach(ListViewItem LVI in ListView_Uncheck.Items)
+            {
+                LVI.Font = new Font(LVI.Font,FontStyle.Strikeout);
+            }
         }
         /// <summary>
         /// Set all students(even checked) as unchecked
