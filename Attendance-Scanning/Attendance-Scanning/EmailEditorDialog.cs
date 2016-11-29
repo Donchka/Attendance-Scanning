@@ -55,7 +55,7 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void ExapmleApplier_Click(object sender, EventArgs e)
         {
-            正文.Text = "Hello! \r\n This is <TeacherName> from <ClassName>, your child <StudentName> was not here today. Please check your child's status. Thank you! ";
+            正文.Text = "Hello! \r\n This is <TeacherName> from <ClassName>, your child <StudentName> was not here today. Please check your child's status. Thank you!";
             TitleTextBox.Text = "Absent Alarm";
         }
 

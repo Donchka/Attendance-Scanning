@@ -54,7 +54,7 @@ namespace Attendance_Scanning
             {
                 if (Words == "<StudentName>")
                 {
-                    FinalReturner += student;
+                    FinalReturner += student.SecondName + " " + student.FirstName;
                 }
                 else if (Words == "<StudentLateTime>")
                 {
@@ -72,6 +72,7 @@ namespace Attendance_Scanning
                 {
                     FinalReturner += Words;
                 }
+                FinalReturner += " ";
             }
             return FinalReturner;
         }
@@ -86,9 +87,15 @@ namespace Attendance_Scanning
         {
             List<SingleStudent> MultipleStudents = new List<SingleStudent>();
             List<string> RealData = Data.ToList();
-            RealData.RemoveAt(0);
-            RealData.RemoveAt(1);
-            foreach (string str in Data)
+            foreach(string inini in RealData)
+            {
+                if(inini.Contains("Last Name"))
+                {
+                    RealData.Remove(inini);
+                    break;
+                }
+            }
+            foreach (string str in RealData)
             {
                 List<string> strList = str.Split(',').ToList();
                 SingleStudent ST = new SingleStudent(strList[3], strList[0], strList[1], strList[12]/*,strList[14]*/);
