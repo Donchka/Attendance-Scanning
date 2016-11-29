@@ -10,7 +10,7 @@ using System.Diagnostics;
 namespace Attendance_Scanning
 {
     //This class will take the students time and say if they are on time or not
-    class TimeKeeper
+    public class TimeKeeper
     {
 
         public DateTime[] Period_Times;
@@ -58,35 +58,42 @@ namespace Attendance_Scanning
             }
         }
 
-        public void TimeLog(DateTime TimeIN)
+        public string TimeLog(DateTime TimeIN,SingleStudent SS)
         {
             //This logs the students into the system when they scan their cards
             //after being logged, the data is sent to a student array
-            string StudentID = "Charlie";
-
+            string zuosi = "";
             TimeSpan timeLIMIT = new TimeSpan(0,30,0);
             int result = TimeSpan.Compare(diff, timeLIMIT);
             //string timeLIMITS = ""; //30 minute time limit preset; teacher can change limit in TeacherSettings
 
             if (TimeIN > Period_Times[period])
             {
-                Console.WriteLine(StudentID + " is late for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes");
+                Console.WriteLine(SS.FirstName + " is late for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes");
+                zuosi = SS.FirstName + " is late for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes";
             }
-            else if ((TimeIN > Period_Times[period] && result==1)||(TimeIN > Period_Times[period] && result == 0))
-            
-                Console.WriteLine(StudentID + " is absent for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
+            else if ((TimeIN > Period_Times[period] && result == 1) || (TimeIN > Period_Times[period] && result == 0))
+            {
+
+                Console.WriteLine(SS.FirstName + " is absent for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
+                zuosi = SS.FirstName + " is absent for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day;
             }
+            return zuosi;
+        }
 
         /// <summary>
         /// Do things
         /// </summary>
         /// <param name="CheckInTime">Time Students checked in</param>
-        public void perform(DateTime CheckInTime)
+        public string perform(DateTime CheckInTime, SingleStudent TheStu)
         {
+            string stuMess;
             updateTime();
             identifyPeriod(CheckInTime);
             StopWatch(CheckInTime);
-            TimeLog(CheckInTime);
+            stuMess = TimeLog(CheckInTime,TheStu);
+
+            return stuMess;
         }
 
     }
