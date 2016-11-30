@@ -49,8 +49,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.B_LoadFile = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.B_DataSave = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.Label_Current_File = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Button_TeacherManagement = new System.Windows.Forms.ToolStripButton();
@@ -80,6 +78,14 @@
             this.AttendedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Course_Index = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.TimeEditing = new System.Windows.Forms.ToolStripDropDownButton();
+            this.editSpecialDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editLateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.PersonalData = new System.Windows.Forms.ToolStripDropDownButton();
+            this.editManagementPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editEmailAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -251,6 +257,7 @@
             this.Button_SetTime.TabIndex = 2;
             this.Button_SetTime.Text = "Set this as late time";
             this.Button_SetTime.UseVisualStyleBackColor = true;
+            this.Button_SetTime.Click += new System.EventHandler(this.Button_SetTime_Click);
             // 
             // Button_SetAbsent
             // 
@@ -292,11 +299,13 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.B_LoadFile,
             this.toolStripSeparator1,
-            this.B_DataSave,
-            this.toolStripSeparator2,
             this.Label_Current_File,
             this.toolStripSeparator5,
-            this.Button_TeacherManagement});
+            this.Button_TeacherManagement,
+            this.toolStripSeparator6,
+            this.TimeEditing,
+            this.toolStripSeparator7,
+            this.PersonalData});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -318,21 +327,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // B_DataSave
-            // 
-            this.B_DataSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.B_DataSave.Image = ((System.Drawing.Image)(resources.GetObject("B_DataSave.Image")));
-            this.B_DataSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.B_DataSave.Name = "B_DataSave";
-            this.B_DataSave.Size = new System.Drawing.Size(62, 22);
-            this.B_DataSave.Text = "Save Data";
-            this.B_DataSave.Click += new System.EventHandler(this.FileSaverButtonClicked);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // Label_Current_File
             // 
@@ -583,6 +577,66 @@
             this.Course_Index.TabIndex = 2;
             this.Course_Index.Text = "Course Index: ";
             // 
+            // TimeEditing
+            // 
+            this.TimeEditing.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.TimeEditing.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editSpecialDaysToolStripMenuItem,
+            this.editLateTimeToolStripMenuItem});
+            this.TimeEditing.Image = ((System.Drawing.Image)(resources.GetObject("TimeEditing.Image")));
+            this.TimeEditing.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TimeEditing.Name = "TimeEditing";
+            this.TimeEditing.Size = new System.Drawing.Size(87, 22);
+            this.TimeEditing.Text = "Time Editing";
+            this.TimeEditing.Visible = false;
+            // 
+            // editSpecialDaysToolStripMenuItem
+            // 
+            this.editSpecialDaysToolStripMenuItem.Name = "editSpecialDaysToolStripMenuItem";
+            this.editSpecialDaysToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editSpecialDaysToolStripMenuItem.Text = "Edit Special Days";
+            // 
+            // editLateTimeToolStripMenuItem
+            // 
+            this.editLateTimeToolStripMenuItem.Name = "editLateTimeToolStripMenuItem";
+            this.editLateTimeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editLateTimeToolStripMenuItem.Text = "Edit Late Time";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // PersonalData
+            // 
+            this.PersonalData.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.PersonalData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editManagementPasswordToolStripMenuItem,
+            this.editEmailAccountToolStripMenuItem});
+            this.PersonalData.Image = ((System.Drawing.Image)(resources.GetObject("PersonalData.Image")));
+            this.PersonalData.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PersonalData.Name = "PersonalData";
+            this.PersonalData.Size = new System.Drawing.Size(132, 22);
+            this.PersonalData.Text = "Personal Data Option";
+            this.PersonalData.Visible = false;
+            // 
+            // editManagementPasswordToolStripMenuItem
+            // 
+            this.editManagementPasswordToolStripMenuItem.Name = "editManagementPasswordToolStripMenuItem";
+            this.editManagementPasswordToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.editManagementPasswordToolStripMenuItem.Text = "Edit Management Password";
+            // 
+            // editEmailAccountToolStripMenuItem
+            // 
+            this.editEmailAccountToolStripMenuItem.Name = "editEmailAccountToolStripMenuItem";
+            this.editEmailAccountToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.editEmailAccountToolStripMenuItem.Text = "Edit Email Account";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -625,12 +679,10 @@
         private System.Windows.Forms.TableLayoutPanel BarCodeInputLabel;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton B_LoadFile;
-        private System.Windows.Forms.ToolStripButton B_DataSave;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.OpenFileDialog FileOpener;
         private System.Windows.Forms.SaveFileDialog FileSaver;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel Label_Current_File;
         private System.Windows.Forms.Panel StudentListPanel;
         private System.Windows.Forms.Panel UncheckPanel;
@@ -669,6 +721,14 @@
         private System.Windows.Forms.ColumnHeader Index_Attended;
         private System.Windows.Forms.ColumnHeader AttendedTime;
         private System.Windows.Forms.Button button_CallPasswordEditor;
+        private System.Windows.Forms.ToolStripDropDownButton TimeEditing;
+        private System.Windows.Forms.ToolStripMenuItem editSpecialDaysToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editLateTimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripDropDownButton PersonalData;
+        private System.Windows.Forms.ToolStripMenuItem editManagementPasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editEmailAccountToolStripMenuItem;
     }
 }
 

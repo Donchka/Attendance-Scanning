@@ -93,6 +93,8 @@ namespace Attendance_Scanning
                 if(TMV.ShowDialog() == DialogResult.OK)
                 {
                     TeacherManagementPanel.Show();
+                    TimeEditing.Visible = true;
+                    PersonalData.Visible = true;
                     Button_TeacherManagement.Text = "Hide Teacher Management";
                     IsTeacherManagementOpened = true;
                     TMV.Close();
@@ -251,5 +253,9 @@ namespace Attendance_Scanning
             }
         }
 
+        private void Button_SetTime_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
