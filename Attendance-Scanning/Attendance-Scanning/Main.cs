@@ -20,7 +20,7 @@ namespace Attendance_Scanning
         /// </summary>
         public bool IsTeacherManagementOpened = false;
         public List<SingleStudent> NotCheckedSingleStudents = new List<SingleStudent>();
-        public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>();
+        public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>(); 
         public Data_Processor DP = new Data_Processor();
         public TimeKeeper tk = new TimeKeeper();
         public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
