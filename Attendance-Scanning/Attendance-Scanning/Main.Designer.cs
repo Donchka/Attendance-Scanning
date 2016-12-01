@@ -52,6 +52,14 @@
             this.Label_Current_File = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Button_TeacherManagement = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.TimeEditing = new System.Windows.Forms.ToolStripDropDownButton();
+            this.editSpecialDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editLateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.PersonalData = new System.Windows.Forms.ToolStripDropDownButton();
+            this.editManagementPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editEmailAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BarCodeInputLabel = new System.Windows.Forms.TableLayoutPanel();
             this.Box_StudentIndex = new System.Windows.Forms.TextBox();
             this.Label_StudentIndex = new System.Windows.Forms.Label();
@@ -78,14 +86,6 @@
             this.AttendedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Course_Index = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.TimeEditing = new System.Windows.Forms.ToolStripDropDownButton();
-            this.editSpecialDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editLateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.PersonalData = new System.Windows.Forms.ToolStripDropDownButton();
-            this.editManagementPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editEmailAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -334,6 +334,66 @@
             this.Button_TeacherManagement.Text = "Teacher Management";
             this.Button_TeacherManagement.Click += new System.EventHandler(this.Button_TeacherManagement_Click);
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            // 
+            // TimeEditing
+            // 
+            this.TimeEditing.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.TimeEditing.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editSpecialDaysToolStripMenuItem,
+            this.editLateTimeToolStripMenuItem});
+            this.TimeEditing.Image = ((System.Drawing.Image)(resources.GetObject("TimeEditing.Image")));
+            this.TimeEditing.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TimeEditing.Name = "TimeEditing";
+            this.TimeEditing.Size = new System.Drawing.Size(137, 28);
+            this.TimeEditing.Text = "Time Editing";
+            this.TimeEditing.Visible = false;
+            // 
+            // editSpecialDaysToolStripMenuItem
+            // 
+            this.editSpecialDaysToolStripMenuItem.Name = "editSpecialDaysToolStripMenuItem";
+            this.editSpecialDaysToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
+            this.editSpecialDaysToolStripMenuItem.Text = "Edit Special Days";
+            // 
+            // editLateTimeToolStripMenuItem
+            // 
+            this.editLateTimeToolStripMenuItem.Name = "editLateTimeToolStripMenuItem";
+            this.editLateTimeToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
+            this.editLateTimeToolStripMenuItem.Text = "Edit Late Time";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
+            // 
+            // PersonalData
+            // 
+            this.PersonalData.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.PersonalData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editManagementPasswordToolStripMenuItem,
+            this.editEmailAccountToolStripMenuItem});
+            this.PersonalData.Image = ((System.Drawing.Image)(resources.GetObject("PersonalData.Image")));
+            this.PersonalData.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PersonalData.Name = "PersonalData";
+            this.PersonalData.Size = new System.Drawing.Size(213, 28);
+            this.PersonalData.Text = "Personal Data Option";
+            this.PersonalData.Visible = false;
+            // 
+            // editManagementPasswordToolStripMenuItem
+            // 
+            this.editManagementPasswordToolStripMenuItem.Name = "editManagementPasswordToolStripMenuItem";
+            this.editManagementPasswordToolStripMenuItem.Size = new System.Drawing.Size(334, 30);
+            this.editManagementPasswordToolStripMenuItem.Text = "Edit Management Password";
+            // 
+            // editEmailAccountToolStripMenuItem
+            // 
+            this.editEmailAccountToolStripMenuItem.Name = "editEmailAccountToolStripMenuItem";
+            this.editEmailAccountToolStripMenuItem.Size = new System.Drawing.Size(334, 30);
+            this.editEmailAccountToolStripMenuItem.Text = "Edit Email Account";
+            // 
             // BarCodeInputLabel
             // 
             this.BarCodeInputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -394,9 +454,9 @@
             this.StudentListPanel.Controls.Add(this.UncheckPanel);
             this.StudentListPanel.Controls.Add(this.CheckedPanel);
             this.StudentListPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.StudentListPanel.Location = new System.Drawing.Point(380, 194);
+            this.StudentListPanel.Location = new System.Drawing.Point(158, 194);
             this.StudentListPanel.Name = "StudentListPanel";
-            this.StudentListPanel.Size = new System.Drawing.Size(798, 650);
+            this.StudentListPanel.Size = new System.Drawing.Size(1020, 650);
             this.StudentListPanel.TabIndex = 1;
             // 
             // UncheckPanel
@@ -408,7 +468,7 @@
             this.UncheckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UncheckPanel.Location = new System.Drawing.Point(0, 0);
             this.UncheckPanel.Name = "UncheckPanel";
-            this.UncheckPanel.Size = new System.Drawing.Size(390, 650);
+            this.UncheckPanel.Size = new System.Drawing.Size(460, 650);
             this.UncheckPanel.TabIndex = 3;
             // 
             // UncheckToolStrip
@@ -424,7 +484,7 @@
             this.UncheckToolStrip.Location = new System.Drawing.Point(0, 0);
             this.UncheckToolStrip.Name = "UncheckToolStrip";
             this.UncheckToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.UncheckToolStrip.Size = new System.Drawing.Size(390, 40);
+            this.UncheckToolStrip.Size = new System.Drawing.Size(460, 40);
             this.UncheckToolStrip.TabIndex = 3;
             this.UncheckToolStrip.Text = "toolStrip2";
             // 
@@ -451,7 +511,7 @@
             this.ListView_Uncheck.Location = new System.Drawing.Point(0, 43);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
-            this.ListView_Uncheck.Size = new System.Drawing.Size(390, 607);
+            this.ListView_Uncheck.Size = new System.Drawing.Size(460, 607);
             this.ListView_Uncheck.TabIndex = 1;
             this.ListView_Uncheck.UseCompatibleStateImageBehavior = false;
             this.ListView_Uncheck.View = System.Windows.Forms.View.Details;
@@ -476,9 +536,9 @@
             this.CheckedPanel.Controls.Add(this.CheckToolStrip);
             this.CheckedPanel.Controls.Add(this.CheckedListView);
             this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CheckedPanel.Location = new System.Drawing.Point(390, 0);
+            this.CheckedPanel.Location = new System.Drawing.Point(460, 0);
             this.CheckedPanel.Name = "CheckedPanel";
-            this.CheckedPanel.Size = new System.Drawing.Size(408, 650);
+            this.CheckedPanel.Size = new System.Drawing.Size(560, 650);
             this.CheckedPanel.TabIndex = 2;
             // 
             // CheckToolStrip
@@ -494,7 +554,7 @@
             this.CheckToolStrip.Location = new System.Drawing.Point(0, 0);
             this.CheckToolStrip.Name = "CheckToolStrip";
             this.CheckToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.CheckToolStrip.Size = new System.Drawing.Size(408, 40);
+            this.CheckToolStrip.Size = new System.Drawing.Size(560, 40);
             this.CheckToolStrip.TabIndex = 3;
             this.CheckToolStrip.Text = "toolStrip3";
             // 
@@ -522,7 +582,7 @@
             this.CheckedListView.Location = new System.Drawing.Point(0, 43);
             this.CheckedListView.MultiSelect = false;
             this.CheckedListView.Name = "CheckedListView";
-            this.CheckedListView.Size = new System.Drawing.Size(408, 607);
+            this.CheckedListView.Size = new System.Drawing.Size(560, 607);
             this.CheckedListView.TabIndex = 2;
             this.CheckedListView.UseCompatibleStateImageBehavior = false;
             this.CheckedListView.View = System.Windows.Forms.View.Details;
@@ -545,7 +605,7 @@
             // AttendedTime
             // 
             this.AttendedTime.Text = "Time";
-            this.AttendedTime.Width = 76;
+            this.AttendedTime.Width = 111;
             // 
             // Course_Index
             // 
@@ -555,66 +615,6 @@
             this.Course_Index.Size = new System.Drawing.Size(134, 18);
             this.Course_Index.TabIndex = 2;
             this.Course_Index.Text = "Course Index: ";
-            // 
-            // TimeEditing
-            // 
-            this.TimeEditing.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.TimeEditing.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editSpecialDaysToolStripMenuItem,
-            this.editLateTimeToolStripMenuItem});
-            this.TimeEditing.Image = ((System.Drawing.Image)(resources.GetObject("TimeEditing.Image")));
-            this.TimeEditing.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TimeEditing.Name = "TimeEditing";
-            this.TimeEditing.Size = new System.Drawing.Size(87, 22);
-            this.TimeEditing.Text = "Time Editing";
-            this.TimeEditing.Visible = false;
-            // 
-            // editSpecialDaysToolStripMenuItem
-            // 
-            this.editSpecialDaysToolStripMenuItem.Name = "editSpecialDaysToolStripMenuItem";
-            this.editSpecialDaysToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.editSpecialDaysToolStripMenuItem.Text = "Edit Special Days";
-            // 
-            // editLateTimeToolStripMenuItem
-            // 
-            this.editLateTimeToolStripMenuItem.Name = "editLateTimeToolStripMenuItem";
-            this.editLateTimeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.editLateTimeToolStripMenuItem.Text = "Edit Late Time";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // PersonalData
-            // 
-            this.PersonalData.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.PersonalData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editManagementPasswordToolStripMenuItem,
-            this.editEmailAccountToolStripMenuItem});
-            this.PersonalData.Image = ((System.Drawing.Image)(resources.GetObject("PersonalData.Image")));
-            this.PersonalData.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PersonalData.Name = "PersonalData";
-            this.PersonalData.Size = new System.Drawing.Size(132, 22);
-            this.PersonalData.Text = "Personal Data Option";
-            this.PersonalData.Visible = false;
-            // 
-            // editManagementPasswordToolStripMenuItem
-            // 
-            this.editManagementPasswordToolStripMenuItem.Name = "editManagementPasswordToolStripMenuItem";
-            this.editManagementPasswordToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
-            this.editManagementPasswordToolStripMenuItem.Text = "Edit Management Password";
-            // 
-            // editEmailAccountToolStripMenuItem
-            // 
-            this.editEmailAccountToolStripMenuItem.Name = "editEmailAccountToolStripMenuItem";
-            this.editEmailAccountToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
-            this.editEmailAccountToolStripMenuItem.Text = "Edit Email Account";
             // 
             // Main
             // 

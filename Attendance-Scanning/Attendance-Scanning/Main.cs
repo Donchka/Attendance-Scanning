@@ -127,6 +127,7 @@ namespace Attendance_Scanning
                 ListView_Uncheck.Items.Add(new ListViewItem(Meow.ToArray()));
                 ListView_Uncheck.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
+            Label_Current_File.Text = "Current File: " + FileOpener.SafeFileName;
 
             //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
             //if(CCSD.ShowDialog() == DialogResult.OK)
