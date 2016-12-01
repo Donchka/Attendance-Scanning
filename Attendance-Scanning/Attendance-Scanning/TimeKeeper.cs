@@ -19,10 +19,9 @@ namespace Attendance_Scanning
 
         int period;
         TimeSpan diff;
-        bool UseCustomTime = false;
-        DateTime CustomTime;
 
-        public void updateTime()
+
+        public void updateTime(DateTime Cust)
         {
             int yearNow = DateTime.Now.Year;
             int monthNow = DateTime.Now.Month;
@@ -36,13 +35,16 @@ namespace Attendance_Scanning
         new DateTime (yearNow, monthNow, dayNow, 13, 20, 0),//13:20    
         };
 
-            
+            if (Cust!=null)
+            {
+                identifyPeriod(Cust);
+                Period_Times[period] = Cust;
+            }
 
         }
 
         public TimeSpan StopWatch(DateTime Dt) {
             //this starts a timer after the class begins and tells TimeBracket how much time the student was late of absent
-
 
             //TimeLimit will check with these times and TimeBracket will send the data to TimeLog
            
@@ -89,21 +91,16 @@ namespace Attendance_Scanning
         /// Do things
         /// </summary>
         /// <param name="CheckInTime">Time Students checked in</param>
-        public string perform(DateTime CheckInTime, SingleStudent TheStu)
+        public string perform(DateTime CheckInTime, SingleStudent TheStu,DateTime CustomTime)
         {
             string stuMess;
-            updateTime();
+
+            updateTime(CustomTime);
             identifyPeriod(CheckInTime);
             StopWatch(CheckInTime);
             stuMess = TimeLog(CheckInTime,TheStu);
 
             return stuMess;
-        }
-
-        public void ResetStartTimer(DateTime When)
-        {
-            CustomTime = When;
-            UseCustomTime = true;
         }
 
     }
@@ -115,9 +112,6 @@ namespace Attendance_Scanning
     //    int TimeLATE;
     //    int TimeABSENT;
     //}
-
-
-    //this is where teachers are allowed to manipulate the software to their rules
 
 
 
