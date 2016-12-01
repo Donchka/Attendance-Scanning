@@ -466,7 +466,7 @@
             this.StudentListPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.StudentListPanel.Location = new System.Drawing.Point(158, 194);
             this.StudentListPanel.Name = "StudentListPanel";
-            this.StudentListPanel.Size = new System.Drawing.Size(1020, 547);
+            this.StudentListPanel.Size = new System.Drawing.Size(1020, 694);
             this.StudentListPanel.TabIndex = 1;
             // 
             // UncheckPanel
@@ -478,7 +478,7 @@
             this.UncheckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UncheckPanel.Location = new System.Drawing.Point(0, 0);
             this.UncheckPanel.Name = "UncheckPanel";
-            this.UncheckPanel.Size = new System.Drawing.Size(460, 547);
+            this.UncheckPanel.Size = new System.Drawing.Size(460, 694);
             this.UncheckPanel.TabIndex = 3;
             // 
             // UncheckToolStrip
@@ -518,7 +518,7 @@
             this.ListView_Uncheck.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ListView_Uncheck.FullRowSelect = true;
             this.ListView_Uncheck.GridLines = true;
-            this.ListView_Uncheck.Location = new System.Drawing.Point(0, -59);
+            this.ListView_Uncheck.Location = new System.Drawing.Point(0, 88);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
             this.ListView_Uncheck.Size = new System.Drawing.Size(460, 606);
@@ -548,7 +548,7 @@
             this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.CheckedPanel.Location = new System.Drawing.Point(460, 0);
             this.CheckedPanel.Name = "CheckedPanel";
-            this.CheckedPanel.Size = new System.Drawing.Size(560, 547);
+            this.CheckedPanel.Size = new System.Drawing.Size(560, 694);
             this.CheckedPanel.TabIndex = 2;
             // 
             // CheckToolStrip
@@ -589,7 +589,7 @@
             this.CheckedListView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CheckedListView.FullRowSelect = true;
             this.CheckedListView.GridLines = true;
-            this.CheckedListView.Location = new System.Drawing.Point(0, -59);
+            this.CheckedListView.Location = new System.Drawing.Point(0, 88);
             this.CheckedListView.MultiSelect = false;
             this.CheckedListView.Name = "CheckedListView";
             this.CheckedListView.Size = new System.Drawing.Size(560, 606);
@@ -631,7 +631,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1178, 741);
+            this.ClientSize = new System.Drawing.Size(1178, 888);
             this.Controls.Add(this.Course_Index);
             this.Controls.Add(this.StudentListPanel);
             this.Controls.Add(this.panel1);
