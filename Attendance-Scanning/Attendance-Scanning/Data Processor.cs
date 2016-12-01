@@ -134,10 +134,23 @@ namespace Attendance_Scanning
             return FinalReturner;
         }
 
-
-        //public string FromDateTimeToString()
-        //{
-
-        //}
+        /// <summary>
+        /// Covert a datetime to a string for saving. 
+        /// </summary>
+        /// <param name="DT">DateTime that is in the Year-Month-Date form</param>
+        /// <returns>a string of date time splited by ','</returns>
+        public string FromDateTimeToString(DateTime DT)
+        {
+            return DT.Year + "," + DT.Month + "," + DT.Day;
+        }
+        /// <summary>
+        /// Covert a string to a DateTime
+        /// </summary>
+        /// <param name="SSS">Datetime String. using ',' to split year, month and days</param>
+        /// <returns>A datetime</returns>
+        public DateTime FromStringToDateTime(String SSS)
+        {
+            return new DateTime(int.Parse(SSS.Split(',')[0]), int.Parse(SSS.Split(',')[1]), int.Parse(SSS.Split(',')[2]));
+        }
     }
 }

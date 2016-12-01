@@ -128,11 +128,11 @@
       <DependentUpon>SendMailSelector.cs</DependentUpon>
     </Compile>
     <Compile Include="SingleStudent.cs" />
-    <Compile Include="SpecialDaysEditor.cs">
+    <Compile Include="毒瘤之SpecialDaysEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SpecialDaysEditor.Designer.cs">
-      <DependentUpon>SpecialDaysEditor.cs</DependentUpon>
+    <Compile Include="毒瘤之SpecialDaysEditor.Designer.cs">
+      <DependentUpon>毒瘤之SpecialDaysEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherManagementValidater.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="SendMailSelector.resx">
       <DependentUpon>SendMailSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SpecialDaysEditor.resx">
-      <DependentUpon>SpecialDaysEditor.cs</DependentUpon>
+    <EmbeddedResource Include="毒瘤之SpecialDaysEditor.resx">
+      <DependentUpon>毒瘤之SpecialDaysEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherManagementValidater.resx">
       <DependentUpon>TeacherManagementValidater.cs</DependentUpon>

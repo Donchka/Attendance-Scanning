@@ -1,6 +1,6 @@
 ﻿namespace Attendance_Scanning
 {
-    partial class SpecialDaysEditor
+    partial class 毒瘤之SpecialDaysEditor
     {
         /// <summary>
         /// Required designer variable.
