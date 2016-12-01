@@ -259,5 +259,10 @@ namespace Attendance_Scanning
         {
 
         }
+
+        private void Box_StudentIndex_TextChanged(object sender, EventArgs e)
+        {
+            Check_Click(new object(), new EventArgs());
+        }
     }
 }

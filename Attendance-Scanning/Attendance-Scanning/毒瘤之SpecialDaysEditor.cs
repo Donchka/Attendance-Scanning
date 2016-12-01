@@ -10,17 +10,19 @@ using System.Windows.Forms;
 
 namespace Attendance_Scanning
 {
-    public partial class SpecialDaysEditor : Form
+    public partial class 毒瘤之SpecialDaysEditor : Form
     {
         public List<DateTime> DTList = new List<DateTime>();
-        public SpecialDaysEditor()
+        public Data_Processor DPPPPPP;
+        public 毒瘤之SpecialDaysEditor(Data_Processor DPPP)
         {
             InitializeComponent();
+            DPPPPPP = DPPP;
             foreach (string SSS in Properties.Settings.Default.SpecialDateSetting)
             {
-                DateTime DT = new DateTime(int.Parse(SSS.Split(',')[0]), int.Parse(SSS.Split(',')[1]), int.Parse(SSS.Split(',')[2]));
+                DateTime DT = DPPP.FromStringToDateTime(SSS);
                 List<string> Temp = new List<string>();
-                Temp.Add(DT.Year + " " + DT.Month + " " + DT.Day);
+                Temp.Add(DPPP.FromDateTimeToString(DT));
                 Temp.Add(SSS.Split(',')[3]);
                 DateAndNoteListView.Items.Add(new ListViewItem(Temp.ToArray()));
                 DTList.Add(DT);
@@ -33,7 +35,15 @@ namespace Attendance_Scanning
             {
                 if (DTtttt == DateTimePicker.Value)
                 {
-
+                    foreach (ListViewItem LVI in DateAndNoteListView.Items)
+                    {
+                        if (LVI.SubItems[0].ToString().Contains(DPPPPPP.FromDateTimeToString(DTtttt)))
+                        {
+                            DateAndNoteListView.Items.Remove(LVI);
+                            ///int xxx = DTList.
+                            ///DTList.
+                        }
+                    }
                 }
             }
         }
