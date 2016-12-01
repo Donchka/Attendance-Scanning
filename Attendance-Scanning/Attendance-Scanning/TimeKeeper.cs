@@ -19,6 +19,8 @@ namespace Attendance_Scanning
 
         int period;
         TimeSpan diff;
+        bool UseCustomTime = false;
+        DateTime CustomTime;
 
         public void updateTime()
         {
@@ -33,6 +35,8 @@ namespace Attendance_Scanning
         new DateTime (yearNow, monthNow, dayNow, 12, 5, 0),//12:05
         new DateTime (yearNow, monthNow, dayNow, 13, 20, 0),//13:20    
         };
+
+            
 
         }
 
@@ -69,14 +73,14 @@ namespace Attendance_Scanning
 
             if (TimeIN > Period_Times[period])
             {
-                Console.WriteLine(SS.FirstName + " is late for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes");
-                zuosi = SS.FirstName + " is late for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes";
+                Console.WriteLine(SS.FirstName + " is late for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes");
+                zuosi = SS.FirstName + " is late for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes";
             }
             else if ((TimeIN > Period_Times[period] && result == 1) || (TimeIN > Period_Times[period] && result == 0))
             {
 
-                Console.WriteLine(SS.FirstName + " is absent for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
-                zuosi = SS.FirstName + " is absent for period " + period + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day;
+                Console.WriteLine(SS.FirstName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
+                zuosi = SS.FirstName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day;
             }
             return zuosi;
         }
@@ -96,6 +100,12 @@ namespace Attendance_Scanning
             return stuMess;
         }
 
+        public void ResetStartTimer(DateTime When)
+        {
+            CustomTime = When;
+            UseCustomTime = true;
+        }
+
     }
 }
     //    public enum ScanIn
@@ -108,12 +118,7 @@ namespace Attendance_Scanning
 
 
     //this is where teachers are allowed to manipulate the software to their rules
-    public class TeacherSettings{
-        
-        //increase or decrease time limit
-        //I need the form in order to connect this setting                
 
-    }
 
 
 
