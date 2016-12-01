@@ -238,6 +238,7 @@ namespace Attendance_Scanning
                             Meow.Add(stu.FirstName);
                             Meow.Add(stu.SecondName);
                             Meow.Add(stu.Index);
+                            Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
                             //Meow.Add(DateTime.Now.TimeOfDay.ToString("00:00"));
                             CheckedListView.Items.Add(new ListViewItem(Meow.ToArray()));
                             CheckedSingleStudents.Add(stu);
