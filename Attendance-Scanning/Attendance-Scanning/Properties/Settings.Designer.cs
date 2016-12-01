@@ -106,5 +106,16 @@ namespace Attendance_Scanning.Properties {
                 this["ClassCode"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection SpecialDateSetting {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["SpecialDateSetting"]));
+            }
+            set {
+                this["SpecialDateSetting"] = value;
+            }
+        }
     }
 }
