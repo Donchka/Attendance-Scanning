@@ -70,8 +70,7 @@ namespace Attendance_Scanning
             //after being logged, the data is sent to a student array
             string zuosi = "";
             TimeSpan timeLIMIT = new TimeSpan(0,30,0);
-            int result = TimeSpan.Compare(diff, timeLIMIT);
-            //string timeLIMITS = ""; //30 minute time limit preset; teacher can change limit in TeacherSettings
+            int result = TimeSpan.Compare(diff, timeLIMIT);//30 minute time limit preset; teacher can change limit in TeacherSettings
 
             if (TimeIN > Period_Times[period])
             {
