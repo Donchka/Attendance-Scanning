@@ -20,15 +20,15 @@ namespace Attendance_Scanning
         /// </summary>
         public bool IsTeacherManagementOpened = false;
         public List<SingleStudent> NotCheckedSingleStudents = new List<SingleStudent>();
-        public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>();
+        public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>(); 
         public Data_Processor DP = new Data_Processor();
         public TimeKeeper tk = new TimeKeeper();
+        public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
 
         public Main()
         {
             InitializeComponent();
             TeacherManagementPanel.Hide();
-   
         }
 
         /// <summary>
@@ -151,9 +151,9 @@ namespace Attendance_Scanning
             {
                 foreach (SingleStudent SS in NotCheckedSingleStudents) {
                     if (SS.IsMe(LVI.SubItems[2].ToString())) {
-                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now,SS), SS, Properties.Settings.Default.EmailFormatTitle));
-                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now, SS), SS, Properties.Settings.Default.EmailFormatMain));
-                        MailSender(SS,DateTime.Now, tk.perform(DateTime.Now, SS));
+                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now,SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatTitle));
+                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatMain));
+                        MailSender(SS,DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme));
                     }
                 }
             }
@@ -238,6 +238,7 @@ namespace Attendance_Scanning
                             Meow.Add(stu.FirstName);
                             Meow.Add(stu.SecondName);
                             Meow.Add(stu.Index);
+                            Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
                             //Meow.Add(DateTime.Now.TimeOfDay.ToString("00:00"));
                             CheckedListView.Items.Add(new ListViewItem(Meow.ToArray()));
                             CheckedSingleStudents.Add(stu);
@@ -258,6 +259,11 @@ namespace Attendance_Scanning
         private void Button_SetTime_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Box_StudentIndex_TextChanged(object sender, EventArgs e)
+        {
+            Check_Click(new object(), new EventArgs());
         }
     }
 }
