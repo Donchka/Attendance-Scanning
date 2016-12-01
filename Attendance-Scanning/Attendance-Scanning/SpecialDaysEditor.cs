@@ -19,7 +19,22 @@ namespace Attendance_Scanning
             foreach (string SSS in Properties.Settings.Default.SpecialDateSetting)
             {
                 DateTime DT = new DateTime(int.Parse(SSS.Split(',')[0]), int.Parse(SSS.Split(',')[1]), int.Parse(SSS.Split(',')[2]));
-                DateAndNoteListView.Items.Add(new ListViewItem(""));
+                List<string> Temp = new List<string>();
+                Temp.Add(DT.Year + " " + DT.Month + " " + DT.Day);
+                Temp.Add(SSS.Split(',')[3]);
+                DateAndNoteListView.Items.Add(new ListViewItem(Temp.ToArray()));
+                DTList.Add(DT);
+            }
+        }
+
+        private void B_Nothing_Click(object sender, EventArgs e)
+        {
+            foreach(DateTime DTtttt in DTList)
+            {
+                if (DTtttt == DateTimePicker.Value)
+                {
+
+                }
             }
         }
     }

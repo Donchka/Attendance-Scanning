@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.DateAndNoteListView = new System.Windows.Forms.ListView();
             this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -38,12 +38,12 @@
             this.B_SuperSpecial = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // DateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(162, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(384, 28);
-            this.dateTimePicker1.TabIndex = 0;
+            this.DateTimePicker.Location = new System.Drawing.Point(162, 5);
+            this.DateTimePicker.Name = "DateTimePicker";
+            this.DateTimePicker.Size = new System.Drawing.Size(384, 28);
+            this.DateTimePicker.TabIndex = 0;
             // 
             // label1
             // 
@@ -84,6 +84,7 @@
             this.B_Nothing.TabIndex = 3;
             this.B_Nothing.Text = "Not Special";
             this.B_Nothing.UseVisualStyleBackColor = true;
+            this.B_Nothing.Click += new System.EventHandler(this.B_Nothing_Click);
             // 
             // B_NoClass
             // 
@@ -113,7 +114,7 @@
             this.Controls.Add(this.B_Nothing);
             this.Controls.Add(this.DateAndNoteListView);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DateTimePicker);
             this.Name = "SpecialDaysEditor";
             this.Text = "SpecialDaysEditor";
             this.ResumeLayout(false);
@@ -123,7 +124,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DateTimePicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView DateAndNoteListView;
         private System.Windows.Forms.ColumnHeader Date;

@@ -23,12 +23,12 @@ namespace Attendance_Scanning
         public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>();
         public Data_Processor DP = new Data_Processor();
         public TimeKeeper tk = new TimeKeeper();
+        public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
 
         public Main()
         {
             InitializeComponent();
             TeacherManagementPanel.Hide();
-            this.
         }
 
         /// <summary>
@@ -151,9 +151,9 @@ namespace Attendance_Scanning
             {
                 foreach (SingleStudent SS in NotCheckedSingleStudents) {
                     if (SS.IsMe(LVI.SubItems[2].ToString())) {
-                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now,SS), SS, Properties.Settings.Default.EmailFormatTitle));
-                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now, SS), SS, Properties.Settings.Default.EmailFormatMain));
-                        MailSender(SS,DateTime.Now, tk.perform(DateTime.Now, SS));
+                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now,SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatTitle));
+                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatMain));
+                        MailSender(SS,DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme));
                     }
                 }
             }

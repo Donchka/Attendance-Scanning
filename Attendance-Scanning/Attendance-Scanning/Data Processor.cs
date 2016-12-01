@@ -133,5 +133,11 @@ namespace Attendance_Scanning
             }
             return FinalReturner;
         }
+
+
+        public string FromDateTimeToString()
+        {
+
+        }
     }
 }
