@@ -56,6 +56,7 @@
             this.TimeEditing = new System.Windows.Forms.ToolStripDropDownButton();
             this.editSpecialDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTimeLimitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.PersonalData = new System.Windows.Forms.ToolStripDropDownButton();
             this.editManagementPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +87,6 @@
             this.AttendedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Course_Index = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.editTimeLimitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -107,7 +107,7 @@
             this.panel1.Controls.Add(this.BarCodeInputLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(785, 140);
             this.panel1.TabIndex = 0;
@@ -122,7 +122,7 @@
             this.TeacherManagementPanel.Controls.Add(this.TeacherManagementLabel);
             this.TeacherManagementPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.TeacherManagementPanel.Location = new System.Drawing.Point(253, 25);
-            this.TeacherManagementPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeacherManagementPanel.Margin = new System.Windows.Forms.Padding(2);
             this.TeacherManagementPanel.Name = "TeacherManagementPanel";
             this.TeacherManagementPanel.Size = new System.Drawing.Size(532, 115);
             this.TeacherManagementPanel.TabIndex = 3;
@@ -130,7 +130,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(59, 70);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(58, 20);
             this.textBox2.TabIndex = 5;
@@ -138,7 +138,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(47, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 20);
             this.textBox1.TabIndex = 4;
@@ -179,7 +179,7 @@
             this.tableLayoutPanel2.Controls.Add(this.button_CallPasswordEditor, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(159, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.69767F));
@@ -193,7 +193,7 @@
             // 
             this.sendEmail_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sendEmail_Button.Location = new System.Drawing.Point(260, 2);
-            this.sendEmail_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sendEmail_Button.Margin = new System.Windows.Forms.Padding(2);
             this.sendEmail_Button.Name = "sendEmail_Button";
             this.sendEmail_Button.Size = new System.Drawing.Size(111, 26);
             this.sendEmail_Button.TabIndex = 3;
@@ -205,7 +205,7 @@
             // 
             this.Button_SetUncheck.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_SetUncheck.Location = new System.Drawing.Point(260, 32);
-            this.Button_SetUncheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SetUncheck.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SetUncheck.Name = "Button_SetUncheck";
             this.Button_SetUncheck.Size = new System.Drawing.Size(111, 41);
             this.Button_SetUncheck.TabIndex = 0;
@@ -217,7 +217,7 @@
             // 
             this.Button_SpecialDayEdition.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_SpecialDayEdition.Location = new System.Drawing.Point(260, 77);
-            this.Button_SpecialDayEdition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SpecialDayEdition.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SpecialDayEdition.Name = "Button_SpecialDayEdition";
             this.Button_SpecialDayEdition.Size = new System.Drawing.Size(111, 36);
             this.Button_SpecialDayEdition.TabIndex = 4;
@@ -228,7 +228,7 @@
             // 
             this.Button_EditEmailFormat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_EditEmailFormat.Location = new System.Drawing.Point(141, 2);
-            this.Button_EditEmailFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_EditEmailFormat.Margin = new System.Windows.Forms.Padding(2);
             this.Button_EditEmailFormat.Name = "Button_EditEmailFormat";
             this.Button_EditEmailFormat.Size = new System.Drawing.Size(115, 26);
             this.Button_EditEmailFormat.TabIndex = 5;
@@ -240,7 +240,7 @@
             // 
             this.Button_EditEmailAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_EditEmailAccount.Location = new System.Drawing.Point(2, 2);
-            this.Button_EditEmailAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_EditEmailAccount.Margin = new System.Windows.Forms.Padding(2);
             this.Button_EditEmailAccount.Name = "Button_EditEmailAccount";
             this.Button_EditEmailAccount.Size = new System.Drawing.Size(135, 26);
             this.Button_EditEmailAccount.TabIndex = 6;
@@ -252,7 +252,7 @@
             // 
             this.Button_SetTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_SetTime.Location = new System.Drawing.Point(2, 32);
-            this.Button_SetTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SetTime.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SetTime.Name = "Button_SetTime";
             this.Button_SetTime.Size = new System.Drawing.Size(135, 41);
             this.Button_SetTime.TabIndex = 2;
@@ -264,7 +264,7 @@
             // 
             this.Button_SetAbsent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_SetAbsent.Location = new System.Drawing.Point(141, 32);
-            this.Button_SetAbsent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_SetAbsent.Margin = new System.Windows.Forms.Padding(2);
             this.Button_SetAbsent.Name = "Button_SetAbsent";
             this.Button_SetAbsent.Size = new System.Drawing.Size(115, 41);
             this.Button_SetAbsent.TabIndex = 1;
@@ -276,7 +276,7 @@
             // 
             this.button_CallPasswordEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_CallPasswordEditor.Location = new System.Drawing.Point(141, 77);
-            this.button_CallPasswordEditor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_CallPasswordEditor.Margin = new System.Windows.Forms.Padding(2);
             this.button_CallPasswordEditor.Name = "button_CallPasswordEditor";
             this.button_CallPasswordEditor.Size = new System.Drawing.Size(115, 36);
             this.button_CallPasswordEditor.TabIndex = 7;
@@ -304,8 +304,8 @@
             this.toolStripSeparator5,
             this.Button_TeacherManagement,
             this.toolStripSeparator6,
-            this.TimeEditing,
             this.toolStripSeparator7,
+            this.TimeEditing,
             this.PersonalData});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -374,12 +374,21 @@
             this.editSpecialDaysToolStripMenuItem.Name = "editSpecialDaysToolStripMenuItem";
             this.editSpecialDaysToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.editSpecialDaysToolStripMenuItem.Text = "Edit Special Days";
+            this.editSpecialDaysToolStripMenuItem.ToolTipText = "For some reasons(Like PA days), we do not need any record of late time";
             // 
             // editLateTimeToolStripMenuItem
             // 
             this.editLateTimeToolStripMenuItem.Name = "editLateTimeToolStripMenuItem";
             this.editLateTimeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.editLateTimeToolStripMenuItem.Text = "Edit Late Time";
+            this.editLateTimeToolStripMenuItem.ToolTipText = "Change the amount of time for late of a student";
+            // 
+            // editTimeLimitToolStripMenuItem
+            // 
+            this.editTimeLimitToolStripMenuItem.Name = "editTimeLimitToolStripMenuItem";
+            this.editTimeLimitToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editTimeLimitToolStripMenuItem.Text = "Edit Time Limit";
+            this.editTimeLimitToolStripMenuItem.ToolTipText = "Change the amount of time  to determine a student is absent or not";
             // 
             // toolStripSeparator7
             // 
@@ -404,12 +413,14 @@
             this.editManagementPasswordToolStripMenuItem.Name = "editManagementPasswordToolStripMenuItem";
             this.editManagementPasswordToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.editManagementPasswordToolStripMenuItem.Text = "Edit Management Password";
+            this.editManagementPasswordToolStripMenuItem.ToolTipText = "Change the password for entering Teacher Management Panel";
             // 
             // editEmailAccountToolStripMenuItem
             // 
             this.editEmailAccountToolStripMenuItem.Name = "editEmailAccountToolStripMenuItem";
             this.editEmailAccountToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.editEmailAccountToolStripMenuItem.Text = "Edit Email Account";
+            this.editEmailAccountToolStripMenuItem.ToolTipText = "Login to your email account";
             // 
             // BarCodeInputLabel
             // 
@@ -421,7 +432,7 @@
             this.BarCodeInputLabel.Controls.Add(this.Label_StudentIndex, 0, 0);
             this.BarCodeInputLabel.Controls.Add(this.CheckButton, 0, 2);
             this.BarCodeInputLabel.Location = new System.Drawing.Point(8, 28);
-            this.BarCodeInputLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BarCodeInputLabel.Margin = new System.Windows.Forms.Padding(2);
             this.BarCodeInputLabel.Name = "BarCodeInputLabel";
             this.BarCodeInputLabel.RowCount = 3;
             this.BarCodeInputLabel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
@@ -433,7 +444,7 @@
             // Box_StudentIndex
             // 
             this.Box_StudentIndex.Location = new System.Drawing.Point(2, 33);
-            this.Box_StudentIndex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Box_StudentIndex.Margin = new System.Windows.Forms.Padding(2);
             this.Box_StudentIndex.Name = "Box_StudentIndex";
             this.Box_StudentIndex.Size = new System.Drawing.Size(139, 20);
             this.Box_StudentIndex.TabIndex = 0;
@@ -452,7 +463,7 @@
             // CheckButton
             // 
             this.CheckButton.Location = new System.Drawing.Point(2, 68);
-            this.CheckButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckButton.Margin = new System.Windows.Forms.Padding(2);
             this.CheckButton.Name = "CheckButton";
             this.CheckButton.Size = new System.Drawing.Size(139, 35);
             this.CheckButton.TabIndex = 2;
@@ -476,7 +487,7 @@
             this.StudentListPanel.Controls.Add(this.CheckedPanel);
             this.StudentListPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.StudentListPanel.Location = new System.Drawing.Point(105, 140);
-            this.StudentListPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentListPanel.Margin = new System.Windows.Forms.Padding(2);
             this.StudentListPanel.Name = "StudentListPanel";
             this.StudentListPanel.Size = new System.Drawing.Size(680, 395);
             this.StudentListPanel.TabIndex = 1;
@@ -489,7 +500,7 @@
             this.UncheckPanel.Controls.Add(this.ListView_Uncheck);
             this.UncheckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UncheckPanel.Location = new System.Drawing.Point(0, 0);
-            this.UncheckPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UncheckPanel.Margin = new System.Windows.Forms.Padding(2);
             this.UncheckPanel.Name = "UncheckPanel";
             this.UncheckPanel.Size = new System.Drawing.Size(307, 395);
             this.UncheckPanel.TabIndex = 3;
@@ -531,7 +542,7 @@
             this.ListView_Uncheck.FullRowSelect = true;
             this.ListView_Uncheck.GridLines = true;
             this.ListView_Uncheck.Location = new System.Drawing.Point(0, -44);
-            this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(2);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
             this.ListView_Uncheck.Size = new System.Drawing.Size(307, 439);
@@ -560,7 +571,7 @@
             this.CheckedPanel.Controls.Add(this.CheckedListView);
             this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.CheckedPanel.Location = new System.Drawing.Point(307, 0);
-            this.CheckedPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckedPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CheckedPanel.Name = "CheckedPanel";
             this.CheckedPanel.Size = new System.Drawing.Size(373, 395);
             this.CheckedPanel.TabIndex = 2;
@@ -603,7 +614,7 @@
             this.CheckedListView.FullRowSelect = true;
             this.CheckedListView.GridLines = true;
             this.CheckedListView.Location = new System.Drawing.Point(0, -44);
-            this.CheckedListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckedListView.Margin = new System.Windows.Forms.Padding(2);
             this.CheckedListView.MultiSelect = false;
             this.CheckedListView.Name = "CheckedListView";
             this.CheckedListView.Size = new System.Drawing.Size(373, 439);
@@ -641,13 +652,6 @@
             this.Course_Index.TabIndex = 2;
             this.Course_Index.Text = "Course Index: ";
             // 
-            // editTimeLimitToolStripMenuItem
-            // 
-            this.editTimeLimitToolStripMenuItem.Name = "editTimeLimitToolStripMenuItem";
-            this.editTimeLimitToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.editTimeLimitToolStripMenuItem.Text = "Edit Time Limit";
-            this.editTimeLimitToolStripMenuItem.ToolTipText = "Change the amount of time  to determine a student is absent";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,7 +662,7 @@
             this.Controls.Add(this.StudentListPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.Text = "Student Attendance Manager";
             this.panel1.ResumeLayout(false);
