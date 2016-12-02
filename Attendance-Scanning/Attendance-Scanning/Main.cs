@@ -251,10 +251,6 @@ namespace Attendance_Scanning
                         }
                     }
                 }
-                //else
-                //{
-                //    MessageBox.Show(stu.Index + "    " + Box_StudentIndex.Text);
-                //}
             }
         }
 
