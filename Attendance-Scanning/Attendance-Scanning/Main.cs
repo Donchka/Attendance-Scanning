@@ -42,6 +42,7 @@ namespace Attendance_Scanning
         private void LoadFileButtonClicked(object sender, EventArgs e)
         {
             FileOpener.ShowDialog();
+            CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
         }
         /// <summary>
         /// Save thy file
@@ -245,6 +246,7 @@ namespace Attendance_Scanning
                             Meow.Add(stu.SecondName);
                             Meow.Add(stu.Index);
                             Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
+                            
                             //Meow.Add(DateTime.Now.TimeOfDay.ToString("00:00"));
                             CheckedListView.Items.Add(new ListViewItem(Meow.ToArray()));
                             CheckedSingleStudents.Add(stu);
@@ -260,7 +262,13 @@ namespace Attendance_Scanning
 
         private void Button_SetTime_Click(object sender, EventArgs e)
         {
-           //MessageBox.Show("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            int hhh;
+            int mmm;
+            DateTime DTNOW = DateTime.Now;
+            if (int.TryParse(StartHour.Text, out hhh) && int.TryParse(StartMinute.Text, out mmm)) {
+                CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime(DTNOW.Year, DTNOW.Month, DTNOW.Day, hhh, mmm,0);
+           }
+
         }
 
         private void Box_StudentIndex_TextChanged(object sender, EventArgs e)
@@ -273,6 +281,5 @@ namespace Attendance_Scanning
             TimeSetter tl = new TimeSetter(true);
             tl.Show();
         }
-
     }
 }

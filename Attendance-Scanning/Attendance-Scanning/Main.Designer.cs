@@ -33,8 +33,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Course_Index = new System.Windows.Forms.Label();
             this.TeacherManagementPanel = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.StartMinute = new System.Windows.Forms.TextBox();
+            this.StartHour = new System.Windows.Forms.TextBox();
             this.MinuteLabel = new System.Windows.Forms.Label();
             this.HourLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -50,11 +50,11 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Button_TeacherManagement = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.TimeEditing = new System.Windows.Forms.ToolStripDropDownButton();
             this.editSpecialDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editTimeLimitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.PersonalData = new System.Windows.Forms.ToolStripDropDownButton();
             this.editManagementPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmailAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +64,6 @@
             this.Label_StudentIndex = new System.Windows.Forms.Label();
             this.FileOpener = new System.Windows.Forms.OpenFileDialog();
             this.FileSaver = new System.Windows.Forms.SaveFileDialog();
-            this.StudentListPanel = new System.Windows.Forms.Panel();
             this.UncheckPanel = new System.Windows.Forms.Panel();
             this.UncheckToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -84,17 +83,18 @@
             this.AttendedTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.FYtooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.StudentListPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.BarCodeInputLabel.SuspendLayout();
-            this.StudentListPanel.SuspendLayout();
             this.UncheckPanel.SuspendLayout();
             this.UncheckToolStrip.SuspendLayout();
             this.CheckedPanel.SuspendLayout();
             this.CheckToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.StudentListPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,8 +122,8 @@
             // 
             // TeacherManagementPanel
             // 
-            this.TeacherManagementPanel.Controls.Add(this.textBox2);
-            this.TeacherManagementPanel.Controls.Add(this.textBox1);
+            this.TeacherManagementPanel.Controls.Add(this.StartMinute);
+            this.TeacherManagementPanel.Controls.Add(this.StartHour);
             this.TeacherManagementPanel.Controls.Add(this.MinuteLabel);
             this.TeacherManagementPanel.Controls.Add(this.HourLabel);
             this.TeacherManagementPanel.Controls.Add(this.tableLayoutPanel2);
@@ -135,21 +135,21 @@
             this.TeacherManagementPanel.Size = new System.Drawing.Size(532, 115);
             this.TeacherManagementPanel.TabIndex = 3;
             // 
-            // textBox2
+            // StartMinute
             // 
-            this.textBox2.Location = new System.Drawing.Point(58, 72);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 20);
-            this.textBox2.TabIndex = 5;
+            this.StartMinute.Location = new System.Drawing.Point(58, 72);
+            this.StartMinute.Margin = new System.Windows.Forms.Padding(1);
+            this.StartMinute.Name = "StartMinute";
+            this.StartMinute.Size = new System.Drawing.Size(58, 20);
+            this.StartMinute.TabIndex = 5;
             // 
-            // textBox1
+            // StartHour
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 4;
+            this.StartHour.Location = new System.Drawing.Point(49, 30);
+            this.StartHour.Margin = new System.Windows.Forms.Padding(1);
+            this.StartHour.Name = "StartHour";
+            this.StartHour.Size = new System.Drawing.Size(68, 20);
+            this.StartHour.TabIndex = 4;
             // 
             // MinuteLabel
             // 
@@ -203,7 +203,6 @@
         "");
             this.Button_SetTime.UseVisualStyleBackColor = true;
             this.Button_SetTime.Click += new System.EventHandler(this.Button_SetTime_Click);
-
             // 
             // sendEmail_Button
             // 
@@ -313,6 +312,11 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // TimeEditing
             // 
             this.TimeEditing.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -330,29 +334,24 @@
             // editSpecialDaysToolStripMenuItem
             // 
             this.editSpecialDaysToolStripMenuItem.Name = "editSpecialDaysToolStripMenuItem";
-            this.editSpecialDaysToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editSpecialDaysToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.editSpecialDaysToolStripMenuItem.Text = "Edit Special Days";
             this.editSpecialDaysToolStripMenuItem.ToolTipText = "For some reasons(Like PA days), we do not need any record of late time";
             // 
             // editLateTimeToolStripMenuItem
             // 
             this.editLateTimeToolStripMenuItem.Name = "editLateTimeToolStripMenuItem";
-            this.editLateTimeToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.editLateTimeToolStripMenuItem.Text = "Edit Late Time";
+            this.editLateTimeToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.editLateTimeToolStripMenuItem.Text = "Edit Class Start Time";
             this.editLateTimeToolStripMenuItem.ToolTipText = "Change the amount of time for late of a student";
             // 
             // editTimeLimitToolStripMenuItem
             // 
             this.editTimeLimitToolStripMenuItem.Name = "editTimeLimitToolStripMenuItem";
-            this.editTimeLimitToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editTimeLimitToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.editTimeLimitToolStripMenuItem.Text = "Edit Time Limit";
             this.editTimeLimitToolStripMenuItem.ToolTipText = "Change the amount of time for determining a student is absent or not";
             this.editTimeLimitToolStripMenuItem.Click += new System.EventHandler(this.editTimeLimitToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // PersonalData
             // 
@@ -442,17 +441,6 @@
             // 
             this.FileSaver.Filter = "Comma Split Value File|*.csv";
             // 
-            // StudentListPanel
-            // 
-            this.StudentListPanel.Controls.Add(this.UncheckPanel);
-            this.StudentListPanel.Controls.Add(this.CheckedPanel);
-            this.StudentListPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StudentListPanel.Location = new System.Drawing.Point(0, 140);
-            this.StudentListPanel.Margin = new System.Windows.Forms.Padding(1);
-            this.StudentListPanel.Name = "StudentListPanel";
-            this.StudentListPanel.Size = new System.Drawing.Size(804, 395);
-            this.StudentListPanel.TabIndex = 1;
-            // 
             // UncheckPanel
             // 
             this.UncheckPanel.AutoSize = true;
@@ -460,10 +448,10 @@
             this.UncheckPanel.Controls.Add(this.UncheckToolStrip);
             this.UncheckPanel.Controls.Add(this.ListView_Uncheck);
             this.UncheckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UncheckPanel.Location = new System.Drawing.Point(0, 0);
+            this.UncheckPanel.Location = new System.Drawing.Point(1, 1);
             this.UncheckPanel.Margin = new System.Windows.Forms.Padding(1);
             this.UncheckPanel.Name = "UncheckPanel";
-            this.UncheckPanel.Size = new System.Drawing.Size(360, 395);
+            this.UncheckPanel.Size = new System.Drawing.Size(319, 389);
             this.UncheckPanel.TabIndex = 3;
             // 
             // UncheckToolStrip
@@ -478,7 +466,7 @@
             this.toolStripSeparator3});
             this.UncheckToolStrip.Location = new System.Drawing.Point(0, 0);
             this.UncheckToolStrip.Name = "UncheckToolStrip";
-            this.UncheckToolStrip.Size = new System.Drawing.Size(360, 29);
+            this.UncheckToolStrip.Size = new System.Drawing.Size(319, 29);
             this.UncheckToolStrip.TabIndex = 3;
             this.UncheckToolStrip.Text = "toolStrip2";
             // 
@@ -502,11 +490,11 @@
             this.ListView_Uncheck.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ListView_Uncheck.FullRowSelect = true;
             this.ListView_Uncheck.GridLines = true;
-            this.ListView_Uncheck.Location = new System.Drawing.Point(0, 30);
+            this.ListView_Uncheck.Location = new System.Drawing.Point(0, 24);
             this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(1);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
-            this.ListView_Uncheck.Size = new System.Drawing.Size(360, 365);
+            this.ListView_Uncheck.Size = new System.Drawing.Size(319, 365);
             this.ListView_Uncheck.TabIndex = 1;
             this.ListView_Uncheck.UseCompatibleStateImageBehavior = false;
             this.ListView_Uncheck.View = System.Windows.Forms.View.Details;
@@ -530,11 +518,11 @@
             // 
             this.CheckedPanel.Controls.Add(this.CheckToolStrip);
             this.CheckedPanel.Controls.Add(this.CheckedListView);
-            this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CheckedPanel.Location = new System.Drawing.Point(360, 0);
+            this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CheckedPanel.Location = new System.Drawing.Point(322, 1);
             this.CheckedPanel.Margin = new System.Windows.Forms.Padding(1);
             this.CheckedPanel.Name = "CheckedPanel";
-            this.CheckedPanel.Size = new System.Drawing.Size(444, 395);
+            this.CheckedPanel.Size = new System.Drawing.Size(481, 389);
             this.CheckedPanel.TabIndex = 2;
             // 
             // CheckToolStrip
@@ -549,7 +537,7 @@
             this.toolStripSeparator4});
             this.CheckToolStrip.Location = new System.Drawing.Point(0, 0);
             this.CheckToolStrip.Name = "CheckToolStrip";
-            this.CheckToolStrip.Size = new System.Drawing.Size(444, 29);
+            this.CheckToolStrip.Size = new System.Drawing.Size(481, 29);
             this.CheckToolStrip.TabIndex = 3;
             this.CheckToolStrip.Text = "toolStrip3";
             // 
@@ -574,11 +562,11 @@
             this.CheckedListView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CheckedListView.FullRowSelect = true;
             this.CheckedListView.GridLines = true;
-            this.CheckedListView.Location = new System.Drawing.Point(0, 30);
+            this.CheckedListView.Location = new System.Drawing.Point(0, 24);
             this.CheckedListView.Margin = new System.Windows.Forms.Padding(1);
             this.CheckedListView.MultiSelect = false;
             this.CheckedListView.Name = "CheckedListView";
-            this.CheckedListView.Size = new System.Drawing.Size(444, 365);
+            this.CheckedListView.Size = new System.Drawing.Size(481, 365);
             this.CheckedListView.TabIndex = 2;
             this.CheckedListView.UseCompatibleStateImageBehavior = false;
             this.CheckedListView.View = System.Windows.Forms.View.Details;
@@ -608,7 +596,21 @@
             this.FYtooltip.AutoPopDelay = 20000;
             this.FYtooltip.InitialDelay = 50;
             this.FYtooltip.ReshowDelay = 100;
-
+            // 
+            // StudentListPanel
+            // 
+            this.StudentListPanel.ColumnCount = 2;
+            this.StudentListPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.StudentListPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.StudentListPanel.Controls.Add(this.CheckedPanel, 1, 0);
+            this.StudentListPanel.Controls.Add(this.UncheckPanel, 0, 0);
+            this.StudentListPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.StudentListPanel.Location = new System.Drawing.Point(0, 144);
+            this.StudentListPanel.Name = "StudentListPanel";
+            this.StudentListPanel.RowCount = 1;
+            this.StudentListPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.StudentListPanel.Size = new System.Drawing.Size(804, 391);
+            this.StudentListPanel.TabIndex = 2;
             // 
             // Main
             // 
@@ -619,6 +621,7 @@
             this.Controls.Add(this.StudentListPanel);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(1);
+            this.MinimumSize = new System.Drawing.Size(820, 574);
             this.Name = "Main";
             this.Text = "Student Attendance Manager";
             this.panel1.ResumeLayout(false);
@@ -630,8 +633,6 @@
             this.toolStrip1.PerformLayout();
             this.BarCodeInputLabel.ResumeLayout(false);
             this.BarCodeInputLabel.PerformLayout();
-            this.StudentListPanel.ResumeLayout(false);
-            this.StudentListPanel.PerformLayout();
             this.UncheckPanel.ResumeLayout(false);
             this.UncheckToolStrip.ResumeLayout(false);
             this.UncheckToolStrip.PerformLayout();
@@ -639,6 +640,8 @@
             this.CheckToolStrip.ResumeLayout(false);
             this.CheckToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.StudentListPanel.ResumeLayout(false);
+            this.StudentListPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -656,7 +659,6 @@
         private System.Windows.Forms.SaveFileDialog FileSaver;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel Label_Current_File;
-        private System.Windows.Forms.Panel StudentListPanel;
         private System.Windows.Forms.Panel UncheckPanel;
         private System.Windows.Forms.Panel CheckedPanel;
         private System.Windows.Forms.ToolStrip CheckToolStrip;
@@ -673,8 +675,8 @@
         private System.Windows.Forms.ToolStrip UncheckToolStrip;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox StartMinute;
+        private System.Windows.Forms.TextBox StartHour;
         private System.Windows.Forms.Label MinuteLabel;
         private System.Windows.Forms.Label HourLabel;
         public System.Windows.Forms.ListView ListView_Uncheck;
@@ -699,6 +701,7 @@
         private System.Windows.Forms.Button Button_SetUncheck;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolTip FYtooltip;
+        private System.Windows.Forms.TableLayoutPanel StudentListPanel;
     }
 }
 
