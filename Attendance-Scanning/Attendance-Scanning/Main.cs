@@ -29,8 +29,8 @@ namespace Attendance_Scanning
         {
             InitializeComponent();
             TeacherManagementPanel.Hide();
-            StudentListPanel.Hide();
-            panel1.Hide();
+            //StudentListPanel.Hide();
+            //panel1.Hide();
         }
 
         /// <summary>
@@ -266,6 +266,12 @@ namespace Attendance_Scanning
         private void Box_StudentIndex_TextChanged(object sender, EventArgs e)
         {
             Check_Click(new object(), new EventArgs());
+        }
+
+        private void editTimeLimitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimeLimit tl = new TimeLimit();
+            tl.Show();
         }
     }
 }
