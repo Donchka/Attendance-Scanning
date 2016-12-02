@@ -270,7 +270,7 @@ namespace Attendance_Scanning
 
         private void editTimeLimitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TimeLimit tl = new TimeLimit();
+            TimeSetter tl = new TimeSetter(true);
             tl.Show();
         }
     }
