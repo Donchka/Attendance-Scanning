@@ -29,8 +29,8 @@ namespace Attendance_Scanning
         {
             InitializeComponent();
             TeacherManagementPanel.Hide();
-            StudentListPanel.Hide();
-            panel1.Hide();
+            //StudentListPanel.Hide();
+            //panel1.Hide();
         }
 
         /// <summary>
@@ -251,10 +251,6 @@ namespace Attendance_Scanning
                         }
                     }
                 }
-                //else
-                //{
-                //    MessageBox.Show(stu.Index + "    " + Box_StudentIndex.Text);
-                //}
             }
         }
 
