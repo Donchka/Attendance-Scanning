@@ -24,6 +24,7 @@ namespace Attendance_Scanning
         public Data_Processor DP = new Data_Processor();
         public TimeKeeper tk = new TimeKeeper();
         public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
+        public bool LoadedStudentDataaaaa = false;
 
         public Main()
         {
@@ -41,6 +42,13 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void LoadFileButtonClicked(object sender, EventArgs e)
         {
+            if(LoadedStudentDataaaaa)///Ensure that this opreation is not by students.
+            {
+                if (new TeacherManagementValidater(DP).ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
+            }
             FileOpener.ShowDialog();
         }
         /// <summary>
@@ -134,6 +142,7 @@ namespace Attendance_Scanning
             StudentListPanel.Show();
             BarCodeInputLabel.Show();
             this.Size = new Size(820, 574);
+            LoadedStudentDataaaaa = true;
 
             //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
             //if(CCSD.ShowDialog() == DialogResult.OK)
@@ -241,6 +250,7 @@ namespace Attendance_Scanning
                         if (OBJ.ToString().Contains(stu.FirstName))
                         {
                             List<String> Meow = new List<string>();
+                            stu.AttandanceTime = DateTime.Now;
                             Meow.Add(stu.FirstName);
                             Meow.Add(stu.SecondName);
                             Meow.Add(stu.Index);

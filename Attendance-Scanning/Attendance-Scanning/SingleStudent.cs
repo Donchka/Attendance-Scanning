@@ -13,6 +13,7 @@ namespace Attendance_Scanning
         public List<string> CourseCodes;
         public String SecondName = "";
         public String EmailAddress = "";
+        public DateTime AttandanceTime = new DateTime();
         /// <summary>
         /// Real Type
         /// </summary>
