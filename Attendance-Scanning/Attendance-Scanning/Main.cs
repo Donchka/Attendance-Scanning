@@ -260,7 +260,7 @@ namespace Attendance_Scanning
 
         private void Button_SetTime_Click(object sender, EventArgs e)
         {
-
+           //MessageBox.Show("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         }
 
         private void Box_StudentIndex_TextChanged(object sender, EventArgs e)
@@ -273,5 +273,6 @@ namespace Attendance_Scanning
             TimeSetter tl = new TimeSetter(true);
             tl.Show();
         }
+
     }
 }
