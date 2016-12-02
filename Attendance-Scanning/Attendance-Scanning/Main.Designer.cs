@@ -498,11 +498,11 @@
             this.ListView_Uncheck.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ListView_Uncheck.FullRowSelect = true;
             this.ListView_Uncheck.GridLines = true;
-            this.ListView_Uncheck.Location = new System.Drawing.Point(0, -44);
+            this.ListView_Uncheck.Location = new System.Drawing.Point(0, 30);
             this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
-            this.ListView_Uncheck.Size = new System.Drawing.Size(360, 439);
+            this.ListView_Uncheck.Size = new System.Drawing.Size(360, 365);
             this.ListView_Uncheck.TabIndex = 1;
             this.ListView_Uncheck.UseCompatibleStateImageBehavior = false;
             this.ListView_Uncheck.View = System.Windows.Forms.View.Details;
@@ -570,11 +570,11 @@
             this.CheckedListView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CheckedListView.FullRowSelect = true;
             this.CheckedListView.GridLines = true;
-            this.CheckedListView.Location = new System.Drawing.Point(0, -44);
+            this.CheckedListView.Location = new System.Drawing.Point(0, 30);
             this.CheckedListView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.CheckedListView.MultiSelect = false;
             this.CheckedListView.Name = "CheckedListView";
-            this.CheckedListView.Size = new System.Drawing.Size(444, 439);
+            this.CheckedListView.Size = new System.Drawing.Size(444, 365);
             this.CheckedListView.TabIndex = 2;
             this.CheckedListView.UseCompatibleStateImageBehavior = false;
             this.CheckedListView.View = System.Windows.Forms.View.Details;

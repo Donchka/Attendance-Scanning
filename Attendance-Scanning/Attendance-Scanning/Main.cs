@@ -29,8 +29,9 @@ namespace Attendance_Scanning
         {
             InitializeComponent();
             TeacherManagementPanel.Hide();
-            //StudentListPanel.Hide();
-            //panel1.Hide();
+            StudentListPanel.Hide();
+            BarCodeInputLabel.Hide();
+            this.Height = 80;
         }
 
         /// <summary>
@@ -130,6 +131,9 @@ namespace Attendance_Scanning
                 ListView_Uncheck.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
             Label_Current_File.Text = "Current File: " + FileOpener.SafeFileName;
+            StudentListPanel.Show();
+            BarCodeInputLabel.Show();
+            this.Size = new Size(820, 574);
 
             //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
             //if(CCSD.ShowDialog() == DialogResult.OK)

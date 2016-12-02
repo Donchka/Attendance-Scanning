@@ -59,7 +59,7 @@ namespace Attendance_Scanning
             {
                 if (d >= Period_Times[4])
                 {
-                    period = 5;
+                    period = 4;
                 }
                 else if(d>=Period_Times[i] && d < Period_Times[i + 1])
                 {
