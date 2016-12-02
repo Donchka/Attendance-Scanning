@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnityEngine;
 
 namespace Attendance_Scanning
 {
@@ -43,6 +44,14 @@ namespace Attendance_Scanning
             {
                 TemperalPasswordDecryptor = "Safauawjefuehfhdsugbauwefuefiaeufbiaewbuifbaewuifbuawefewafergaergwg";
                 MessageBox.Show("Incorrect Password!");
+            }
+        }
+
+        private void PasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)//When user press Enter, directly input the password
+            {
+                Enter_Button_Click(new object(), new EventArgs());
             }
         }
     }

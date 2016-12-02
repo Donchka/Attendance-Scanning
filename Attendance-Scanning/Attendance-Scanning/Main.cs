@@ -10,6 +10,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using UnityEngine;
 
 namespace Attendance_Scanning
 {
@@ -20,10 +21,11 @@ namespace Attendance_Scanning
         /// </summary>
         public bool IsTeacherManagementOpened = false;
         public List<SingleStudent> NotCheckedSingleStudents = new List<SingleStudent>();
-        public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>(); 
+        public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>();
         public Data_Processor DP = new Data_Processor();
         public TimeKeeper tk = new TimeKeeper();
         public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
+        public string classCode = "";
         public bool LoadedStudentDataaaaa = false;
 
         public Main()
@@ -42,7 +44,7 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void LoadFileButtonClicked(object sender, EventArgs e)
         {
-            if(LoadedStudentDataaaaa)///Ensure that this opreation is not by students.
+            if (LoadedStudentDataaaaa)///Ensure that this opreation is not by students.
             {
                 if (new TeacherManagementValidater(DP).ShowDialog() != DialogResult.OK)
                 {
@@ -67,9 +69,9 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void Button_SetAllUncheckedStudentAsAbsent_Click(object sender, EventArgs e)
         {
-            foreach(ListViewItem LVI in ListView_Uncheck.Items)
+            foreach (ListViewItem LVI in ListView_Uncheck.Items)
             {
-                LVI.Font = new Font(LVI.Font,FontStyle.Strikeout);
+                LVI.Font = new System.Drawing.Font(LVI.Font, System.Drawing.FontStyle.Strikeout);
             }
         }
         /// <summary>
@@ -85,7 +87,7 @@ namespace Attendance_Scanning
         private void Button_EditEmailFormat_Click(object sender, EventArgs e)
         {
             EmailEditorDialog EED = new EmailEditorDialog();
-            if(EED.ShowDialog() == DialogResult.OK)
+            if (EED.ShowDialog() == DialogResult.OK)
             {
 
             }
@@ -93,7 +95,7 @@ namespace Attendance_Scanning
 
         private void Button_TeacherManagement_Click(object sender, EventArgs e)
         {
-            if(IsTeacherManagementOpened)
+            if (IsTeacherManagementOpened)
             {
                 TeacherManagementPanel.Hide();
                 Button_TeacherManagement.Text = "Show Teacher Management";
@@ -102,7 +104,7 @@ namespace Attendance_Scanning
             else
             {
                 TeacherManagementValidater TMV = new TeacherManagementValidater(DP);
-                if(TMV.ShowDialog() == DialogResult.OK)
+                if (TMV.ShowDialog() == DialogResult.OK)
                 {
                     TeacherManagementPanel.Show();
                     TimeEditing.Visible = true;
@@ -116,7 +118,7 @@ namespace Attendance_Scanning
 
         private void FileOpener_FileOk(object sender, CancelEventArgs e)
         {
-            if(FileOpener.SafeFileName.Split('_')[0].Length != 6)
+            if (FileOpener.SafeFileName.Split('_')[0].Length != 6)
             {
                 MessageBox.Show(FileOpener.SafeFileName.Split('_')[0]);
                 MessageBox.Show("Not a valid data file! Please check the file name so it contains the class code!");
@@ -143,6 +145,7 @@ namespace Attendance_Scanning
             BarCodeInputLabel.Show();
             this.Size = new Size(820, 574);
             LoadedStudentDataaaaa = true;
+            Box_StudentIndex.Focus();
 
             //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
             //if(CCSD.ShowDialog() == DialogResult.OK)
@@ -158,20 +161,23 @@ namespace Attendance_Scanning
         private void SendMailButtonClick(object sender, EventArgs e)
         {
             SendMailSelector SMS = new SendMailSelector();
-            if(SMS.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
+            if (SMS.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
                 bool ToAbsent = SMS.Absent_Student_Checkbox.Checked;
                 bool ToLate = SMS.Late_Students_Checkbox.Checked;
                 bool ToUnc = SMS.Unchecked_Students_Checkbox.Checked;
-            foreach(ListViewItem LVI in ListView_Uncheck.Items)
-            {
-                foreach (SingleStudent SS in NotCheckedSingleStudents) {
-                    if (SS.IsMe(LVI.SubItems[2].ToString())) {
-                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now,SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatTitle));
-                        MessageBox.Show(DP.MailReplacer(DateTime.Now,tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatMain));
-                        MailSender(SS,DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme));
+                foreach (ListViewItem LVI in ListView_Uncheck.Items)
+                {
+                    foreach (SingleStudent SS in NotCheckedSingleStudents)
+                    {
+                        if (SS.IsMe(LVI.SubItems[2].ToString()))
+                        {
+                            MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatTitle));
+                            MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatMain));
+                            MailSender(SS, DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme));
+                        }
                     }
                 }
-            }
             }
         }
         /// <summary>
@@ -188,7 +194,7 @@ namespace Attendance_Scanning
             smtpc.Credentials = userLogin;//apply user's info
             mail = new MailMessage { From = new MailAddress(Properties.Settings.Default.EmailAddress, "CKSSmailer", Encoding.UTF8) };//get sending address
             mail.To.Add(new MailAddress(Student.EmailAddress));//get receving address
-            mail.Subject = DP.MailReplacer(time,LateData,Student,Properties.Settings.Default.EmailFormatTitle);//get title 
+            mail.Subject = DP.MailReplacer(time, LateData, Student, Properties.Settings.Default.EmailFormatTitle);//get title 
             mail.Body = DP.MailReplacer(time, LateData, Student, Properties.Settings.Default.EmailFormatMain);//get message body
             mail.BodyEncoding = Encoding.UTF8;
             mail.IsBodyHtml = true;
@@ -241,7 +247,7 @@ namespace Attendance_Scanning
 
         private void Check_Click(object sender, EventArgs e)
         {
-            foreach(SingleStudent stu in NotCheckedSingleStudents)
+            foreach (SingleStudent stu in NotCheckedSingleStudents)
             {
                 if (stu.IsMe(Box_StudentIndex.Text))
                 {
@@ -270,7 +276,7 @@ namespace Attendance_Scanning
 
         private void Button_SetTime_Click(object sender, EventArgs e)
         {
-           //MessageBox.Show("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            //MessageBox.Show("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         }
 
         private void Box_StudentIndex_TextChanged(object sender, EventArgs e)
@@ -283,6 +289,36 @@ namespace Attendance_Scanning
             TimeSetter tl = new TimeSetter(true);
             tl.Show();
         }
+        /// <summary>
+        /// If user pressed Enter, see it as Check_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Box_StudentIndex_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(KeyCode.Return) || e.KeyCode.Equals(KeyCode.KeypadEnter))
+            {
+                Check_Click(new object(), new EventArgs());
+            }
+        }
+        /// <summary>
+        /// User start save their file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SaveData_Click(object sender, EventArgs e)
+        {
+            FileSaver.FileName = classCode +".csv";
+            FileSaver.ShowDialog();
+        }
+        /// <summary>
+        /// On saving
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnSaving(object sender, CancelEventArgs e)
+        {
 
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -102,6 +103,11 @@ namespace Attendance_Scanning
                 MultipleStudents.Add(ST);
             }
             return MultipleStudents;
+        }
+
+        public void StudentsCovetor(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date)
+        {
+            if (File.)
         }
 
         public List<string> CourseCodeCollector(List<SingleStudent> StudentList)
