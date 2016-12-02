@@ -9,6 +9,11 @@ namespace Attendance_Scanning
 {
     public class Data_Processor
     {
+        public TimeKeeper TK;
+        public Data_Processor(TimeKeeper TKKK)
+        {
+            TK = TKKK;
+        }
         /// <summary>
         /// Decrypte a string by char jumps
         /// </summary>
@@ -105,9 +110,44 @@ namespace Attendance_Scanning
             return MultipleStudents;
         }
 
-        public void StudentsCovetor(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date)
+        public void StudentsCovetor(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date,string ClassCode)
         {
-            if (File.)
+            int columnToWrite;
+            if (!File.Exists(FilePathAndName))
+            {
+                List<SingleStudent> SSFull = new List<SingleStudent>();
+                SSFull.AddRange(CheckedStudents);
+                SSFull.AddRange(UncheckedStudents);
+                InitializeTheCSVFile(SSFull, ClassCode);
+            }
+            List<string> CsvFile = File.ReadAllLines(FilePathAndName).ToList();
+            List<string> FirstRowOfColumns = CsvFile[0].Split(',').ToList();
+            columnToWrite = FirstRowOfColumns.Count;
+            for (int i = 0; i < FirstRowOfColumns.Count - 1; ++i)
+            {
+                if (FirstRowOfColumns[i].Contains((FromDateTimeToString(Date))))
+                {
+                    columnToWrite = i;
+                }
+            }
+            foreach(string line in CsvFile)
+            {
+                List<string> LSS = line.Split(',').ToList();
+                foreach(SingleStudent SSChecked in CheckedStudents)
+                {
+                    if (SSChecked.IsMe(LSS[2]))
+                    {
+                        //LSS。末端+tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme)
+                        //LSS被合并
+                        //lss被并入文件内
+                    }
+                }
+            }
+        }
+
+        public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode)
+        {
+
         }
 
         public List<string> CourseCodeCollector(List<SingleStudent> StudentList)

@@ -22,14 +22,15 @@ namespace Attendance_Scanning
         public bool IsTeacherManagementOpened = false;
         public List<SingleStudent> NotCheckedSingleStudents = new List<SingleStudent>();
         public List<SingleStudent> CheckedSingleStudents = new List<SingleStudent>();
-        public Data_Processor DP = new Data_Processor();
         public TimeKeeper tk = new TimeKeeper();
+        public Data_Processor DP;
         public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
         public string classCode = "";
         public bool LoadedStudentDataaaaa = false;
 
         public Main()
         {
+            DP = new Data_Processor(tk);
             InitializeComponent();
             TeacherManagementPanel.Hide();
             StudentListPanel.Hide();
@@ -137,7 +138,6 @@ namespace Attendance_Scanning
                 Meow.Add(SS.FirstName);
                 Meow.Add(SS.SecondName);
                 Meow.Add(SS.Index);
-
                 ListView_Uncheck.Items.Add(new ListViewItem(Meow.ToArray()));
                 ListView_Uncheck.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
@@ -173,8 +173,8 @@ namespace Attendance_Scanning
                     {
                         if (SS.IsMe(LVI.SubItems[2].ToString()))
                         {
-                            MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatTitle));
-                            MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatMain));
+                            //MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatTitle));
+                            //MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatMain));
                             MailSender(SS, DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme));
                         }
                     }
