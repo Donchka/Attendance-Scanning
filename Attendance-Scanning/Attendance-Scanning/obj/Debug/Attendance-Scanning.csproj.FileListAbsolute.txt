@@ -83,7 +83,7 @@ C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendanc
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.PasswordEditor.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Properties.Resources.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.SendMailSelector.resources
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TimeLimit.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.毒瘤之SpecialDaysEditor.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TeacherManagementValidater.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.GenerateResource.Cache
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TimeSetter.resources
