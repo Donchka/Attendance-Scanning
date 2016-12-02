@@ -29,6 +29,8 @@ namespace Attendance_Scanning
         {
             InitializeComponent();
             TeacherManagementPanel.Hide();
+            StudentListPanel.Hide();
+            panel1.Hide();
         }
 
         /// <summary>
