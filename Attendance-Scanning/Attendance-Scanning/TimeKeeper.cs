@@ -57,7 +57,11 @@ namespace Attendance_Scanning
             
             for(int i = 0; i < 5; i++)
             {
-                if(d>=Period_Times[i] && d < Period_Times[i + 1])
+                if (d >= Period_Times[4])
+                {
+                    period = 5;
+                }
+                else if(d>=Period_Times[i] && d < Period_Times[i + 1])
                 {
                     period = i;
                 }
