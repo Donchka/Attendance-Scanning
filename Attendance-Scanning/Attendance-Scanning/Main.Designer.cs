@@ -48,7 +48,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.Button_TeacherManagement = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.TimeEditing = new System.Windows.Forms.ToolStripDropDownButton();
             this.editSpecialDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,6 +82,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Button_SetUncheck = new System.Windows.Forms.Button();
             this.sendEmail_Button = new System.Windows.Forms.Button();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -170,29 +170,29 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.17857F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.82143F));
             this.tableLayoutPanel2.Controls.Add(this.Button_SetTime, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.Button_SetAbsent, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.sendEmail_Button, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Button_SetUncheck, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Button_SetUncheck, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.Button_SetAbsent, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(238, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.69767F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.30233F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.32516F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.67485F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(560, 163);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // Button_SetTime
             // 
             this.Button_SetTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_SetTime.Location = new System.Drawing.Point(2, 67);
+            this.Button_SetTime.Location = new System.Drawing.Point(2, 114);
             this.Button_SetTime.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Button_SetTime.Name = "Button_SetTime";
-            this.Button_SetTime.Size = new System.Drawing.Size(276, 95);
+            this.Button_SetTime.Size = new System.Drawing.Size(361, 48);
             this.Button_SetTime.TabIndex = 2;
             this.Button_SetTime.Text = "Set this as late time";
             this.Button_SetTime.UseVisualStyleBackColor = true;
@@ -201,10 +201,10 @@
             // Button_SetAbsent
             // 
             this.Button_SetAbsent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_SetAbsent.Location = new System.Drawing.Point(282, 67);
+            this.Button_SetAbsent.Location = new System.Drawing.Point(367, 1);
             this.Button_SetAbsent.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Button_SetAbsent.Name = "Button_SetAbsent";
-            this.Button_SetAbsent.Size = new System.Drawing.Size(276, 95);
+            this.Button_SetAbsent.Size = new System.Drawing.Size(191, 111);
             this.Button_SetAbsent.TabIndex = 1;
             this.Button_SetAbsent.Text = "Set All unchecked as Absent";
             this.Button_SetAbsent.UseVisualStyleBackColor = true;
@@ -229,8 +229,8 @@
             this.toolStripSeparator5,
             this.Button_TeacherManagement,
             this.toolStripSeparator6,
-            this.toolStripSeparator7,
             this.TimeEditing,
+            this.toolStripSeparator2,
             this.PersonalData});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -280,11 +280,6 @@
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
             // 
             // TimeEditing
             // 
@@ -340,6 +335,7 @@
             this.editManagementPasswordToolStripMenuItem.Size = new System.Drawing.Size(334, 30);
             this.editManagementPasswordToolStripMenuItem.Text = "Edit Management Password";
             this.editManagementPasswordToolStripMenuItem.ToolTipText = "Change the password for entering Teacher Management Panel";
+            this.editManagementPasswordToolStripMenuItem.Click += new System.EventHandler(this.button_CallPasswordEditor_Click);
             // 
             // editEmailAccountToolStripMenuItem
             // 
@@ -347,6 +343,7 @@
             this.editEmailAccountToolStripMenuItem.Size = new System.Drawing.Size(334, 30);
             this.editEmailAccountToolStripMenuItem.Text = "Edit Email Account";
             this.editEmailAccountToolStripMenuItem.ToolTipText = "Login to your email account";
+            this.editEmailAccountToolStripMenuItem.Click += new System.EventHandler(this.Button_EditEmailAccount_Click);
             // 
             // BarCodeInputLabel
             // 
@@ -572,10 +569,10 @@
             // Button_SetUncheck
             // 
             this.Button_SetUncheck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Button_SetUncheck.Location = new System.Drawing.Point(282, 1);
+            this.Button_SetUncheck.Location = new System.Drawing.Point(367, 114);
             this.Button_SetUncheck.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Button_SetUncheck.Name = "Button_SetUncheck";
-            this.Button_SetUncheck.Size = new System.Drawing.Size(276, 64);
+            this.Button_SetUncheck.Size = new System.Drawing.Size(191, 48);
             this.Button_SetUncheck.TabIndex = 0;
             this.Button_SetUncheck.Text = "Set All as Unchecked";
             this.Button_SetUncheck.UseVisualStyleBackColor = true;
@@ -584,14 +581,20 @@
             // sendEmail_Button
             // 
             this.sendEmail_Button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sendEmail_Button.Font = new System.Drawing.Font("幼圆", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sendEmail_Button.Location = new System.Drawing.Point(2, 1);
             this.sendEmail_Button.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.sendEmail_Button.Name = "sendEmail_Button";
-            this.sendEmail_Button.Size = new System.Drawing.Size(276, 64);
+            this.sendEmail_Button.Size = new System.Drawing.Size(361, 111);
             this.sendEmail_Button.TabIndex = 3;
             this.sendEmail_Button.Text = "Send Email";
             this.sendEmail_Button.UseVisualStyleBackColor = true;
             this.sendEmail_Button.Click += new System.EventHandler(this.SendMailButtonClick);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // Main
             // 
@@ -674,13 +677,13 @@
         private System.Windows.Forms.ToolStripMenuItem editSpecialDaysToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editLateTimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripDropDownButton PersonalData;
         private System.Windows.Forms.ToolStripMenuItem editManagementPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editEmailAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editTimeLimitToolStripMenuItem;
         private System.Windows.Forms.Button sendEmail_Button;
         private System.Windows.Forms.Button Button_SetUncheck;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 
