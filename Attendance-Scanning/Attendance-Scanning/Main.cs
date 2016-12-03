@@ -132,11 +132,11 @@ namespace Attendance_Scanning
             foreach (SingleStudent SS in DP.CSVCovertor(Data))
             {
 
-                //ListView_Uncheck.Items.Add(SS.FirstName + " " + SS.SecondName);
+                //ListView_Uncheck.Items.Add(SS.LastName + " " + SS.FirstName);
                 NotCheckedSingleStudents.Add(SS);
                 List<String> Meow = new List<string>();
+                Meow.Add(SS.LastName);
                 Meow.Add(SS.FirstName);
-                Meow.Add(SS.SecondName);
                 Meow.Add(SS.Index);
                 ListView_Uncheck.Items.Add(new ListViewItem(Meow.ToArray()));
                 ListView_Uncheck.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -254,12 +254,12 @@ namespace Attendance_Scanning
                 {
                     foreach (object OBJ in ListView_Uncheck.Items)
                     {
-                        if (OBJ.ToString().Contains(stu.FirstName))
+                        if (OBJ.ToString().Contains(stu.LastName))
                         {
                             List<String> Meow = new List<string>();
                             stu.AttandanceTime = DateTime.Now;
+                            Meow.Add(stu.LastName);
                             Meow.Add(stu.FirstName);
-                            Meow.Add(stu.SecondName);
                             Meow.Add(stu.Index);
                             Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
                             

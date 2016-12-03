@@ -60,7 +60,7 @@ namespace Attendance_Scanning
             {
                 if (Words == "<StudentName>")
                 {
-                    FinalReturner += student.SecondName + " " + student.FirstName;
+                    FinalReturner += student.FirstName + " " + student.LastName;
                 }
                 else if (Words == "<StudentLateTime>")
                 {
@@ -118,7 +118,7 @@ namespace Attendance_Scanning
                 List<SingleStudent> SSFull = new List<SingleStudent>();
                 SSFull.AddRange(CheckedStudents);
                 SSFull.AddRange(UncheckedStudents);
-                InitializeTheCSVFile(SSFull, ClassCode);
+                InitializeTheCSVFile(SSFull, ClassCode,FilePathAndName);
             }
             List<string> CsvFile = File.ReadAllLines(FilePathAndName).ToList();
             List<string> FirstRowOfColumns = CsvFile[0].Split(',').ToList();
@@ -137,17 +137,40 @@ namespace Attendance_Scanning
                 {
                     if (SSChecked.IsMe(LSS[2]))
                     {
-                        //LSS。末端+tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme)
-                        //LSS被合并
+                        LSS[columnToWrite] = TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime);
+                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS,",");
                         //lss被并入文件内
                     }
                 }
             }
         }
-
-        public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode)
+        /// <summary>
+        /// To initialize a csv file for future usage
+        /// </summary>
+        /// <param name="SSs">Students that are in this class</param>
+        /// <param name="ClassCode">Class code</param>
+        /// <param name="PathAndName">The path and file name for creating the file</param>
+        public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode,string PathAndName)
         {
+            List<string> Lines = new List<string>();
+            Lines.Add("Student Last Name,Student First Name,Student Number," + FromDateTimeToString(DateTime.Today));
+            foreach(SingleStudent ss in SSs)
+            {
+                Lines.Add(ss.LastName + "," + ss.FirstName + "," + ss.Index);
+            }
+            File.WriteAllLines(PathAndName, Lines, Encoding.Unicode);
+        }
 
+        public string LineCombiner(List<string> TheLine, string TheSpliter)
+        {
+            string returner = "";
+            foreach(string TheSplitted in TheLine)
+            {
+                returner += TheSplitted;
+                returner += TheSpliter;
+            }
+            returner.Remove(returner.Length - 1);
+            return returner;
         }
 
         public List<string> CourseCodeCollector(List<SingleStudent> StudentList)
@@ -184,19 +207,19 @@ namespace Attendance_Scanning
         /// Covert a datetime to a string for saving. 
         /// </summary>
         /// <param name="DT">DateTime that is in the Year-Month-Date form</param>
-        /// <returns>a string of date time splited by ','</returns>
+        /// <returns>a string of date time splited by '-'</returns>
         public string FromDateTimeToString(DateTime DT)
         {
-            return DT.Year + "," + DT.Month + "," + DT.Day;
+            return DT.Year + "-" + DT.Month + "-" + DT.Day;
         }
         /// <summary>
         /// Covert a string to a DateTime
         /// </summary>
-        /// <param name="SSS">Datetime String. using ',' to split year, month and days</param>
+        /// <param name="SSS">Datetime String. using '-' to split year, month and days</param>
         /// <returns>A datetime</returns>
         public DateTime FromStringToDateTime(String SSS)
         {
-            return new DateTime(int.Parse(SSS.Split(',')[0]), int.Parse(SSS.Split(',')[1]), int.Parse(SSS.Split(',')[2]));
+            return new DateTime(int.Parse(SSS.Split('-')[0]), int.Parse(SSS.Split('-')[1]), int.Parse(SSS.Split('-')[2]));
         }
     }
 }

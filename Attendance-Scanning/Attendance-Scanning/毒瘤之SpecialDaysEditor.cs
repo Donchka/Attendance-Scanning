@@ -23,7 +23,7 @@ namespace Attendance_Scanning
                 DateTime DT = DPPP.FromStringToDateTime(SSS);
                 List<string> Temp = new List<string>();
                 Temp.Add(DPPP.FromDateTimeToString(DT));
-                Temp.Add(SSS.Split(',')[3]);
+                Temp.Add(SSS.Split('-')[3]);
                 DateAndNoteListView.Items.Add(new ListViewItem(Temp.ToArray()));
                 DTList.Add(DT);
             }

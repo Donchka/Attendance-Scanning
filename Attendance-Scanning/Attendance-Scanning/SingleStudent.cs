@@ -9,9 +9,9 @@ namespace Attendance_Scanning
     public class SingleStudent
     {
         public String Index = "";
-        public String FirstName = "";
+        public String LastName = "";
         public List<string> CourseCodes;
-        public String SecondName = "";
+        public String FirstName = "";
         public String EmailAddress = "";
         public DateTime AttandanceTime = new DateTime();
         /// <summary>
@@ -25,8 +25,8 @@ namespace Attendance_Scanning
         public SingleStudent(String MyIndex, String MyFirstName, string MySecondName, string MyEmail, string MyCourseCode)
         {
             Index = MyIndex;
-            FirstName = MyFirstName;
-            SecondName = MySecondName;
+            LastName = MyFirstName;
+            FirstName = MySecondName;
             EmailAddress = MyEmail;
             CourseCodes = MyCourseCode.Split(' ').ToList();
         }
@@ -40,8 +40,8 @@ namespace Attendance_Scanning
         public SingleStudent(String MyIndex, String MyFirstName, string MySecondName, string MyEmail)
         {
             Index = MyIndex;
-            FirstName = MyFirstName;
-            SecondName = MySecondName;
+            LastName = MyFirstName;
+            FirstName = MySecondName;
             EmailAddress = MyEmail;
         }
         public bool IsMe(String ThyIndex)
