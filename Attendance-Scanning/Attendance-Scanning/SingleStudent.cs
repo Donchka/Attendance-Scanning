@@ -14,6 +14,7 @@ namespace Attendance_Scanning
         public String FirstName = "";
         public String EmailAddress = "";
         public DateTime AttandanceTime = new DateTime();
+        public String State = "";
         /// <summary>
         /// Real Type
         /// </summary>

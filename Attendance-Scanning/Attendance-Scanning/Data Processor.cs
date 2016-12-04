@@ -89,7 +89,7 @@ namespace Attendance_Scanning
         /// </summary>
         /// <param name="Data">file data</param>
         /// <returns>List of single students</returns>
-        public List<SingleStudent> CSVCovertor (string[] Data)
+        public List<SingleStudent> GetStudents (string[] Data)
         {
             List<SingleStudent> MultipleStudents = new List<SingleStudent>();
             List<string> RealData = Data.ToList();
@@ -104,7 +104,7 @@ namespace Attendance_Scanning
             foreach (string str in RealData)
             {
                 List<string> strList = str.Split(',').ToList();
-                SingleStudent ST = new SingleStudent(strList[3], strList[0], strList[1], strList[12]/*,strList[14]*/);
+                SingleStudent ST = new SingleStudent(strList[2], strList[0], strList[1], strList[3]);
                 MultipleStudents.Add(ST);
             }
             return MultipleStudents;
@@ -118,7 +118,7 @@ namespace Attendance_Scanning
         /// <param name="FilePathAndName">From the FileLoadDialog.FileName</param>
         /// <param name="Date">Date today, or any given day</param>
         /// <param name="ClassCode">The class code the teacher is in</param>
-        public void StudentsCovetor(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date,string ClassCode)
+        public void SaveDailyFiles(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date,string ClassCode)
         {
             int columnToWrite;
             if (!File.Exists(FilePathAndName))
@@ -130,23 +130,43 @@ namespace Attendance_Scanning
             }
             List<string> CsvFile = File.ReadAllLines(FilePathAndName).ToList();
             List<string> FirstRowOfColumns = CsvFile[0].Split(',').ToList();
-            columnToWrite = FirstRowOfColumns.Count;
-            for (int i = 0; i < FirstRowOfColumns.Count - 1; ++i)
+            columnToWrite = FirstRowOfColumns.Count;//Do not need -1
+            CsvFile[0] += "," + FromYYYYMMDDToString(Date);
+            for (int i = 1; i < FirstRowOfColumns.Count - 1; ++i)
             {
                 if (FirstRowOfColumns[i].Contains((FromYYYYMMDDToString(Date))))
                 {
                     columnToWrite = i;
                 }
             }
-            foreach(string line in CsvFile)
+            bool DoAddAAolumn = false;
+            if(columnToWrite == FirstRowOfColumns.Count)
+            {
+                DoAddAAolumn = true;
+            }
+            foreach(string line in CsvFile.ToArray())
             {
                 List<string> LSS = line.Split(',').ToList();
                 foreach(SingleStudent SSChecked in CheckedStudents)
                 {
                     if (SSChecked.IsMe(LSS[2]))
                     {
-                        LSS[columnToWrite] = TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime);
-                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS,",");
+                        if (DoAddAAolumn)
+                            LSS.Add(TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime));
+                        else
+                            LSS[columnToWrite] = TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime);
+                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ",");
+                    }
+                }
+                foreach (SingleStudent SSUncke in UncheckedStudents)
+                {
+                    if (SSUncke.IsMe(LSS[2]))
+                    {
+                        if (DoAddAAolumn)
+                            LSS.Add(TK.perform(DateTime.Now, SSUncke, SSUncke.AttandanceTime));
+                        else
+                            LSS[columnToWrite] = TK.perform(DateTime.Now, SSUncke, SSUncke.AttandanceTime);
+                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ",");
                     }
                 }
             }
@@ -161,10 +181,10 @@ namespace Attendance_Scanning
         public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode,string PathAndName)
         {
             List<string> Lines = new List<string>();
-            Lines.Add("Student Last Name,Student First Name,Student Number," + FromYYYYMMDDToString(DateTime.Today));
+            Lines.Add("Student Last Name,Student First Name,Student Number,Guadian Email," + FromYYYYMMDDToString(DateTime.Today));
             foreach(SingleStudent ss in SSs)
             {
-                Lines.Add(ss.LastName + "," + ss.FirstName + "," + ss.Index);
+                Lines.Add(ss.LastName + "," + ss.FirstName + "," + ss.Index + "," + ss.EmailAddress);
             }
             File.WriteAllLines(PathAndName, Lines, Encoding.Unicode);
         }

@@ -1,8 +1,8 @@
-Last Name,First Name,Student Number,Barcode Number,Date of Birth,Gender,Home Form,Program,Code Name,Phone #1,Phone #2,Student e-mail,Parent e-mail,Notes
-McGregor,Connor,2357665,26000923576659,20010208,M,8A,,Zoltan,123-555-1234,,,1wangcha2@hdsb.ca,
-Ali,Muhammad,2452563,26000924525636,20010619,F,8A,,Foxy,,,,1wangcha2@hdsb.ca,
-Henry,Lisa,2567393,26000925673932,20010917,F,8A,,Ace,,,,1wangcha2@hdsb.ca,
-Peterson,Bob,2364314,26000923643148,20010313,M,8A,,Buddy,,,,1wangcha2@hdsb.ca,
-Drake,Just,4768321,26000947683215,20010530,M,8B,,Slack,,,,1wangcha2@hdsb.ca,
-Trump,Donald,8939371,26000989393712,20010301,M,8A,,Star,,,,1wangcha2@hdsb.ca,
-Tesora,Sylvia,5423451,26000954234518,20010623,F,8C,,Skipper,,,,1wangcha2@hdsb.ca,
+Last Name,First Name,Student Number,Parent e-mail,Notes
+McGregor,Connor,2357665,1wangcha2@hdsb.ca,
+Ali,Muhammad,2452563,1wangcha2@hdsb.ca,
+Henry,Lisa,2567393,1wangcha2@hdsb.ca,
+Peterson,Bob,2364314,1wangcha2@hdsb.ca,
+Drake,Just,4768321,1wangcha2@hdsb.ca,
+Trump,Donald,8939371,1wangcha2@hdsb.ca,
+Tesora,Sylvia,5423451,1wangcha2@hdsb.ca,
