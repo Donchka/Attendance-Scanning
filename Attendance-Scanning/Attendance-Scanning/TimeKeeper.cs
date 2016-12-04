@@ -19,6 +19,8 @@ namespace Attendance_Scanning
 
         int period;
         TimeSpan diff;
+        TimeSpan lateInterval;
+        
 
 
         public void updateTime(DateTime Cust)
@@ -63,7 +65,12 @@ namespace Attendance_Scanning
                 }
                 else if(d>=Period_Times[i] && d < Period_Times[i + 1])
                 {
-                    period = i;
+                    lateInterval = Period_Times[i + 1] - d;
+
+                    if (lateInterval.Hours == 0 && lateInterval.Minutes <= 5)
+                        period = i + 1;
+                    else
+                        period = i;
                 }
             }
         }
@@ -87,6 +94,10 @@ namespace Attendance_Scanning
 
                 Console.WriteLine(SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
                 //zuosi = SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day;               
+            }
+            else if (TimeIN < Period_Times[period])
+            {
+                zuosi = "On Time";
             }
             return zuosi;
         }
