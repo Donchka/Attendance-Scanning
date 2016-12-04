@@ -110,6 +110,14 @@ namespace Attendance_Scanning
             return MultipleStudents;
         }
 
+        /// <summary>
+        /// To save a file of daily records. Available for first creation. Available for First Name, Last Name, Student ID and daily records. 
+        /// </summary>
+        /// <param name="CheckedStudents">For those who has been checked, include late</param>
+        /// <param name="UncheckedStudents">For those who has been unchecked, include absent</param>
+        /// <param name="FilePathAndName">From the FileLoadDialog.FileName</param>
+        /// <param name="Date">Date today, or any given day</param>
+        /// <param name="ClassCode">The class code the teacher is in</param>
         public void StudentsCovetor(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date,string ClassCode)
         {
             int columnToWrite;

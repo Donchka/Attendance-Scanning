@@ -90,3 +90,4 @@ C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendanc
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TimeSetter.resources
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\UnityEngine.dll
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\UnityEngine.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.ClassCodeSelector.resources

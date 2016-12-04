@@ -27,6 +27,7 @@ namespace Attendance_Scanning
         public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
         public string classCode = "";
         public bool LoadedStudentDataaaaa = false;
+        public bool Saved = true;
 
         public Main()
         {
@@ -35,7 +36,7 @@ namespace Attendance_Scanning
             TeacherManagementPanel.Hide();
             StudentListPanel.Hide();
             BarCodeInputLabel.Hide();
-            this.Height = 80;
+            this.Size = new Size(this.Width,80);
         }
 
         /// <summary>
@@ -120,15 +121,45 @@ namespace Attendance_Scanning
 
         private void FileOpener_FileOk(object sender, CancelEventArgs e)
         {
-            if (FileOpener.SafeFileName.Split('_')[0].Length != 6)
+            string ClassCodeTempelate;
+            if(!Saved)
             {
-                MessageBox.Show(FileOpener.SafeFileName.Split('_')[0]);
-                MessageBox.Show("Not a valid data file! Please check the file name so it contains the class code!");
-                return;
+                DialogResult DR = MessageBox.Show("You did not save the attendance data! would you like to save it now?", "Not saved!", MessageBoxButtons.YesNoCancel);
+                //If yes, create new one; if no, go on; if cancel, return.
+                if (DR == DialogResult.Yes)
+                {
+                    SaveData_Click(new object(), new EventArgs());
+                }
+                else if (DR == DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             string[] Data = File.ReadAllLines((FileOpener.FileName));
+            if (FileOpener.SafeFileName.Split('_')[0].Length != 6)
+            {
+                DialogResult DR = MessageBox.Show("Cannot be identified as a single class file! Would you like to create a new single class file from this one?", "Loading New File", MessageBoxButtons.YesNoCancel);
+                //If yes, create new one; if no, go on; if cancel, return.
+                if (DR == DialogResult.Yes)
+                {
+                    ClassCodeSelector CCS = new ClassCodeSelector(Data);
+                    if (CCS.ShowDialog() == DialogResult.OK)
+                    {
+                        ///File name as class code is nintialized by DP.initialize thingy
+                        ///open that file 
+                        ///return;
+                    }
+                }
+                else if(DR == DialogResult.Cancel)
+                {
+                    return;
+                }
+                
+            }
             ListView_Uncheck.ShowGroups = true;
             //ListView_Uncheck.
+            NotCheckedSingleStudents.Clear();
+            CheckedSingleStudents.Clear();
             foreach (SingleStudent SS in DP.CSVCovertor(Data))
             {
 
@@ -146,6 +177,7 @@ namespace Attendance_Scanning
             BarCodeInputLabel.Show();
             this.Size = new Size(820, 574);
             LoadedStudentDataaaaa = true;
+            Saved = false;
             Box_StudentIndex.Focus();
 
             //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
@@ -211,7 +243,7 @@ namespace Attendance_Scanning
         {
             if (e.Cancelled)
             {
-                MessageBox.Show("send cancelled");
+                MessageBox.Show("Sending progress cancelled");
             }
             else if (e.Error != null)
             {

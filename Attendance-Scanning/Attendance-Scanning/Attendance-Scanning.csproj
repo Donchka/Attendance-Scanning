@@ -91,6 +91,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassCodeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCodeSelector.Designer.cs">
+      <DependentUpon>ClassCodeSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Course Code Selector Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
       <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
     </Compile>
     <Compile Include="TimeKeeper.cs" />
+    <EmbeddedResource Include="ClassCodeSelector.resx">
+      <DependentUpon>ClassCodeSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Course Code Selector Dialog.resx">
       <DependentUpon>Course Code Selector Dialog.cs</DependentUpon>
     </EmbeddedResource>
