@@ -21,7 +21,7 @@ namespace Attendance_Scanning
             }
             else
             {
-                SetTimeButton.Text = "Set this as auto absent timer";
+                SetTimeButton.Text = "Set this as the length of determining \" On Time\"";
             }
         }
 

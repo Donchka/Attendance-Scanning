@@ -107,7 +107,9 @@ namespace Attendance_Scanning
                 {
                     return;
                 }
-                ShouldBeTheFileName = FileOpener.SafeFileName;
+                else
+                    ShouldBeTheFileName = FileOpener.SafeFileName;
+                
             }
             else
             {

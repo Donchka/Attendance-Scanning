@@ -104,7 +104,7 @@ namespace Attendance_Scanning
             foreach (string str in RealData)
             {
                 List<string> strList = str.Split(',').ToList();
-                SingleStudent ST = new SingleStudent(strList[2], strList[0], strList[1], strList[3]);
+                SingleStudent ST = new SingleStudent(strList[2].Trim(), strList[0], strList[1], strList[3].Trim());
                 MultipleStudents.Add(ST);
             }
             return MultipleStudents;
@@ -155,7 +155,7 @@ namespace Attendance_Scanning
                             LSS.Add(TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime));
                         else
                             LSS[columnToWrite] = TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime);
-                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ",");
+                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ", ");
                     }
                 }
                 foreach (SingleStudent SSUncke in UncheckedStudents)
@@ -166,11 +166,11 @@ namespace Attendance_Scanning
                             LSS.Add(TK.perform(DateTime.Now, SSUncke, SSUncke.AttandanceTime));
                         else
                             LSS[columnToWrite] = TK.perform(DateTime.Now, SSUncke, SSUncke.AttandanceTime);
-                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ",");
+                        CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ", ");
                     }
                 }
             }
-            File.WriteAllLines(FilePathAndName, CsvFile,Encoding.Unicode);
+            File.WriteAllLines(FilePathAndName, CsvFile,Encoding.UTF8);
         }
         /// <summary>
         /// To initialize a csv file for future usage
@@ -186,7 +186,7 @@ namespace Attendance_Scanning
             {
                 Lines.Add(ss.LastName + "," + ss.FirstName + "," + ss.Index + "," + ss.EmailAddress);
             }
-            File.WriteAllLines(PathAndName, Lines, Encoding.Unicode);
+            File.WriteAllLines(PathAndName, Lines, Encoding.UTF8);
         }
 
         public string LineCombiner(List<string> TheLine, string TheSpliter)
@@ -197,7 +197,7 @@ namespace Attendance_Scanning
                 returner += TheSplitted;
                 returner += TheSpliter;
             }
-            returner.Remove(returner.Length - 1);
+            returner.Remove(returner.Length - TheSpliter.Length);
             return returner;
         }
 
@@ -245,8 +245,9 @@ namespace Attendance_Scanning
         /// </summary>
         /// <param name="SSS">Datetime String. using '-' to split year, month and days</param>
         /// <returns>A datetime</returns>
-        public DateTime FromStringToYYYYMMDD(String SSS)
+        public DateTime FromStringToYYYYMMDD(String SSSn)
         {
+            String SSS = SSSn.Trim();
             return new DateTime(int.Parse(SSS.Split('-')[0]), int.Parse(SSS.Split('-')[1]), int.Parse(SSS.Split('-')[2]));
         }
     }
