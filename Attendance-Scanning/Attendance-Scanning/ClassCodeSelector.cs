@@ -15,6 +15,8 @@ namespace Attendance_Scanning
         List<string> ThyFile;
         string FinalReturningClassCode;
         bool Changing = false;
+        int WhichOne = 7;
+        public List<SingleStudent> stustu;
         /// <summary>
         /// Initialize the class code selector with the file
         /// </summary>
@@ -29,7 +31,7 @@ namespace Attendance_Scanning
 
         void NoIWouldLikeSpike()
         {
-            int WhichOne = 7;
+            WhichOne = 7;
             ThyFile.RemoveAt(0);
             if (ThyFile[0].Split(',')[7].Length < 2)
             {
@@ -41,6 +43,7 @@ namespace Attendance_Scanning
                 if (!ClassCodeComboBox.Items.Contains(Nope))
                 {
                     ClassCodeComboBox.Items.Add(Nope);
+                    ClassCodeComboBox.AutoCompleteCustomSource.Add(Nope);
                 }
             }
         }
@@ -61,6 +64,29 @@ namespace Attendance_Scanning
             {
                 Changing = true;
                 ClassCodeComboBox.Text = "";
+            }
+        }
+
+        private void Yes_Click(object sender, EventArgs e)
+        {
+            if(!ClassCodeComboBox.Text.Contains("select"))
+            {
+                stustu = new List<SingleStudent>();
+                foreach (string SingleLine in ThyFile)
+                {
+                    string[] TheLine = SingleLine.Split(',');
+                    if (TheLine[WhichOne] == ClassCodeComboBox.Text)
+                    {
+                        SingleStudent SS = new SingleStudent(TheLine[2], TheLine[1], TheLine[0], TheLine[11]);
+                        stustu.Add(SS);
+                    }
+                }
+                if(stustu.Count <= 0)
+                {
+                    MessageBox.Show("No student has this course!");
+                    return;
+                }
+                this.DialogResult = DialogResult.OK;
             }
         }
     }

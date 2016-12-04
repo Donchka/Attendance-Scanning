@@ -133,7 +133,7 @@ namespace Attendance_Scanning
             columnToWrite = FirstRowOfColumns.Count;
             for (int i = 0; i < FirstRowOfColumns.Count - 1; ++i)
             {
-                if (FirstRowOfColumns[i].Contains((FromDateTimeToString(Date))))
+                if (FirstRowOfColumns[i].Contains((FromYYYYMMDDToString(Date))))
                 {
                     columnToWrite = i;
                 }
@@ -147,10 +147,10 @@ namespace Attendance_Scanning
                     {
                         LSS[columnToWrite] = TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime);
                         CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS,",");
-                        //lss被并入文件内
                     }
                 }
             }
+            File.WriteAllLines(FilePathAndName, CsvFile,Encoding.Unicode);
         }
         /// <summary>
         /// To initialize a csv file for future usage
@@ -161,7 +161,7 @@ namespace Attendance_Scanning
         public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode,string PathAndName)
         {
             List<string> Lines = new List<string>();
-            Lines.Add("Student Last Name,Student First Name,Student Number," + FromDateTimeToString(DateTime.Today));
+            Lines.Add("Student Last Name,Student First Name,Student Number," + FromYYYYMMDDToString(DateTime.Today));
             foreach(SingleStudent ss in SSs)
             {
                 Lines.Add(ss.LastName + "," + ss.FirstName + "," + ss.Index);
@@ -216,7 +216,7 @@ namespace Attendance_Scanning
         /// </summary>
         /// <param name="DT">DateTime that is in the Year-Month-Date form</param>
         /// <returns>a string of date time splited by '-'</returns>
-        public string FromDateTimeToString(DateTime DT)
+        public string FromYYYYMMDDToString(DateTime DT)
         {
             return DT.Year + "-" + DT.Month + "-" + DT.Day;
         }
@@ -225,7 +225,7 @@ namespace Attendance_Scanning
         /// </summary>
         /// <param name="SSS">Datetime String. using '-' to split year, month and days</param>
         /// <returns>A datetime</returns>
-        public DateTime FromStringToDateTime(String SSS)
+        public DateTime FromStringToYYYYMMDD(String SSS)
         {
             return new DateTime(int.Parse(SSS.Split('-')[0]), int.Parse(SSS.Split('-')[1]), int.Parse(SSS.Split('-')[2]));
         }

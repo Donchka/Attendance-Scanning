@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
+using System.Windows.Forms;
 using UnityEngine;
 
 namespace Attendance_Scanning
@@ -36,7 +33,7 @@ namespace Attendance_Scanning
             TeacherManagementPanel.Hide();
             StudentListPanel.Hide();
             BarCodeInputLabel.Hide();
-            this.Size = new Size(this.Width,80);
+            this.Size = new Size(this.Width, 80);
         }
 
         /// <summary>
@@ -122,7 +119,7 @@ namespace Attendance_Scanning
         private void FileOpener_FileOk(object sender, CancelEventArgs e)
         {
             string ClassCodeTempelate;
-            if(!Saved)
+            if (!Saved)
             {
                 DialogResult DR = MessageBox.Show("You did not save the attendance data! would you like to save it now?", "Not saved!", MessageBoxButtons.YesNoCancel);
                 //If yes, create new one; if no, go on; if cancel, return.
@@ -135,8 +132,17 @@ namespace Attendance_Scanning
                     return;
                 }
             }
-            string[] Data = File.ReadAllLines((FileOpener.FileName));
-            if (FileOpener.SafeFileName.Split('_')[0].Length != 6)
+            string[] Data;
+            try
+            {
+                Data = File.ReadAllLines((FileOpener.FileName));
+            }
+            catch
+            {
+                MessageBox.Show("Cannot Open a File while it has been opened by another program!");
+                return;
+            }
+            if (FileOpener.SafeFileName.Split('_')[0].Length != 9)
             {
                 DialogResult DR = MessageBox.Show("Cannot be identified as a single class file! Would you like to create a new single class file from this one?", "Loading New File", MessageBoxButtons.YesNoCancel);
                 //If yes, create new one; if no, go on; if cancel, return.
@@ -145,16 +151,16 @@ namespace Attendance_Scanning
                     ClassCodeSelector CCS = new ClassCodeSelector(Data);
                     if (CCS.ShowDialog() == DialogResult.OK)
                     {
-                        ///File name as class code is nintialized by DP.initialize thingy
-                        ///open that file 
-                        ///return;
+                        ClassCodeTempelate = CCS.ClassCodeComboBox.Text;
+                        DP.InitializeTheCSVFile(CCS.stustu, ClassCodeTempelate, FileOpener.FileName.Remove(FileOpener.FileName.Length - FileOpener.SafeFileName.Length - 1, FileOpener.SafeFileName.Length) + ClassCodeTempelate + "_ClassFile.csv");
+                        Data = File.ReadAllLines(FileOpener.FileName.Remove(FileOpener.FileName.Length - FileOpener.SafeFileName.Length - 1, FileOpener.SafeFileName.Length) + ClassCodeTempelate + "_ClassFile.csv");
                     }
                 }
-                else if(DR == DialogResult.Cancel)
+                else if (DR == DialogResult.Cancel)
                 {
                     return;
                 }
-                
+
             }
             ListView_Uncheck.ShowGroups = true;
             //ListView_Uncheck.
@@ -162,7 +168,6 @@ namespace Attendance_Scanning
             CheckedSingleStudents.Clear();
             foreach (SingleStudent SS in DP.CSVCovertor(Data))
             {
-
                 //ListView_Uncheck.Items.Add(SS.LastName + " " + SS.FirstName);
                 NotCheckedSingleStudents.Add(SS);
                 List<String> Meow = new List<string>();
@@ -178,12 +183,12 @@ namespace Attendance_Scanning
             this.Size = new Size(820, 574);
             LoadedStudentDataaaaa = true;
             Saved = false;
+            StatueLabel.Text = "File Loaded!";
             Box_StudentIndex.Focus();
 
             //Course_Code_Selector_Dialog CCSD = new Course_Code_Selector_Dialog();
             //if(CCSD.ShowDialog() == DialogResult.OK)
             //{
-
             //}
         }
 
@@ -294,7 +299,7 @@ namespace Attendance_Scanning
                             Meow.Add(stu.FirstName);
                             Meow.Add(stu.Index);
                             Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
-                            
+                            StatueLabel.Text = stu.FirstName + " " + stu.LastName + "\r\nhas been checked at\r\n" + DateTime.Now;
                             //Meow.Add(DateTime.Now.TimeOfDay.ToString("00:00"));
                             CheckedListView.Items.Add(new ListViewItem(Meow.ToArray()));
                             CheckedSingleStudents.Add(stu);
@@ -313,9 +318,10 @@ namespace Attendance_Scanning
             int hhh;
             int mmm;
             DateTime DTNOW = DateTime.Now;
-            if (int.TryParse(StartHour.Text, out hhh) && int.TryParse(StartMinute.Text, out mmm)) {
-                CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime(DTNOW.Year, DTNOW.Month, DTNOW.Day, hhh, mmm,0);
-           }
+            if (int.TryParse(StartHour.Text, out hhh) && int.TryParse(StartMinute.Text, out mmm))
+            {
+                CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime(DTNOW.Year, DTNOW.Month, DTNOW.Day, hhh, mmm, 0);
+            }
 
         }
 
@@ -348,7 +354,7 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void SaveData_Click(object sender, EventArgs e)
         {
-            FileSaver.FileName = classCode +".csv";
+            FileSaver.FileName = classCode + ".csv";
             FileSaver.ShowDialog();
         }
         /// <summary>
@@ -359,6 +365,30 @@ namespace Attendance_Scanning
         private void OnSaving(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void editLateTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimeSetter TSSetStart = new TimeSetter(false);
+            if (TSSetStart.ShowDialog() == DialogResult.OK)
+            {
+                int Min = (int)TSSetStart.NUD_Min.Value;
+                int Hrs = (int)TSSetStart.NUD_Hrs.Value;
+                CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Hrs, Min, 0);
+            }
+        }
+
+        void CheckedStudentsTimeUpdate()
+        {
+            foreach (ListViewItem LVI in CheckedListView.Items)
+            {
+
+            }
+        }
+
+        private void FileSaver_FileOk(object sender, CancelEventArgs e)
+        {
+            StatueLabel.Text = "File Saved!";
         }
     }
 }

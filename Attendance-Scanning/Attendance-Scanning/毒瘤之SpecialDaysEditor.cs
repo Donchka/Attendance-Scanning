@@ -20,9 +20,9 @@ namespace Attendance_Scanning
             DPPPPPP = DPPP;
             foreach (string SSS in Properties.Settings.Default.SpecialDateSetting)
             {
-                DateTime DT = DPPP.FromStringToDateTime(SSS);
+                DateTime DT = DPPP.FromStringToYYYYMMDD(SSS);
                 List<string> Temp = new List<string>();
-                Temp.Add(DPPP.FromDateTimeToString(DT));
+                Temp.Add(DPPP.FromYYYYMMDDToString(DT));
                 Temp.Add(SSS.Split('-')[3]);
                 DateAndNoteListView.Items.Add(new ListViewItem(Temp.ToArray()));
                 DTList.Add(DT);
@@ -37,7 +37,7 @@ namespace Attendance_Scanning
                 {
                     foreach (ListViewItem LVI in DateAndNoteListView.Items)
                     {
-                        if (LVI.SubItems[0].ToString().Contains(DPPPPPP.FromDateTimeToString(DTtttt)))
+                        if (LVI.SubItems[0].ToString().Contains(DPPPPPP.FromYYYYMMDDToString(DTtttt)))
                         {
                             DateAndNoteListView.Items.Remove(LVI);
                             ///int xxx = DTList.

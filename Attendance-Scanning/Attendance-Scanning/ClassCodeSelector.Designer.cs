@@ -64,6 +64,7 @@
             this.Yes.TabIndex = 0;
             this.Yes.Text = "Yes";
             this.Yes.UseVisualStyleBackColor = true;
+            this.Yes.Click += new System.EventHandler(this.Yes_Click);
             // 
             // No
             // 
@@ -90,7 +91,8 @@
             // 
             // ClassCodeComboBox
             // 
-            this.ClassCodeComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ClassCodeComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.ClassCodeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.ClassCodeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClassCodeComboBox.FormattingEnabled = true;
             this.ClassCodeComboBox.Location = new System.Drawing.Point(285, 3);
@@ -120,6 +122,6 @@
         private System.Windows.Forms.Button Yes;
         private System.Windows.Forms.Button No;
         private System.Windows.Forms.Label LAAbe;
-        private System.Windows.Forms.ComboBox ClassCodeComboBox;
+        public System.Windows.Forms.ComboBox ClassCodeComboBox;
     }
 }
