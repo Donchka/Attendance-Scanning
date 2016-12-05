@@ -14,13 +14,15 @@ namespace Attendance_Scanning
     {
 
         public DateTime[] Period_Times;
+        public DateTime[] Period_Ring_Times;
         //this will call the functions below
         //call TimeBracket
 
         int period;
         TimeSpan diff;
-        TimeSpan lateInterval;
-        
+        //TimeSpan lateInterval;
+        //TimeSpan temp;
+
 
 
         public void updateTime(DateTime Cust)
@@ -30,12 +32,21 @@ namespace Attendance_Scanning
             int dayNow = DateTime.Now.Day;
 
             Period_Times = new DateTime[] {
-        new DateTime (yearNow, monthNow, dayNow, 8, 10, 0),//8:10
+        new DateTime (yearNow, monthNow, dayNow, 8, 13, 0),//8:10
         new DateTime (yearNow, monthNow, dayNow, 9, 30, 0),//9:30
-        new DateTime (yearNow, monthNow, dayNow, 10, 50, 0),//10:50
-        new DateTime (yearNow, monthNow, dayNow, 12, 5, 0),//12:05
-        new DateTime (yearNow, monthNow, dayNow, 13, 20, 0),//13:20    
+        new DateTime (yearNow, monthNow, dayNow, 10, 47, 0),//10:50
+        new DateTime (yearNow, monthNow, dayNow, 12, 4, 0),//12:05
+        new DateTime (yearNow, monthNow, dayNow, 13, 21, 0),//13:20    
         };
+
+            Period_Ring_Times = new DateTime[]
+            {
+        new DateTime (yearNow, monthNow, dayNow, 8, 00, 0),//8:10
+        new DateTime (yearNow, monthNow, dayNow, 9, 27, 0),//9:30
+        new DateTime (yearNow, monthNow, dayNow, 10, 44, 0),//10:50
+        new DateTime (yearNow, monthNow, dayNow, 12, 1, 0),//12:05
+        new DateTime (yearNow, monthNow, dayNow, 13, 18, 0),//13:20   
+            };
 
             if (Cust!=new DateTime())
             {
@@ -60,21 +71,30 @@ namespace Attendance_Scanning
             
             for(int i = 0; i < 5; i++)
             {
-                if (d >= Period_Times[4])
+                if (d >= Period_Ring_Times[4])
                 {
                     period = 4;
-                }
-                else if(d>=Period_Times[i] && d < Period_Times[i + 1])
-                {
-                    lateInterval = Period_Times[i+1] - d;
-                    Console.WriteLine("iya" + i);
-                    Console.WriteLine(Period_Times[i + 1]);
+                    //Console.WriteLine("iya" + i);
+                    //Console.WriteLine(Period_Times[i + 1]);
                     Console.WriteLine(d);
-                    Console.WriteLine(lateInterval.ToString());
-                    if (lateInterval.Hours == 0 && lateInterval.Minutes <= 5)
-                        period = i + 1;
-                    else
-                        period = i;
+                }
+                else if(d>=Period_Ring_Times[i] && d < Period_Ring_Times[i + 1])
+                {
+
+                    //lateInterval = d - Period_Ring_Times[i+1];
+                    //temp = Period_Times[i+1] - Period_Ring_Times[i+1];
+                    //Console.WriteLine("temp" + temp.ToString());
+                    //Console.WriteLine("iya" + i);
+                    //Console.WriteLine(Period_Times[i + 1]);
+                    Console.WriteLine(d);
+                    //Console.WriteLine(lateInterval.ToString());
+                    //if (lateInterval.Hours == 0 && lateInterval.Minutes <= (temp.Minutes))
+                    //    period = i + 1;
+                    //else
+                    //    period = i;
+
+                    period = i;
+
                     Console.WriteLine("period" + period);
 
                 }
@@ -115,7 +135,6 @@ namespace Attendance_Scanning
         public string perform(DateTime CheckInTime, SingleStudent TheStu,DateTime CustomTime)
         {
             string stuMess;
-
             updateTime(CustomTime);
             identifyPeriod(CheckInTime);
             StopWatch(CheckInTime);
