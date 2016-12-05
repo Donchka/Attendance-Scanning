@@ -37,7 +37,7 @@ namespace Attendance_Scanning
         new DateTime (yearNow, monthNow, dayNow, 13, 20, 0),//13:20    
         };
 
-            if (Cust!=null)
+            if (Cust!=new DateTime())
             {
                 identifyPeriod(Cust);
                 Period_Times[period] = Cust;
@@ -49,8 +49,9 @@ namespace Attendance_Scanning
             //this starts a timer after the class begins and tells TimeBracket how much time the student was late of absent
 
             //TimeLimit will check with these times and TimeBracket will send the data to TimeLog
-           
+
             diff = Dt - Period_Times[period];
+
             return diff;
         }
 
@@ -65,12 +66,17 @@ namespace Attendance_Scanning
                 }
                 else if(d>=Period_Times[i] && d < Period_Times[i + 1])
                 {
-                    lateInterval = Period_Times[i + 1] - d;
-
+                    lateInterval = Period_Times[i+1] - d;
+                    Console.WriteLine("iya" + i);
+                    Console.WriteLine(Period_Times[i + 1]);
+                    Console.WriteLine(d);
+                    Console.WriteLine(lateInterval.ToString());
                     if (lateInterval.Hours == 0 && lateInterval.Minutes <= 5)
                         period = i + 1;
                     else
                         period = i;
+                    Console.WriteLine("period" + period);
+
                 }
             }
         }
@@ -85,14 +91,14 @@ namespace Attendance_Scanning
 
             if (TimeIN > Period_Times[period])
             {
-                Console.WriteLine(SS.LastName + " is late for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes");
+                //Console.WriteLine(SS.LastName + " is late for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes");
                 //zuosi = SS.LastName + " is late for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes";
                 zuosi = "Late at period " + (period + 1) + " : " + diff.Hours + " h " + diff.Minutes + " m";
             }
             else if ((TimeIN > Period_Times[period] && result == 1) || (TimeIN > Period_Times[period] && result == 0))
             {
 
-                Console.WriteLine(SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
+                //Console.WriteLine(SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
                 //zuosi = SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day;               
             }
             else if (TimeIN < Period_Times[period])
