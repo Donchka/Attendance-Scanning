@@ -54,7 +54,7 @@ namespace Attendance_Scanning
         /// <param name="student">Student's data</param>
         /// <param name="NeedToBeReplaced"></param>
         /// <returns>The string of mail that has been replaced</returns>
-        public string MailReplacer(DateTime time,String LateData , SingleStudent student,String NeedToBeReplaced)
+        public string MailReplacer(DateTime time, String LateData, SingleStudent student, String NeedToBeReplaced)
         {
             string FinalReturner = "";
             foreach (string Words in NeedToBeReplaced.Split(' '))
@@ -90,13 +90,13 @@ namespace Attendance_Scanning
         /// </summary>
         /// <param name="Data">file data</param>
         /// <returns>List of single students</returns>
-        public List<SingleStudent> GetStudents (string[] Data)
+        public List<SingleStudent> GetStudents(string[] Data)
         {
             List<SingleStudent> MultipleStudents = new List<SingleStudent>();
             List<string> RealData = Data.ToList();
-            foreach(string inini in RealData)
+            foreach (string inini in RealData)
             {
-                if(inini.Contains("Last Name"))
+                if (inini.Contains("Last Name"))
                 {
                     RealData.Remove(inini);
                     break;
@@ -119,7 +119,7 @@ namespace Attendance_Scanning
         /// <param name="FilePathAndName">From the FileLoadDialog.FileName</param>
         /// <param name="Date">Date today, or any given day</param>
         /// <param name="ClassCode">The class code the teacher is in</param>
-        public void SaveDailyFiles(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date,string ClassCode,DateTime CustomTimmmmmmmmmme)
+        public void SaveDailyFiles(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date, string ClassCode, DateTime CustomTimmmmmmmmmme)
         {
             int columnToWrite;
             if (!File.Exists(FilePathAndName))
@@ -127,37 +127,46 @@ namespace Attendance_Scanning
                 List<SingleStudent> SSFull = new List<SingleStudent>();
                 SSFull.AddRange(CheckedStudents);
                 SSFull.AddRange(UncheckedStudents);
-                InitializeTheCSVFile(SSFull, ClassCode,FilePathAndName);
+                InitializeTheCSVFile(SSFull, ClassCode, FilePathAndName);
             }
             List<string> CsvFile = File.ReadAllLines(FilePathAndName).ToList();
             List<string> FirstRowOfColumns = CsvFile[0].Split(',').ToList();
             columnToWrite = FirstRowOfColumns.Count;//Do not need -1
-            
+
             for (int i = 0; i < FirstRowOfColumns.Count; ++i)
             {
                 if (FirstRowOfColumns[i].Contains((FromYYYYMMDDToString(Date))))
                 {
-                    MessageBox.Show(FromYYYYMMDDToString(Date));
+
                     columnToWrite = i;
                 }
             }
             bool DoAddAAolumn = false;
-            if(columnToWrite == FirstRowOfColumns.Count)
+            if (columnToWrite == FirstRowOfColumns.Count)
             {
                 CsvFile[0] += ", " + FromYYYYMMDDToString(Date);
-                DoAddAAolumn = true;
+                //DoAddAAolumn = true;
             }
-            foreach(string line in CsvFile.ToArray())
+            foreach (string line in CsvFile.ToArray())
             {
                 List<string> LSS = line.Split(',').ToList();
-                foreach(SingleStudent SSChecked in CheckedStudents)
+                foreach (SingleStudent SSChecked in CheckedStudents)
                 {
                     if (SSChecked.IsMe(LSS[2]))
                     {
-                        if (DoAddAAolumn)
+                        if (DoAddAAolumn)//Actually will never be used
                             LSS.Add(TK.perform(SSChecked.AttandanceTime, SSChecked, CustomTimmmmmmmmmme));
                         else
-                            LSS[columnToWrite] = TK.perform(SSChecked.AttandanceTime, SSChecked, CustomTimmmmmmmmmme);
+                        {
+                            try
+                            {
+                                LSS[columnToWrite] = TK.perform(SSChecked.AttandanceTime, SSChecked, CustomTimmmmmmmmmme);
+                            }
+                            catch
+                            {
+                                LSS.Add(TK.perform(SSChecked.AttandanceTime, SSChecked, CustomTimmmmmmmmmme));
+                            }
+                        }
                         CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ", ");
                     }
                 }
@@ -165,15 +174,25 @@ namespace Attendance_Scanning
                 {
                     if (SSUncke.IsMe(LSS[2]))
                     {
-                        if (DoAddAAolumn)
+                        if (DoAddAAolumn)//Actually will never be used
                             LSS.Add(SSUncke.State);
                         else
-                            LSS[columnToWrite] = SSUncke.State;
+                        {
+                            try
+                            {
+                                LSS[columnToWrite] = SSUncke.State;
+                            }
+                            catch
+                            {
+                                LSS.Add(SSUncke.State);
+                            }
+                        }
                         CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ", ");
+
                     }
                 }
             }
-            File.WriteAllLines(FilePathAndName, CsvFile,Encoding.UTF8);
+            File.WriteAllLines(FilePathAndName, CsvFile, Encoding.UTF8);
         }
         /// <summary>
         /// To initialize a csv file for future usage
@@ -181,11 +200,11 @@ namespace Attendance_Scanning
         /// <param name="SSs">Students that are in this class</param>
         /// <param name="ClassCode">Class code</param>
         /// <param name="PathAndName">The path and file name for creating the file</param>
-        public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode,string PathAndName)
+        public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode, string PathAndName)
         {
             List<string> Lines = new List<string>();
             Lines.Add("Student Last Name, Student First Name, Student Number, Guadian Email," + FromYYYYMMDDToString(DateTime.Today));
-            foreach(SingleStudent ss in SSs)
+            foreach (SingleStudent ss in SSs)
             {
                 Lines.Add(ss.LastName + "," + ss.FirstName + "," + ss.Index + "," + ss.EmailAddress);
             }
@@ -195,7 +214,7 @@ namespace Attendance_Scanning
         public string LineCombiner(List<string> TheLine, string TheSpliter)
         {
             string returner = "";
-            foreach(string TheSplitted in TheLine)
+            foreach (string TheSplitted in TheLine)
             {
                 returner += TheSplitted;
                 returner += TheSpliter;
@@ -225,7 +244,7 @@ namespace Attendance_Scanning
                             break;
                         }
                     }
-                    if(!ItContains)
+                    if (!ItContains)
                     {
                         FinalReturner.Add(CourseCode);
                     }
