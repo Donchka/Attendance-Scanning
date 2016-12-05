@@ -35,6 +35,7 @@ namespace Attendance_Scanning
             StudentListPanel.Hide();
             BarCodeInputLabel.Hide();
             Button_Save.Visible = false;
+            FileOpener.FileName = Properties.Settings.Default.ClassCode + "_ClassFile.csv";
             this.Size = new Size(this.Width, 80);
         }
 
@@ -84,7 +85,7 @@ namespace Attendance_Scanning
                 MessageBox.Show("Cannot Open a File while it has been opened by another program!");
                 return;
             }
-            if (FileOpener.SafeFileName.Split('_')[0].Length != 9)
+            if (FileOpener.SafeFileName.Split('_')[0].Length != 9 && FileOpener.SafeFileName.Split('_')[0].Length != 8)
             {
                 DialogResult DR = MessageBox.Show("Cannot be identified as a single class file! Would you like to create a new single class file from this one? \r\nPlease note that you CAN STILL load this one if it was created by me!", "Loading New File", MessageBoxButtons.YesNoCancel);
                 //If yes, create new one; if no, go on; if cancel, return.
@@ -109,7 +110,7 @@ namespace Attendance_Scanning
                 }
                 else
                     ShouldBeTheFileName = FileOpener.SafeFileName;
-                
+
             }
             else
             {
@@ -141,6 +142,7 @@ namespace Attendance_Scanning
             Saved = false;
             StatueLabel.Text = "File Loaded!";
             classCode = ClassCodeTempelate;
+            Properties.Settings.Default.ClassCode = classCode;
             Course_Index.Text = "Class code:\r\n" + classCode;
             Button_Save.Visible = true;
             Box_StudentIndex.Focus();
@@ -167,7 +169,7 @@ namespace Attendance_Scanning
                             Meow.Add(stu.FirstName);
                             Meow.Add(stu.Index);
                             Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
-                            stu.State = "None";
+                            stu.State = tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme);
                             StatueLabel.Text = stu.FirstName + " " + stu.LastName + "\r\nhas been checked at\r\n" + DateTime.Now;
                             //Meow.Add(DateTime.Now.TimeOfDay.ToString("00:00"));
                             CheckedListView.Items.Add(new ListViewItem(Meow.ToArray()));
@@ -271,16 +273,28 @@ namespace Attendance_Scanning
                 bool ToAbsent = SMS.Absent_Student_Checkbox.Checked;
                 bool ToLate = SMS.Late_Students_Checkbox.Checked;
                 bool ToUnc = SMS.Unchecked_Students_Checkbox.Checked;
-                foreach (ListViewItem LVI in ListView_Uncheck.Items)
+                if (ToLate)
                 {
-                    foreach (SingleStudent SS in NotCheckedSingleStudents)
+                    foreach (SingleStudent SS in CheckedSingleStudents)
                     {
-                        if (SS.IsMe(LVI.SubItems[2].ToString()))
+                        if (SS.State.Contains("Late"))
                         {
                             //MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatTitle));
                             //MessageBox.Show(DP.MailReplacer(DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme), SS, Properties.Settings.Default.EmailFormatMain));
-                            MailSender(SS, DateTime.Now, tk.perform(DateTime.Now, SS, CustomTimmmmmmmmmmmmmmmmmmmmme));
+                            MailSender(SS, DateTime.Now, tk.perform(SS.AttandanceTime, SS, CustomTimmmmmmmmmmmmmmmmmmmmme));
                         }
+                    }
+                }
+
+                foreach (SingleStudent SS in NotCheckedSingleStudents)
+                {
+                    if (SS.State == "Not Checked" && ToUnc)
+                    {
+                        MailSender(SS, DateTime.Now, SS.State);
+                    }
+                    else if (SS.State == "Absent" && ToAbsent)
+                    {
+                        MailSender(SS, DateTime.Now, SS.State);
                     }
                 }
             }
@@ -426,7 +440,7 @@ namespace Attendance_Scanning
 
         private void FileSaver_FileOk(object sender, CancelEventArgs e)
         {
-            DP.SaveDailyFiles(CheckedSingleStudents, NotCheckedSingleStudents, FileSaver.FileName, DateTime.Now, classCode);
+            DP.SaveDailyFiles(CheckedSingleStudents, NotCheckedSingleStudents, FileSaver.FileName, DateTime.Now, classCode,CustomTimmmmmmmmmmmmmmmmmmmmme);
             StatueLabel.Text = "File Saved!";
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 
 namespace Attendance_Scanning
@@ -118,7 +119,7 @@ namespace Attendance_Scanning
         /// <param name="FilePathAndName">From the FileLoadDialog.FileName</param>
         /// <param name="Date">Date today, or any given day</param>
         /// <param name="ClassCode">The class code the teacher is in</param>
-        public void SaveDailyFiles(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date,string ClassCode)
+        public void SaveDailyFiles(List<SingleStudent> CheckedStudents, List<SingleStudent> UncheckedStudents, string FilePathAndName, DateTime Date,string ClassCode,DateTime CustomTimmmmmmmmmme)
         {
             int columnToWrite;
             if (!File.Exists(FilePathAndName))
@@ -132,17 +133,18 @@ namespace Attendance_Scanning
             List<string> FirstRowOfColumns = CsvFile[0].Split(',').ToList();
             columnToWrite = FirstRowOfColumns.Count;//Do not need -1
             
-            for (int i = 1; i < FirstRowOfColumns.Count - 1; ++i)
+            for (int i = 0; i < FirstRowOfColumns.Count; ++i)
             {
                 if (FirstRowOfColumns[i].Contains((FromYYYYMMDDToString(Date))))
                 {
+                    MessageBox.Show(FromYYYYMMDDToString(Date));
                     columnToWrite = i;
                 }
             }
             bool DoAddAAolumn = false;
             if(columnToWrite == FirstRowOfColumns.Count)
             {
-                CsvFile[0] += "," + FromYYYYMMDDToString(Date);
+                CsvFile[0] += ", " + FromYYYYMMDDToString(Date);
                 DoAddAAolumn = true;
             }
             foreach(string line in CsvFile.ToArray())
@@ -153,9 +155,9 @@ namespace Attendance_Scanning
                     if (SSChecked.IsMe(LSS[2]))
                     {
                         if (DoAddAAolumn)
-                            LSS.Add(TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime));
+                            LSS.Add(TK.perform(SSChecked.AttandanceTime, SSChecked, CustomTimmmmmmmmmme));
                         else
-                            LSS[columnToWrite] = TK.perform(DateTime.Now, SSChecked, SSChecked.AttandanceTime);
+                            LSS[columnToWrite] = TK.perform(SSChecked.AttandanceTime, SSChecked, CustomTimmmmmmmmmme);
                         CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ", ");
                     }
                 }
@@ -164,9 +166,9 @@ namespace Attendance_Scanning
                     if (SSUncke.IsMe(LSS[2]))
                     {
                         if (DoAddAAolumn)
-                            LSS.Add(TK.perform(DateTime.Now, SSUncke, SSUncke.AttandanceTime));
+                            LSS.Add(SSUncke.State);
                         else
-                            LSS[columnToWrite] = TK.perform(DateTime.Now, SSUncke, SSUncke.AttandanceTime);
+                            LSS[columnToWrite] = SSUncke.State;
                         CsvFile[CsvFile.IndexOf(line)] = LineCombiner(LSS, ", ");
                     }
                 }
@@ -182,7 +184,7 @@ namespace Attendance_Scanning
         public void InitializeTheCSVFile(List<SingleStudent> SSs, string ClassCode,string PathAndName)
         {
             List<string> Lines = new List<string>();
-            Lines.Add("Student Last Name,Student First Name,Student Number,Guadian Email," + FromYYYYMMDDToString(DateTime.Today));
+            Lines.Add("Student Last Name, Student First Name, Student Number, Guadian Email," + FromYYYYMMDDToString(DateTime.Today));
             foreach(SingleStudent ss in SSs)
             {
                 Lines.Add(ss.LastName + "," + ss.FirstName + "," + ss.Index + "," + ss.EmailAddress);
