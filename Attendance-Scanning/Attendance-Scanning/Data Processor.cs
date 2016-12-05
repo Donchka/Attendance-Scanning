@@ -131,7 +131,7 @@ namespace Attendance_Scanning
             List<string> CsvFile = File.ReadAllLines(FilePathAndName).ToList();
             List<string> FirstRowOfColumns = CsvFile[0].Split(',').ToList();
             columnToWrite = FirstRowOfColumns.Count;//Do not need -1
-            CsvFile[0] += "," + FromYYYYMMDDToString(Date);
+            
             for (int i = 1; i < FirstRowOfColumns.Count - 1; ++i)
             {
                 if (FirstRowOfColumns[i].Contains((FromYYYYMMDDToString(Date))))
@@ -142,6 +142,7 @@ namespace Attendance_Scanning
             bool DoAddAAolumn = false;
             if(columnToWrite == FirstRowOfColumns.Count)
             {
+                CsvFile[0] += "," + FromYYYYMMDDToString(Date);
                 DoAddAAolumn = true;
             }
             foreach(string line in CsvFile.ToArray())
