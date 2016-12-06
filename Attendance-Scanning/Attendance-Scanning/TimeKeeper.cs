@@ -129,9 +129,12 @@ namespace Attendance_Scanning
         }
 
         /// <summary>
-        /// Do things
+        /// 来写写注释
         /// </summary>
-        /// <param name="CheckInTime">Time Students checked in</param>
+        /// <param name="CheckInTime"></param>
+        /// <param name="TheStu"></param>
+        /// <param name="CustomTime"></param>
+        /// <returns></returns>
         public string perform(DateTime CheckInTime, SingleStudent TheStu,DateTime CustomTime)
         {
             string stuMess;

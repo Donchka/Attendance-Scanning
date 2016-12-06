@@ -22,6 +22,7 @@ namespace Attendance_Scanning
         public TimeKeeper tk = new TimeKeeper();
         public Data_Processor DP;
         public DateTime CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
+        public DateTime CustomLateStartPoint = new DateTime();
         public string classCode = "";
         public bool LoadedStudentDataaaaa = false;
         public bool Saved = true;
@@ -144,6 +145,7 @@ namespace Attendance_Scanning
             StatueLabel.Text = "File Loaded!";
             classCode = ClassCodeTempelate;
             Properties.Settings.Default.ClassCode = classCode;
+            Properties.Settings.Default.Save();
             Course_Index.Text = "Class code:\r\n" + classCode;
             Button_Save.Visible = true;
             Box_StudentIndex.Focus();
@@ -268,6 +270,30 @@ namespace Attendance_Scanning
 
         private void SendMailButtonClick(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.EmailAddress.Length == 0 )
+            {
+                MessageBox.Show("Please set your Gmail bot first!");
+                Email_Account_Editor EAE = new Email_Account_Editor(DP);
+                 if (EAE.ShowDialog() == DialogResult.OK)
+                {
+                }
+                 else
+                {
+                    return;
+                }
+            }
+            if (Properties.Settings.Default.EmailFormatTitle.Length == 0)
+            {
+                MessageBox.Show("Please set your email format first!");
+                EmailEditorDialog EED = new EmailEditorDialog();
+                if (EED.ShowDialog() == DialogResult.OK)
+                {
+                }
+                else
+                {
+                    return;
+                }
+            }
             SendMailSelector SMS = new SendMailSelector();
             if (SMS.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -309,7 +335,7 @@ namespace Attendance_Scanning
         /// <param name="LateData">Late Data</param>
         public void MailSender(SingleStudent Student, DateTime time, String LateData)
         {
-            userLogin = new NetworkCredential(Properties.Settings.Default.EmailAddress, DP.PasswordDecryptor(Properties.Settings.Default.EmailPosswordEncrypted, 13));//user's email address and password
+            userLogin = new NetworkCredential(Properties.Settings.Default.EmailAddress, DP.PasswordDecryptor(Properties.Settings.Default.EmailPosswordEncrypted, 12));//user's email address and password
             smtpc = new SmtpClient("smtp.gmail.com");
             smtpc.Port = 587;//normal port 
             smtpc.Credentials = userLogin;//apply user's info
@@ -356,7 +382,7 @@ namespace Attendance_Scanning
 
         private void Button_EditEmailAccount_Click(object sender, EventArgs e)
         {
-            Email_Account_Editor ema = new Email_Account_Editor();
+            Email_Account_Editor ema = new Email_Account_Editor(DP);
             ema.Show();
         }
 

@@ -21,7 +21,7 @@ namespace Attendance_Scanning
             }
             else
             {
-                SetTimeButton.Text = "Set this as the length of determining \" On Time\"";
+                SetTimeButton.Text = "Set this as the point of starting counting \" Late\"";
             }
         }
 
