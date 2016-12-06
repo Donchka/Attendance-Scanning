@@ -47,8 +47,11 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void LoadFileButtonClicked(object sender, EventArgs e)
         {
+            tk.updateTime(new DateTime());
+            tk.reminder(DateTime.Now);
             if (LoadedStudentDataaaaa)///Ensure that this opreation is not by students.
             {
+                
                 if (new TeacherManagementValidater(DP).ShowDialog() != DialogResult.OK)
                 {
                     return;
