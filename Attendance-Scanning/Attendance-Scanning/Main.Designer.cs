@@ -212,8 +212,8 @@
             this.Button_SetTime.Name = "Button_SetTime";
             this.Button_SetTime.Size = new System.Drawing.Size(241, 41);
             this.Button_SetTime.TabIndex = 2;
-            this.Button_SetTime.Text = "Set this as class start time";
-            this.FYtooltip.SetToolTip(this.Button_SetTime, "Customize the start time as students who pass this time \r\nwill be considered late" +
+            this.Button_SetTime.Text = "Set this as class late point time";
+            this.FYtooltip.SetToolTip(this.Button_SetTime, "Customize the late point as students who pass this time \r\nwill be considered late" +
         "");
             this.Button_SetTime.UseVisualStyleBackColor = true;
             this.Button_SetTime.Click += new System.EventHandler(this.Button_SetTime_Click);
@@ -355,15 +355,15 @@
             this.editLateTimeToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.editLateTimeToolStripMenuItem.Text = "Edit Class Start Time";
             this.editLateTimeToolStripMenuItem.ToolTipText = "Change the amount of time for late of a student";
+            this.editLateTimeToolStripMenuItem.Visible = false;
             this.editLateTimeToolStripMenuItem.Click += new System.EventHandler(this.EditClassStarTime_Click);
             // 
             // editTimeLimitToolStripMenuItem
             // 
             this.editTimeLimitToolStripMenuItem.Name = "editTimeLimitToolStripMenuItem";
             this.editTimeLimitToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.editTimeLimitToolStripMenuItem.Text = "Edit Time Limit";
+            this.editTimeLimitToolStripMenuItem.Text = "Edit Late Start Point";
             this.editTimeLimitToolStripMenuItem.ToolTipText = "Change the amount of time for determining a student is absent or not";
-            this.editTimeLimitToolStripMenuItem.Visible = false;
             this.editTimeLimitToolStripMenuItem.Click += new System.EventHandler(this.editTimeLimitToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
