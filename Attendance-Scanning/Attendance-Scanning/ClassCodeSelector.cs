@@ -77,7 +77,7 @@ namespace Attendance_Scanning
                     string[] TheLine = SingleLine.Split(',');
                     if (TheLine[WhichOne] == ClassCodeComboBox.Text)
                     {
-                        SingleStudent SS = new SingleStudent(TheLine[2], TheLine[1], TheLine[0], TheLine[11]);
+                        SingleStudent SS = new SingleStudent(TheLine[2], TheLine[1], TheLine[0], TheLine[12]);
                         stustu.Add(SS);
                     }
                 }

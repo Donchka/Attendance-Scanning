@@ -115,6 +115,7 @@ namespace Attendance_Scanning
             else
             {
                 ClassCodeTempelate = FileOpener.SafeFileName.Split('_')[0];
+                ShouldBeTheFileName = FileOpener.SafeFileName;
             }
             ListView_Uncheck.ShowGroups = true;
             //ListView_Uncheck.
@@ -298,6 +299,7 @@ namespace Attendance_Scanning
                     }
                 }
             }
+            StatueLabel.Text = "Mail Sent!";
         }
         /// <summary>
         /// Send a mail to a specific student with late data
