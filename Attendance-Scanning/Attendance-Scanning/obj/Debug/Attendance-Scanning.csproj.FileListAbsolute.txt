@@ -1,47 +1,3 @@
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.exe.config
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.exe
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.PlatformServices.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Core.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Gmail.v1.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.PlatformServices.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\log4net.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Newtonsoft.Json.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Zlib.Portable.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\BouncyCastle.Crypto.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.PlatformServices.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.PlatformServices.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Core.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Core.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Gmail.v1.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Gmail.v1.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.PlatformServices.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.PlatformServices.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\log4net.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Newtonsoft.Json.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Zlib.Portable.xml
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csprojResolveAssemblyReference.cache
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Main.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Properties.Resources.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.GenerateResource.Cache
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.exe
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.pdb
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.EmailEditorDialog.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.PasswordEditor.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TeacherManagementValidater.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Interop.CRYPTEXTLib.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.ResolveComReference.cache
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Email_Account_Editor.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Course_Code_Selector_Dialog.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.SendMailSelector.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.毒瘤之SpecialDaysEditor.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.exe.config
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Interop.CRYPTEXTLib.dll
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.ResolveComReference.cache
@@ -87,8 +43,51 @@ C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendanc
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TeacherManagementValidater.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.GenerateResource.Cache
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TimeSetter.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TimeSetter.resources
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\UnityEngine.dll
-C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.ClassCodeSelector.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.ClassCodeSelector.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\UnityEngine.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.exe.config
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.exe
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Core.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Gmail.v1.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\log4net.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\UnityEngine.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Zlib.Portable.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\BouncyCastle.Crypto.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.PlatformServices.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.PlatformServices.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Core.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Core.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Gmail.v1.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Gmail.v1.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.PlatformServices.pdb
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.PlatformServices.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\log4net.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Newtonsoft.Json.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Zlib.Portable.xml
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Interop.CRYPTEXTLib.dll
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.ResolveComReference.cache
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.ClassCodeSelector.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Course_Code_Selector_Dialog.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Email_Account_Editor.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.EmailEditorDialog.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Main.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.PasswordEditor.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Properties.Resources.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.SendMailSelector.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TimeSetter.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.毒瘤之SpecialDaysEditor.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TeacherManagementValidater.resources
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.GenerateResource.Cache
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.exe
+C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.pdb

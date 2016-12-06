@@ -314,7 +314,11 @@ namespace Attendance_Scanning
             smtpc.Port = 587;//normal port 
             smtpc.Credentials = userLogin;//apply user's info
             mail = new MailMessage { From = new MailAddress(Properties.Settings.Default.EmailAddress, "CKSSmailer", Encoding.UTF8) };//get sending address
-            mail.To.Add(new MailAddress(Student.EmailAddress));//get receving address
+            foreach (string MA in Student.EmailAddress.Split(';'))
+            {
+                MA.Replace(" ", ", ");
+                mail.To.Add(new MailAddress(MA));//get receving address
+            }
             mail.Subject = DP.MailReplacer(time, LateData, Student, Properties.Settings.Default.EmailFormatTitle);//get title 
             mail.Body = DP.MailReplacer(time, LateData, Student, Properties.Settings.Default.EmailFormatMain);//get message body
             mail.BodyEncoding = Encoding.UTF8;
