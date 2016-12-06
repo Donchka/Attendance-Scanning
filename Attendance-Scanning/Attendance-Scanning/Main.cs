@@ -361,7 +361,7 @@ namespace Attendance_Scanning
         {
             if (e.Cancelled)
             {
-                MessageBox.Show("Sending progress cancelled");
+                MessageBox.Show("Sending process cancelled");
             }
             else if (e.Error != null)
             {
