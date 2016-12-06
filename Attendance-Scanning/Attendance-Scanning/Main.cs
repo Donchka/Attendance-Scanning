@@ -404,11 +404,12 @@ namespace Attendance_Scanning
             int hhh;
             int mmm;
             DateTime DTNOW = DateTime.Now;
+            
             if (int.TryParse(StartHour.Text, out hhh) && int.TryParse(StartMinute.Text, out mmm))
             {
                 CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime(DTNOW.Year, DTNOW.Month, DTNOW.Day, hhh, mmm, 0);
+                CheckedStudentsTimeUpdate();
             }
-            CheckedStudentsTimeUpdate();
         }
 
         private void EditClassStarTime_Click(object sender, EventArgs e)
@@ -421,8 +422,8 @@ namespace Attendance_Scanning
                 int Min = (int)TSSetStart.NUD_Min.Value;
                 int Hrs = (int)TSSetStart.NUD_Hrs.Value;
                 CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Hrs, Min, 0);
+                CheckedStudentsTimeUpdate();
             }
-            CheckedStudentsTimeUpdate();
         }
 
         private void Box_StudentIndex_TextChanged(object sender, EventArgs e)
