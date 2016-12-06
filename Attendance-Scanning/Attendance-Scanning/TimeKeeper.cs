@@ -107,21 +107,21 @@ namespace Attendance_Scanning
             //This logs the students into the system when they scan their cards
             //after being logged, the data is sent to a student array
             string zuosi = "";
-            TimeSpan timeLIMIT = new TimeSpan(0,30,0);
-            int result = TimeSpan.Compare(diff, timeLIMIT);//30 minute time limit preset; teacher can change limit in TeacherSettings
+            //TimeSpan timeLIMIT = new TimeSpan(0,30,0);
+            //int result = TimeSpan.Compare(diff, timeLIMIT);//30 minute time limit preset; teacher can change limit in TeacherSettings
 
             if (TimeIN > Period_Times[period])
             {
                 //Console.WriteLine(SS.LastName + " is late for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes");
                 //zuosi = SS.LastName + " is late for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day + " for " + diff.Hours + "hours and " + diff.Minutes + "minutes";
-                zuosi = "Late at period " + (period + 1) + " : " + diff.Hours + " h " + diff.Minutes + " m";
+                zuosi = "Late at class " + Properties.Settings.Default.ClassCode + " : " + diff.Hours + " h " + diff.Minutes + " m";
             }
-            else if ((TimeIN > Period_Times[period] && result == 1) || (TimeIN > Period_Times[period] && result == 0))
-            {
+            //else if ((TimeIN > Period_Times[period] && result == 1) || (TimeIN > Period_Times[period] && result == 0))
+            //{
 
-                //Console.WriteLine(SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
-                //zuosi = SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day;               
-            }
+            //    //Console.WriteLine(SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day);
+            //    //zuosi = SS.LastName + " is absent for period " + (period+1) + " class on " + TimeIN.Year + "." + TimeIN.Month + "." + TimeIN.Day;               
+            //}
             else if (TimeIN < Period_Times[period])
             {
                 zuosi = "On Time";
@@ -130,11 +130,11 @@ namespace Attendance_Scanning
         }
 
         /// <summary>
-        /// 来写写注释
+        /// do things
         /// </summary>
-        /// <param name="CheckInTime"></param>
-        /// <param name="TheStu"></param>
-        /// <param name="CustomTime"></param>
+        /// <param name="CheckInTime">customtimmmmmmmmmmmmmmmmmmmme</param>
+        /// <param name="TheStu">singlestudent</param>
+        /// <param name="CustomTime">late point</param>
         /// <returns></returns>
         public string perform(DateTime CheckInTime, SingleStudent TheStu,DateTime CustomTime)
         {
@@ -152,7 +152,7 @@ namespace Attendance_Scanning
                 identifyPeriod(re0);
                 if (re0 >= Period_Times[period])
                 {
-                    MessageBox.Show("It's probably passed the standard schedule, you may need to set the new late time for your class :)");
+                    MessageBox.Show("It's probably passed the standard schedule, you may need to set the new late time for your class :)\n To adjust the time, go to Teacher Management => personal option");
                 }
             
         }

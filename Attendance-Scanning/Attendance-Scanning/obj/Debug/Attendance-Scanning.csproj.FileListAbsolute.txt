@@ -74,7 +74,6 @@ C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendanc
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\log4net.xml
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Zlib.Portable.xml
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Course_Code_Selector_Dialog.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Email_Account_Editor.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.EmailEditorDialog.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Main.resources
