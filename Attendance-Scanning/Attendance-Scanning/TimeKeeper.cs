@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 
 namespace Attendance_Scanning
@@ -32,11 +33,11 @@ namespace Attendance_Scanning
             int dayNow = DateTime.Now.Day;
 
             Period_Times = new DateTime[] {
-        new DateTime (yearNow, monthNow, dayNow, 8, 13, 0),//8:10
-        new DateTime (yearNow, monthNow, dayNow, 9, 30, 0),//9:30
-        new DateTime (yearNow, monthNow, dayNow, 10, 47, 0),//10:50
-        new DateTime (yearNow, monthNow, dayNow, 12, 4, 0),//12:05
-        new DateTime (yearNow, monthNow, dayNow, 13, 21, 0),//13:20    
+        new DateTime (yearNow, monthNow, dayNow, 8, 15, 0),//8:10
+        new DateTime (yearNow, monthNow, dayNow, 9, 32, 0),//9:30
+        new DateTime (yearNow, monthNow, dayNow, 10, 49, 0),//10:50
+        new DateTime (yearNow, monthNow, dayNow, 12, 6, 0),//12:05
+        new DateTime (yearNow, monthNow, dayNow, 13, 23, 0),//13:20    
         };
 
             Period_Ring_Times = new DateTime[]
@@ -143,6 +144,15 @@ namespace Attendance_Scanning
             return stuMess;
         }
 
+        public void reminder(DateTime re0)
+        {
+                identifyPeriod(re0);
+                if (re0 >= Period_Times[period])
+                {
+                    MessageBox.Show("It's probably passed the standard schedule, you may need to set the new late time for your class :)");
+                }
+            
+        }
     }
 }
     //    public enum ScanIn
