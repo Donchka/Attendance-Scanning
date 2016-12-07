@@ -25,7 +25,16 @@ namespace Attendance_Scanning
         {
             InitializeComponent();
             ThyFile = File.ToList();
-            NoIWouldLikeSpike();
+            try
+            {
+                NoIWouldLikeSpike();
+            } 
+            catch
+            {
+                MessageBox.Show("Not A Valid File!");
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+            }
             ClassCodeComboBox.Text = "Please type in here or select a value.";
         }
 

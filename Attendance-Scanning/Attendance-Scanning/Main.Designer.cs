@@ -348,6 +348,7 @@
             this.editSpecialDaysToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.editSpecialDaysToolStripMenuItem.Text = "Edit Special Days";
             this.editSpecialDaysToolStripMenuItem.ToolTipText = "For some reasons(Like PA days), we do not need any record of late time";
+            this.editSpecialDaysToolStripMenuItem.Visible = false;
             // 
             // editLateTimeToolStripMenuItem
             // 
@@ -725,13 +726,6 @@
         public System.Windows.Forms.ListView ListView_Uncheck;
         public System.Windows.Forms.ListView CheckedListView;
         private System.Windows.Forms.Label Course_Index;
-        private System.Windows.Forms.ColumnHeader First_Name;
-        private System.Windows.Forms.ColumnHeader Last_Name;
-        private System.Windows.Forms.ColumnHeader Index;
-        private System.Windows.Forms.ColumnHeader First_Name_Attended;
-        private System.Windows.Forms.ColumnHeader Last_Name_Attended;
-        private System.Windows.Forms.ColumnHeader Index_Attended;
-        private System.Windows.Forms.ColumnHeader AttendedTime;
         private System.Windows.Forms.ToolStripDropDownButton TimeEditing;
         private System.Windows.Forms.ToolStripMenuItem editSpecialDaysToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editLateTimeToolStripMenuItem;
@@ -749,6 +743,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton Button_Save;
         private System.Windows.Forms.ToolStripMenuItem editEmailFormatToolStripMenuItem;
+        public System.Windows.Forms.ColumnHeader First_Name;
+        public System.Windows.Forms.ColumnHeader Last_Name;
+        public System.Windows.Forms.ColumnHeader Index;
+        public System.Windows.Forms.ColumnHeader First_Name_Attended;
+        public System.Windows.Forms.ColumnHeader Last_Name_Attended;
+        public System.Windows.Forms.ColumnHeader Index_Attended;
+        public System.Windows.Forms.ColumnHeader AttendedTime;
     }
 }
 
