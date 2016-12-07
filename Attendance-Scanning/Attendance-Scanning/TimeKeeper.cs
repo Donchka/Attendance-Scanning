@@ -152,7 +152,7 @@ namespace Attendance_Scanning
                 identifyPeriod(re0);
                 if (re0 >= Period_Times[period])
                 {
-                    MessageBox.Show("It's probably passed the standard schedule, you may need to set the new late time for your class :)\n To adjust the time, go to Teacher Management => Time Editing => Edit Late Start Point");
+                    MessageBox.Show("It's probably passed the standard schedule of the current period, you may need to set the new late time for your class :)\n To adjust the time, go to Teacher Management => Time Editing => Edit Late Start Point");
                 }
             
         }
