@@ -26,7 +26,7 @@ namespace Attendance_Scanning
 
         private void StudentLateTimeLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            正文.AppendText("<StudentLateTime>");
+            正文.AppendText("<StudentStatueInfo>");
         }
 
         private void ClassNameLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -36,7 +36,7 @@ namespace Attendance_Scanning
 
         private void TeacherNameLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            正文.AppendText("<TeacherName>");
+            //正文.AppendText("<TeacherName>");
         }
         /// <summary>
         /// By clicking this, clear the title and main body paragraph
@@ -55,8 +55,8 @@ namespace Attendance_Scanning
         /// <param name="e"></param>
         private void ExapmleApplier_Click(object sender, EventArgs e)
         {
-            正文.Text = "Hello! \r\n This is from <ClassCode>, your child <StudentName> was not here today. Please check your child's status. Thank you!";
-            TitleTextBox.Text = "Absent Alarm";
+            正文.Text = "Hello! \r\n This is from <ClassCode>, your child <StudentName> was <StudentStatueInfo> today. Please check your child's status. Thank you!";
+            TitleTextBox.Text = "<StudentStatueInfo> Message";
         }
 
         private void Save_Click(object sender, EventArgs e)

@@ -63,7 +63,7 @@ namespace Attendance_Scanning
                 {
                     FinalReturner += student.FirstName + " " + student.LastName;
                 }
-                else if (Words == "<StudentLateTime>")
+                else if (Words == "<StudentStatueInfo>")
                 {
                     FinalReturner += LateData;
                 }

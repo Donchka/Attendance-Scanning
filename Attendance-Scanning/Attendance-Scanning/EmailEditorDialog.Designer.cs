@@ -49,7 +49,7 @@
             // Save
             // 
             this.Save.Location = new System.Drawing.Point(387, 8);
-            this.Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Save.Margin = new System.Windows.Forms.Padding(2);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(91, 25);
             this.Save.TabIndex = 0;
@@ -60,7 +60,7 @@
             // Cancel
             // 
             this.Cancel.Location = new System.Drawing.Point(4, 6);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(83, 28);
             this.Cancel.TabIndex = 1;
@@ -104,10 +104,10 @@
             this.StudentLateTimeLabel.Location = new System.Drawing.Point(2, 30);
             this.StudentLateTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentLateTimeLabel.Name = "StudentLateTimeLabel";
-            this.StudentLateTimeLabel.Size = new System.Drawing.Size(311, 12);
+            this.StudentLateTimeLabel.Size = new System.Drawing.Size(401, 12);
             this.StudentLateTimeLabel.TabIndex = 5;
             this.StudentLateTimeLabel.TabStop = true;
-            this.StudentLateTimeLabel.Text = "Use <StudentLateTime> to add the time student lated";
+            this.StudentLateTimeLabel.Text = "Use <StudentStatueInfo> to add information of student\'s attendance";
             this.StudentLateTimeLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.StudentLateTimeLabel_LinkClicked);
             // 
             // ClassNameLabel
@@ -138,7 +138,7 @@
             // ExapmleApplier
             // 
             this.ExapmleApplier.Location = new System.Drawing.Point(110, 10);
-            this.ExapmleApplier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExapmleApplier.Margin = new System.Windows.Forms.Padding(2);
             this.ExapmleApplier.Name = "ExapmleApplier";
             this.ExapmleApplier.Size = new System.Drawing.Size(101, 20);
             this.ExapmleApplier.TabIndex = 8;
@@ -149,7 +149,7 @@
             // ClearAllButton
             // 
             this.ClearAllButton.Location = new System.Drawing.Point(260, 10);
-            this.ClearAllButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClearAllButton.Margin = new System.Windows.Forms.Padding(2);
             this.ClearAllButton.Name = "ClearAllButton";
             this.ClearAllButton.Size = new System.Drawing.Size(101, 20);
             this.ClearAllButton.TabIndex = 9;
@@ -193,7 +193,7 @@
             this.ButtonPanel.Controls.Add(this.ClearAllButton);
             this.ButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ButtonPanel.Location = new System.Drawing.Point(0, 386);
-            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.Size = new System.Drawing.Size(486, 36);
             this.ButtonPanel.TabIndex = 12;
@@ -206,7 +206,7 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.TextPanel);
             this.Controls.Add(this.SelectionPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmailEditorDialog";
             this.Text = "Email Format Editor";
             this.SelectionPanel.ResumeLayout(false);
