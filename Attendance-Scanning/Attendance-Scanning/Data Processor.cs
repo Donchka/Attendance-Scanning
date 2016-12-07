@@ -67,7 +67,7 @@ namespace Attendance_Scanning
                 {
                     FinalReturner += LateData;
                 }
-                else if (Words == "<ClassName>")
+                else if (Words == "<ClassCode>")
                 {
                     FinalReturner += Properties.Settings.Default.ClassCode;
                 }
