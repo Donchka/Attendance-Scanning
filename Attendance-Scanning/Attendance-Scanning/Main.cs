@@ -247,7 +247,7 @@ namespace Attendance_Scanning
             {
                 ///It needs to do nothing
             }
-        }
+        } 
 
         private void Button_TeacherManagement_Click(object sender, EventArgs e)
         {
