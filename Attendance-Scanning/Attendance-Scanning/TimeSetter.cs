@@ -28,6 +28,7 @@ namespace Attendance_Scanning
         private void SetTimeButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

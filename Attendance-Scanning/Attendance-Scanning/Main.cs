@@ -59,6 +59,7 @@ namespace Attendance_Scanning
             }
             FileOpener.ShowDialog();
             CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime();
+
         }
 
         private void FileOpener_FileOk(object sender, CancelEventArgs e)
@@ -122,7 +123,8 @@ namespace Attendance_Scanning
                 ShouldBeTheFileName = FileOpener.SafeFileName;
             }
             ListView_Uncheck.ShowGroups = true;
-            //ListView_Uncheck.
+            ListView_Uncheck.Items.Clear();
+            CheckedListView.Items.Clear();
             NotCheckedSingleStudents.Clear();
             CheckedSingleStudents.Clear();
             foreach (SingleStudent SS in DP.GetStudents(Data))
@@ -183,6 +185,7 @@ namespace Attendance_Scanning
                             NotCheckedSingleStudents.Remove(stu);
                             ListView_Uncheck.Items.Remove((ListViewItem)OBJ);
                             Box_StudentIndex.Text = "";
+                            Saved = false;
                             return;
                         }
                     }
@@ -204,6 +207,7 @@ namespace Attendance_Scanning
                     SSNot.State = "Absent";
                 }
             }
+            Saved = false;
         }
         /// <summary>
         /// Set all students(even checked) as unchecked
@@ -233,6 +237,7 @@ namespace Attendance_Scanning
                 }
             }
             StatueLabel.Text = "All checked \r\nstudents has been \r\nmarked as \r\nunchecked.";
+            Saved = false;
         }
 
         private void Button_EditEmailFormat_Click(object sender, EventArgs e)
@@ -469,15 +474,25 @@ namespace Attendance_Scanning
                 Meow.Add(stu.FirstName);
                 Meow.Add(stu.Index);
                 Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
+                stu.State = tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme);
                 CheckedListView.Items.Add((new ListViewItem(Meow.ToArray())));
             }
             StatueLabel.Text = "Time record has \r\nbeen updated!";
+            Saved = false;
         }
 
         private void FileSaver_FileOk(object sender, CancelEventArgs e)
         {
-            DP.SaveDailyFiles(CheckedSingleStudents, NotCheckedSingleStudents, FileSaver.FileName, DateTime.Now, classCode,CustomTimmmmmmmmmmmmmmmmmmmmme);
-            StatueLabel.Text = "File Saved!";
+            try
+            {
+                DP.SaveDailyFiles(CheckedSingleStudents, NotCheckedSingleStudents, FileSaver.FileName, DateTime.Now, classCode, CustomTimmmmmmmmmmmmmmmmmmmmme);
+                StatueLabel.Text = "File Saved!";
+                Saved = true;
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show("Something wrong happened with saving! Please post the exception below to developers for improvements! Thanks! \r\n" + ee.ToString());
+            }
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
