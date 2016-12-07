@@ -59,6 +59,7 @@
             this.PersonalData = new System.Windows.Forms.ToolStripDropDownButton();
             this.editManagementPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmailAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editEmailFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.Button_Save = new System.Windows.Forms.ToolStripButton();
             this.BarCodeInputLabel = new System.Windows.Forms.TableLayoutPanel();
@@ -87,7 +88,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.FYtooltip = new System.Windows.Forms.ToolTip(this.components);
             this.StudentListPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.editEmailFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.TeacherManagementPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -110,7 +110,7 @@
             this.panel1.Controls.Add(this.BarCodeInputLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 129);
             this.panel1.TabIndex = 0;
@@ -144,7 +144,7 @@
             this.TeacherManagementPanel.Controls.Add(this.TeacherManagementLabel);
             this.TeacherManagementPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.TeacherManagementPanel.Location = new System.Drawing.Point(272, 25);
-            this.TeacherManagementPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TeacherManagementPanel.Margin = new System.Windows.Forms.Padding(1);
             this.TeacherManagementPanel.Name = "TeacherManagementPanel";
             this.TeacherManagementPanel.Size = new System.Drawing.Size(532, 104);
             this.TeacherManagementPanel.TabIndex = 3;
@@ -152,7 +152,7 @@
             // StartMinute
             // 
             this.StartMinute.Location = new System.Drawing.Point(58, 67);
-            this.StartMinute.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.StartMinute.Margin = new System.Windows.Forms.Padding(1);
             this.StartMinute.Name = "StartMinute";
             this.StartMinute.Size = new System.Drawing.Size(58, 21);
             this.StartMinute.TabIndex = 5;
@@ -160,7 +160,7 @@
             // StartHour
             // 
             this.StartHour.Location = new System.Drawing.Point(49, 28);
-            this.StartHour.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.StartHour.Margin = new System.Windows.Forms.Padding(1);
             this.StartHour.Name = "StartHour";
             this.StartHour.Size = new System.Drawing.Size(68, 21);
             this.StartHour.TabIndex = 4;
@@ -196,7 +196,7 @@
             this.tableLayoutPanel2.Controls.Add(this.Button_SetAbsent, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(159, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.5092F));
@@ -208,7 +208,7 @@
             // 
             this.Button_SetTime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_SetTime.Location = new System.Drawing.Point(1, 62);
-            this.Button_SetTime.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Button_SetTime.Margin = new System.Windows.Forms.Padding(1);
             this.Button_SetTime.Name = "Button_SetTime";
             this.Button_SetTime.Size = new System.Drawing.Size(241, 41);
             this.Button_SetTime.TabIndex = 2;
@@ -223,7 +223,7 @@
             this.sendEmail_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sendEmail_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sendEmail_Button.Location = new System.Drawing.Point(1, 1);
-            this.sendEmail_Button.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.sendEmail_Button.Margin = new System.Windows.Forms.Padding(1);
             this.sendEmail_Button.Name = "sendEmail_Button";
             this.sendEmail_Button.Size = new System.Drawing.Size(241, 59);
             this.sendEmail_Button.TabIndex = 3;
@@ -235,7 +235,7 @@
             // 
             this.Button_SetUncheck.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_SetUncheck.Location = new System.Drawing.Point(244, 62);
-            this.Button_SetUncheck.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Button_SetUncheck.Margin = new System.Windows.Forms.Padding(1);
             this.Button_SetUncheck.Name = "Button_SetUncheck";
             this.Button_SetUncheck.Size = new System.Drawing.Size(128, 41);
             this.Button_SetUncheck.TabIndex = 0;
@@ -247,7 +247,7 @@
             // 
             this.Button_SetAbsent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Button_SetAbsent.Location = new System.Drawing.Point(244, 1);
-            this.Button_SetAbsent.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Button_SetAbsent.Margin = new System.Windows.Forms.Padding(1);
             this.Button_SetAbsent.Name = "Button_SetAbsent";
             this.Button_SetAbsent.Size = new System.Drawing.Size(128, 59);
             this.Button_SetAbsent.TabIndex = 1;
@@ -401,6 +401,13 @@
             this.editEmailAccountToolStripMenuItem.ToolTipText = "Login to your email account";
             this.editEmailAccountToolStripMenuItem.Click += new System.EventHandler(this.Button_EditEmailAccount_Click);
             // 
+            // editEmailFormatToolStripMenuItem
+            // 
+            this.editEmailFormatToolStripMenuItem.Name = "editEmailFormatToolStripMenuItem";
+            this.editEmailFormatToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.editEmailFormatToolStripMenuItem.Text = "Edit Email Format";
+            this.editEmailFormatToolStripMenuItem.Click += new System.EventHandler(this.Button_EditEmailFormat_Click);
+            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
@@ -426,7 +433,7 @@
             this.BarCodeInputLabel.Controls.Add(this.CheckButton, 0, 2);
             this.BarCodeInputLabel.Controls.Add(this.Label_StudentIndex, 0, 0);
             this.BarCodeInputLabel.Location = new System.Drawing.Point(5, 26);
-            this.BarCodeInputLabel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BarCodeInputLabel.Margin = new System.Windows.Forms.Padding(1);
             this.BarCodeInputLabel.Name = "BarCodeInputLabel";
             this.BarCodeInputLabel.RowCount = 3;
             this.BarCodeInputLabel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
@@ -438,7 +445,7 @@
             // Box_StudentIndex
             // 
             this.Box_StudentIndex.Location = new System.Drawing.Point(1, 26);
-            this.Box_StudentIndex.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Box_StudentIndex.Margin = new System.Windows.Forms.Padding(1);
             this.Box_StudentIndex.Name = "Box_StudentIndex";
             this.Box_StudentIndex.Size = new System.Drawing.Size(139, 21);
             this.Box_StudentIndex.TabIndex = 0;
@@ -447,7 +454,7 @@
             // CheckButton
             // 
             this.CheckButton.Location = new System.Drawing.Point(1, 54);
-            this.CheckButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CheckButton.Margin = new System.Windows.Forms.Padding(1);
             this.CheckButton.Name = "CheckButton";
             this.CheckButton.Size = new System.Drawing.Size(139, 32);
             this.CheckButton.TabIndex = 2;
@@ -484,7 +491,7 @@
             this.UncheckPanel.Controls.Add(this.ListView_Uncheck);
             this.UncheckPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UncheckPanel.Location = new System.Drawing.Point(1, 1);
-            this.UncheckPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.UncheckPanel.Margin = new System.Windows.Forms.Padding(1);
             this.UncheckPanel.Name = "UncheckPanel";
             this.UncheckPanel.Size = new System.Drawing.Size(319, 359);
             this.UncheckPanel.TabIndex = 3;
@@ -526,7 +533,7 @@
             this.ListView_Uncheck.FullRowSelect = true;
             this.ListView_Uncheck.GridLines = true;
             this.ListView_Uncheck.Location = new System.Drawing.Point(0, 22);
-            this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(1);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
             this.ListView_Uncheck.Size = new System.Drawing.Size(319, 337);
@@ -555,7 +562,7 @@
             this.CheckedPanel.Controls.Add(this.CheckedListView);
             this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckedPanel.Location = new System.Drawing.Point(322, 1);
-            this.CheckedPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CheckedPanel.Margin = new System.Windows.Forms.Padding(1);
             this.CheckedPanel.Name = "CheckedPanel";
             this.CheckedPanel.Size = new System.Drawing.Size(481, 359);
             this.CheckedPanel.TabIndex = 2;
@@ -598,7 +605,7 @@
             this.CheckedListView.FullRowSelect = true;
             this.CheckedListView.GridLines = true;
             this.CheckedListView.Location = new System.Drawing.Point(0, 22);
-            this.CheckedListView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.CheckedListView.Margin = new System.Windows.Forms.Padding(1);
             this.CheckedListView.MultiSelect = false;
             this.CheckedListView.Name = "CheckedListView";
             this.CheckedListView.Size = new System.Drawing.Size(481, 337);
@@ -647,13 +654,6 @@
             this.StudentListPanel.Size = new System.Drawing.Size(804, 361);
             this.StudentListPanel.TabIndex = 2;
             // 
-            // editEmailFormatToolStripMenuItem
-            // 
-            this.editEmailFormatToolStripMenuItem.Name = "editEmailFormatToolStripMenuItem";
-            this.editEmailFormatToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.editEmailFormatToolStripMenuItem.Text = "Edit Email Format";
-            this.editEmailFormatToolStripMenuItem.Click += new System.EventHandler(this.Button_EditEmailFormat_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -662,10 +662,11 @@
             this.ClientSize = new System.Drawing.Size(804, 494);
             this.Controls.Add(this.StudentListPanel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MinimumSize = new System.Drawing.Size(818, 528);
             this.Name = "Main";
             this.Text = "Student Attendance Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.TeacherManagementPanel.ResumeLayout(false);

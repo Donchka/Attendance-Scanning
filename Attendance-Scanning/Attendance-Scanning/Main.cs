@@ -479,5 +479,29 @@ namespace Attendance_Scanning
             DP.SaveDailyFiles(CheckedSingleStudents, NotCheckedSingleStudents, FileSaver.FileName, DateTime.Now, classCode,CustomTimmmmmmmmmmmmmmmmmmmmme);
             StatueLabel.Text = "File Saved!";
         }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!Saved)
+            {
+                DialogResult DR = MessageBox.Show("You did not save the attendance data! would you like to save it now?", "Not saved!", MessageBoxButtons.YesNoCancel);
+                //If yes, create new one; if no, go on; if cancel, return.
+                if (DR == DialogResult.Yes)
+                {
+                    SaveData_Click(new object(), new EventArgs());
+                }
+                else if (DR == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+        }
+
+        void SavingToTempelate ()
+        {
+            //Properties.Settings.Default.VeryTempWrongClosingUncheck = new SingleStudentCollection(NotCheckedSingleStudents);
+
+        }
     }
 }

@@ -117,5 +117,27 @@ namespace Attendance_Scanning.Properties {
                 this["SpecialDateSetting"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.ListDictionary VeryTempWrongClosingUncheck {
+            get {
+                return ((global::System.Collections.Specialized.ListDictionary)(this["VeryTempWrongClosingUncheck"]));
+            }
+            set {
+                this["VeryTempWrongClosingUncheck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.ListDictionary VeryTempWrongClosingCheck {
+            get {
+                return ((global::System.Collections.Specialized.ListDictionary)(this["VeryTempWrongClosingCheck"]));
+            }
+            set {
+                this["VeryTempWrongClosingCheck"] = value;
+            }
+        }
     }
 }
