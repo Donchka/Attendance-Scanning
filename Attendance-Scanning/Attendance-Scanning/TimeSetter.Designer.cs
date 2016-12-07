@@ -40,7 +40,7 @@
             // 
             // SetTimeButton
             // 
-            this.SetTimeButton.Location = new System.Drawing.Point(8, 134);
+            this.SetTimeButton.Location = new System.Drawing.Point(1, 132);
             this.SetTimeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SetTimeButton.Name = "SetTimeButton";
             this.SetTimeButton.Size = new System.Drawing.Size(367, 54);
@@ -92,9 +92,9 @@
             this.label3.Location = new System.Drawing.Point(8, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 27);
+            this.label3.Size = new System.Drawing.Size(236, 27);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Time of the period :";
+            this.label3.Text = "Time of the day:";
             // 
             // TimeSetter
             // 

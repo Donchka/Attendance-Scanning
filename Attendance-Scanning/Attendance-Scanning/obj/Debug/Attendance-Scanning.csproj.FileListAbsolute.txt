@@ -89,4 +89,3 @@ C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Att
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.ClassCodeSelector.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.ClassCodeSelector.resources
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\UnityEngine.dll
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csprojResolveAssemblyReference.cache

@@ -51,11 +51,20 @@ namespace Attendance_Scanning
         private void ClassCodeComboBox_TextChanged(object sender, EventArgs e)
         {
             FinalReturningClassCode = ClassCodeComboBox.Text;
-            if(ClassCodeComboBox.Text.Length == 0 && !Changing)
+            if (ClassCodeComboBox.Text.Length == 0 && !Changing)
             {
                 ClassCodeComboBox.Text = "Please type in here or select a value.";
             }
             Changing = false;
+        }
+
+        private void ClassCodeComboBox_GotFocus(object sender, EventArgs e)
+        {
+            if (ClassCodeComboBox.Text == "Please type in here or select a value.")
+            {
+                Changing = true;
+                ClassCodeComboBox.Text = "";
+            }
         }
 
         private void ClassCodeComboBox_KeyDown(object sender, KeyEventArgs e)
