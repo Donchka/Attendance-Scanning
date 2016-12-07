@@ -40,19 +40,21 @@
             // 
             // Enter_Button
             // 
-            this.Enter_Button.Location = new System.Drawing.Point(190, 209);
+            this.Enter_Button.Location = new System.Drawing.Point(127, 151);
+            this.Enter_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Enter_Button.Name = "Enter_Button";
-            this.Enter_Button.Size = new System.Drawing.Size(76, 29);
+            this.Enter_Button.Size = new System.Drawing.Size(51, 21);
             this.Enter_Button.TabIndex = 7;
-            this.Enter_Button.Text = "Enter";
+            this.Enter_Button.Text = "Save";
             this.Enter_Button.UseVisualStyleBackColor = true;
             this.Enter_Button.Click += new System.EventHandler(this.Enter_Button_Click);
             // 
             // Cancel_Button
             // 
-            this.Cancel_Button.Location = new System.Drawing.Point(14, 209);
+            this.Cancel_Button.Location = new System.Drawing.Point(9, 151);
+            this.Cancel_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Cancel_Button.Name = "Cancel_Button";
-            this.Cancel_Button.Size = new System.Drawing.Size(80, 29);
+            this.Cancel_Button.Size = new System.Drawing.Size(53, 21);
             this.Cancel_Button.TabIndex = 6;
             this.Cancel_Button.Text = "Cancel";
             this.Cancel_Button.UseVisualStyleBackColor = true;
@@ -60,60 +62,66 @@
             // 
             // OldBox
             // 
-            this.OldBox.Location = new System.Drawing.Point(15, 30);
+            this.OldBox.Location = new System.Drawing.Point(10, 22);
+            this.OldBox.Margin = new System.Windows.Forms.Padding(2);
             this.OldBox.Name = "OldBox";
             this.OldBox.PasswordChar = '*';
-            this.OldBox.Size = new System.Drawing.Size(258, 28);
+            this.OldBox.Size = new System.Drawing.Size(173, 20);
             this.OldBox.TabIndex = 5;
             // 
             // Password_Label
             // 
             this.Password_Label.AutoSize = true;
-            this.Password_Label.Location = new System.Drawing.Point(12, 8);
+            this.Password_Label.Location = new System.Drawing.Point(8, 6);
+            this.Password_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password_Label.Name = "Password_Label";
-            this.Password_Label.Size = new System.Drawing.Size(125, 18);
+            this.Password_Label.Size = new System.Drawing.Size(75, 13);
             this.Password_Label.TabIndex = 4;
             this.Password_Label.Text = "Old Password:";
             // 
             // NewBox
             // 
-            this.NewBox.Location = new System.Drawing.Point(15, 91);
+            this.NewBox.Location = new System.Drawing.Point(10, 66);
+            this.NewBox.Margin = new System.Windows.Forms.Padding(2);
             this.NewBox.Name = "NewBox";
             this.NewBox.PasswordChar = '*';
-            this.NewBox.Size = new System.Drawing.Size(258, 28);
+            this.NewBox.Size = new System.Drawing.Size(173, 20);
             this.NewBox.TabIndex = 9;
             // 
             // New_PaswordLabel1
             // 
             this.New_PaswordLabel1.AutoSize = true;
-            this.New_PaswordLabel1.Location = new System.Drawing.Point(12, 71);
+            this.New_PaswordLabel1.Location = new System.Drawing.Point(8, 51);
+            this.New_PaswordLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.New_PaswordLabel1.Name = "New_PaswordLabel1";
-            this.New_PaswordLabel1.Size = new System.Drawing.Size(125, 18);
+            this.New_PaswordLabel1.Size = new System.Drawing.Size(81, 13);
             this.New_PaswordLabel1.TabIndex = 8;
             this.New_PaswordLabel1.Text = "New Password:";
             // 
             // ReenterBox
             // 
-            this.ReenterBox.Location = new System.Drawing.Point(15, 156);
+            this.ReenterBox.Location = new System.Drawing.Point(10, 113);
+            this.ReenterBox.Margin = new System.Windows.Forms.Padding(2);
             this.ReenterBox.Name = "ReenterBox";
             this.ReenterBox.PasswordChar = '*';
-            this.ReenterBox.Size = new System.Drawing.Size(258, 28);
+            this.ReenterBox.Size = new System.Drawing.Size(173, 20);
             this.ReenterBox.TabIndex = 11;
             // 
             // ReEnter_Label
             // 
             this.ReEnter_Label.AutoSize = true;
-            this.ReEnter_Label.Location = new System.Drawing.Point(12, 134);
+            this.ReEnter_Label.Location = new System.Drawing.Point(8, 97);
+            this.ReEnter_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ReEnter_Label.Name = "ReEnter_Label";
-            this.ReEnter_Label.Size = new System.Drawing.Size(242, 18);
+            this.ReEnter_Label.Size = new System.Drawing.Size(142, 13);
             this.ReEnter_Label.TabIndex = 10;
-            this.ReEnter_Label.Text = "reenter your New Password:";
+            this.ReEnter_Label.Text = "Confirm your New Password:";
             // 
             // PasswordEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 253);
+            this.ClientSize = new System.Drawing.Size(189, 183);
             this.Controls.Add(this.ReenterBox);
             this.Controls.Add(this.ReEnter_Label);
             this.Controls.Add(this.NewBox);
@@ -122,6 +130,7 @@
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.OldBox);
             this.Controls.Add(this.Password_Label);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PasswordEditor";
             this.Text = "PasswordEditor";
             this.ResumeLayout(false);
