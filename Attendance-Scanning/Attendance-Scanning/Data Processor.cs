@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using Microsoft.Office.Interop.Excel;
 
 namespace Attendance_Scanning
 {
@@ -112,7 +113,7 @@ namespace Attendance_Scanning
         }
 
         /// <summary>
-        /// To save a file of daily records. Available for first creation. Available for First Name, Last Name, Student ID and daily records. 
+        /// To save a file of daily records in csv format. Available for first creation. Available for First Name, Last Name, Student ID and daily records. 
         /// </summary>
         /// <param name="CheckedStudents">For those who has been checked, include late</param>
         /// <param name="UncheckedStudents">For those who has been unchecked, include absent</param>
@@ -272,5 +273,37 @@ namespace Attendance_Scanning
             String SSS = SSSn.Trim();
             return new DateTime(int.Parse(SSS.Split('-')[0]), int.Parse(SSS.Split('-')[1]), int.Parse(SSS.Split('-')[2]));
         }
+
+        /// <summary>
+        /// New method for saving files in excel format. 
+        /// </summary>
+        /// <param name="CheckedStudents"></param>
+        /// <param name="UncheckedStudents"></param>
+        /// <param name="FilePathAndName"></param>
+        /// <param name="Date"></param>
+        /// <param name="StartPoint"></param>
+        /// <param name="ClassCode"></param>
+        /// <param name="CustomTimmmmmmmmmme"></param>
+        public void SaveDailyFiles(
+            List<SingleStudent> CheckedStudents, 
+            List<SingleStudent> UncheckedStudents, 
+            string FilePathAndName, 
+            string SafeName,
+            DateTime Date, 
+            DateTime StartPoint,
+            string ClassCode, 
+            DateTime CustomTimmmmmmmmmme)
+        {
+            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook EWC = new Workbook();
+            Worksheet StatusRecord = new Worksheet();
+            Worksheet NotInClassMinuteRecord = new Worksheet();
+            Worksheet ExactTimeRecord = new Worksheet();
+
+            StatusRecord.Name = "Student Status";
+            NotInClassMinuteRecord.Name = "During Class Absent time";
+            ExactTimeRecord.Name = "Attendance time";
+            StatusRecord.Cells[2, 5] = "WTF";
+         }
     }
 }
