@@ -200,6 +200,12 @@
       <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
     </Compile>
     <Compile Include="TimeKeeper.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bug.resx">
+      <DependentUpon>Bug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClassCodeSelector.resx">
       <DependentUpon>ClassCodeSelector.cs</DependentUpon>
     </EmbeddedResource>
