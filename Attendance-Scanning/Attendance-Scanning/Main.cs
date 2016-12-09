@@ -518,5 +518,15 @@ namespace Attendance_Scanning
             //Properties.Settings.Default.VeryTempWrongClosingUncheck = new SingleStudentCollection(NotCheckedSingleStudents);
 
         }
+
+        private void bugReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
