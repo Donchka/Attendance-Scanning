@@ -15,6 +15,7 @@ namespace Attendance_Scanning
         public String EmailAddress = "";
         public DateTime AttandanceTime = new DateTime();
         public String State = "";
+        public TimeSpan NotInClassTime;
         /// <summary>
         /// Real Type
         /// </summary>
