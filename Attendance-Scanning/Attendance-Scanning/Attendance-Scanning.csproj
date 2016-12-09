@@ -127,6 +127,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bug.Designer.cs">
+      <DependentUpon>Bug.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassCodeSelector.cs">
       <SubType>Form</SubType>
     </Compile>
