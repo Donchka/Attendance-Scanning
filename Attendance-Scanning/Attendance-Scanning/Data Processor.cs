@@ -5,7 +5,10 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
-using Microsoft.Office.Interop.Excel;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Excel = DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Attendance_Scanning
 {
@@ -138,7 +141,6 @@ namespace Attendance_Scanning
             {
                 if (FirstRowOfColumns[i].Contains((FromYYYYMMDDToString(Date))))
                 {
-
                     columnToWrite = i;
                 }
             }
@@ -294,16 +296,21 @@ namespace Attendance_Scanning
             string ClassCode, 
             DateTime CustomTimmmmmmmmmme)
         {
-            Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel.Workbook EWC = new Workbook();
+            int columnToWrite;
+            DocumentFormat.OpenXml.Spreadsheet.Workbook EWC = new Workbook();
+            //EWC.WorkbookPart.AddNewPart<WorkbookPart>();
             Worksheet StatusRecord = new Worksheet();
             Worksheet NotInClassMinuteRecord = new Worksheet();
             Worksheet ExactTimeRecord = new Worksheet();
+            SpreadsheetDocument SSD = null;
 
-            StatusRecord.Name = "Student Status";
-            NotInClassMinuteRecord.Name = "During Class Absent time";
-            ExactTimeRecord.Name = "Attendance time";
-            StatusRecord.Cells[2, 5] = "WTF";
+            //StatusRecord.Name = "Student Status";
+            //NotInClassMinuteRecord.Name = "During Class Absent time";
+            //ExactTimeRecord.Name = "Attendance time";
+            //StatusRecord.[2, 5] = "WTF";
+
+
+
          }
     }
 }
