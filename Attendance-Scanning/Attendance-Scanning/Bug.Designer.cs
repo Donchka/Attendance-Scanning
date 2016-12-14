@@ -55,21 +55,22 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(108, 184);
+            this.linkLabel1.Location = new System.Drawing.Point(103, 184);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(65, 13);
             this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Github issue";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 184);
+            this.label2.Location = new System.Drawing.Point(31, 171);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(241, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.label2.Text = "Or you can sumit the issue on the github website:)";
             // 
             // Bug
             // 
@@ -82,6 +83,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Bug";
             this.Text = "Bug Report";
+            this.Load += new System.EventHandler(this.Bug_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

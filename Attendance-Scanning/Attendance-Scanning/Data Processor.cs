@@ -5,7 +5,6 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
-using Microsoft.Office.Interop.Excel;
 
 namespace Attendance_Scanning
 {
@@ -284,7 +283,7 @@ namespace Attendance_Scanning
         /// <param name="StartPoint"></param>
         /// <param name="ClassCode"></param>
         /// <param name="CustomTimmmmmmmmmme"></param>
-        public void SaveDailyFiles(
+        /*public void SaveDailyFiles(
             List<SingleStudent> CheckedStudents, 
             List<SingleStudent> UncheckedStudents, 
             string FilePathAndName, 
@@ -304,6 +303,6 @@ namespace Attendance_Scanning
             NotInClassMinuteRecord.Name = "During Class Absent time";
             ExactTimeRecord.Name = "Attendance time";
             StatusRecord.Cells[2, 5] = "WTF";
-         }
+         }*/
     }
 }
