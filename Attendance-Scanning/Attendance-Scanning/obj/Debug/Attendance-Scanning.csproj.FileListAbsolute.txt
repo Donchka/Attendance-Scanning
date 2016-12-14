@@ -36,13 +36,8 @@ C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Att
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Email_Account_Editor.resources
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.SendMailSelector.resources
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.毒瘤之SpecialDaysEditor.resources
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.exe.config
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Interop.CRYPTEXTLib.dll
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csproj.ResolveComReference.cache
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.exe
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.pdb
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.exe
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance-Scanning.pdb
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.dll
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Google.Apis.Auth.PlatformServices.dll
@@ -94,7 +89,16 @@ C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Att
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.exe
 C:\Users\wang_\OneDrive\Grade 12\ICS\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.pdb
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance Recording System.exe.config
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csprojResolveAssemblyReference.cache
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Interop.Microsoft.Office.Core.dll
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.exe
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.pdb
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance Recording System.exe.manifest
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance Recording System.application
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance Recording System.exe
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance Recording System.pdb
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.About.resources
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.Bug.resources
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.exe.manifest
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.application

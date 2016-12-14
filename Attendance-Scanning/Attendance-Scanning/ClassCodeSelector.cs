@@ -107,5 +107,6 @@ namespace Attendance_Scanning
                 this.DialogResult = DialogResult.OK;
             }
         }
+
     }
 }
