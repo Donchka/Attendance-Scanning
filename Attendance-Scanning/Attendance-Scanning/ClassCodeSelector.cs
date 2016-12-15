@@ -190,7 +190,7 @@ namespace Attendance_Scanning
                     foreach (string SingleLine in ThyFile)
                     {
                         string[] TheLine = SingleLine.Split(',');
-                        if (SingleLine.Contains(ClassCodeComboBox.Text))//If the student has this course
+                        if (SingleLine.ToUpper().Contains(ClassCodeComboBox.Text.ToUpper()))//If the student has this course
                         {
                             try
                             {
