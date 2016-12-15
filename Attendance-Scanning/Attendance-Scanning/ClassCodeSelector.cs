@@ -141,9 +141,7 @@ namespace Attendance_Scanning
                     foreach (string SingleLine in ThyFile)
                     {
                         string[] TheLine = SingleLine.Split(',');
-                        foreach (String SingleClassCode in TheLine[WhichOne].Split(' '))
-                        {
-                            if (SingleClassCode == ClassCodeComboBox.Text)//If the student has this course
+                            if (SingleLine.Contains(ClassCodeComboBox.Text))//If the student has this course
                             {
                                 try
                                 {
@@ -159,7 +157,6 @@ namespace Attendance_Scanning
                                     MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
                                 }
                             }
-                        }
                     }
                     if (stustu.Count <= 0)
                     {

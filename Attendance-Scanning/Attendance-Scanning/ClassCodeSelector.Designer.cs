@@ -51,7 +51,7 @@
             this.tableLayoutPanel1.Controls.Add(this.ColumnComboBox, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -65,7 +65,7 @@
             this.Yes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Yes.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Yes.Location = new System.Drawing.Point(2, 50);
-            this.Yes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yes.Margin = new System.Windows.Forms.Padding(2);
             this.Yes.Name = "Yes";
             this.Yes.Size = new System.Drawing.Size(184, 44);
             this.Yes.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.No.Dock = System.Windows.Forms.DockStyle.Fill;
             this.No.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.No.Location = new System.Drawing.Point(190, 50);
-            this.No.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.No.Margin = new System.Windows.Forms.Padding(2);
             this.No.Name = "No";
             this.No.Size = new System.Drawing.Size(185, 44);
             this.No.TabIndex = 1;
@@ -105,7 +105,7 @@
             this.ClassCodeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClassCodeComboBox.FormattingEnabled = true;
             this.ClassCodeComboBox.Location = new System.Drawing.Point(190, 2);
-            this.ClassCodeComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClassCodeComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.ClassCodeComboBox.Name = "ClassCodeComboBox";
             this.ClassCodeComboBox.Size = new System.Drawing.Size(185, 21);
             this.ClassCodeComboBox.TabIndex = 3;
@@ -139,7 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 148);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClassCodeSelector";
             this.Text = "ClassCodeSelector";
             this.tableLayoutPanel1.ResumeLayout(false);
