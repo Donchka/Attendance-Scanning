@@ -92,7 +92,7 @@ namespace Attendance_Scanning
             }
             if (FileOpener.SafeFileName.Split('_')[0].Length != 9 && FileOpener.SafeFileName.Split('_')[0].Length != 8)
             {
-                DialogResult DR = MessageBox.Show("Cannot be identified as a single class file! Would you like to create a new single class file from this one? \r\nPlease note that you CAN STILL load this one if it was created by me!", "Loading New File", MessageBoxButtons.YesNoCancel);
+                DialogResult DR = MessageBox.Show("Cannot be identified as a single class file! Would you like to create a new single class file from this one? \r\nPlease note that you CAN STILL load this one if it was created by me!\r\n\r\nClick Yes: Create a new class file from this file. You will need to select your class code. \r\nClick No: Load this file as a single class file.  \r\nClick Cancel: Stop this opretion and load a new file \r\n\r\nclass file: A single file that contains all students in one class with their daily attendance records.", "Loading New File", MessageBoxButtons.YesNoCancel);
                 //If yes, create new one; if no, go on; if cancel, return.
                 if (DR == DialogResult.Yes)
                 {

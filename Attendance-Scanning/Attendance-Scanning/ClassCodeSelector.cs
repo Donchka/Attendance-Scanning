@@ -132,6 +132,7 @@ namespace Attendance_Scanning
 
         private void Yes_Click(object sender, EventArgs e)
         {
+            stustu = new List<SingleStudent>();
             if (ClassCodeComboBox.Items.Contains(ClassCodeComboBox.Text))
             {
                 if (!ClassCodeComboBox.Text.Contains("select"))
