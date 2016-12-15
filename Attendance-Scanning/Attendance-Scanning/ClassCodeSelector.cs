@@ -52,7 +52,7 @@ namespace Attendance_Scanning
             if (!Gived)
             {
                 WhichOne = DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ourse", 0);
-                //Warning: Complex Logic below
+                //Warning: Complex Logic below 随便打个客户
                 if (WhichOne == -1)
                 {
                     WhichOne = DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "rogram", 0);
@@ -61,41 +61,26 @@ namespace Attendance_Scanning
                         MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
                         return;
                     }
-                    else
+                    else if (ThyFile[1].Split(',')[WhichOne].Length < 2)
                     {
-                        if (ThyFile[1].Split(',')[WhichOne].Length < 2)
-                        {
-                                MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
-                                return;
-                        }
-                    }
-                    if (ThyFile[1].Split(',')[WhichOne].Length < 2)
-                    {
-                        WhichOne = DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "rogram", 0);
-                        if (WhichOne == -1)
-                        {
-                            MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        if (ThyFile[1].Split(',')[WhichOne].Length < 2)
-                        {
-                            MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
-                            return;
-                        }
+                        MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
+                        return;
                     }
                 }
                 else if (ThyFile[1].Split(',')[WhichOne].Length < 2)
                 {
-                    if (MessageBox.Show("Cannot get the column for class codes! Do you still want to continue?", "Warning", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                    WhichOne = DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "rogram", 0);
+                    if (WhichOne == -1)
                     {
-                        MessageBox.Show("Please maually set the class code column.");
+                        MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
+                        return;
+                    }
+                    else if (ThyFile[1].Split(',')[WhichOne].Length < 2)
+                    {
+                        MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
                         return;
                     }
                 }
-
             }
             else
             {
