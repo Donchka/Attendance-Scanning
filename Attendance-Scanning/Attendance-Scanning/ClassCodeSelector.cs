@@ -17,18 +17,25 @@ namespace Attendance_Scanning
         bool Changing = false;
         int WhichOne = 7;
         public List<SingleStudent> stustu;
+        Data_Processor DP;
         /// <summary>
         /// Initialize the class code selector with the file
         /// </summary>
         /// <param name="File"></param>
-        public ClassCodeSelector(string[] File)
+        public ClassCodeSelector(string[] File, Data_Processor DPpp)
         {
             InitializeComponent();
+            DP = DPpp;
             ThyFile = File.ToList();
+
+            foreach (string Title in ThyFile[0].Split(','))
+            {
+                ColumnComboBox.Items.Add(Title);
+            }
             try
             {
-                NoIWouldLikeSpike();
-            } 
+                NoIWouldLikeSpike(0, false);
+            }
             catch
             {
                 MessageBox.Show("Not A Valid File!");
@@ -36,23 +43,50 @@ namespace Attendance_Scanning
                 this.Close();
             }
             ClassCodeComboBox.Text = "Please type in here or select a value.";
+
+
         }
 
-        void NoIWouldLikeSpike()
+        void NoIWouldLikeSpike(int Given, bool Gived)
         {
-            WhichOne = 7;
-            ThyFile.RemoveAt(0);
-            if (ThyFile[0].Split(',')[7].Length < 2)
+            if (!Gived)
             {
-                WhichOne = 6;
+                WhichOne = DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ourse", 0);
+                if (WhichOne == -1)
+                {
+                    WhichOne = DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "rogram", 0);
+                    if (WhichOne == -1)
+                    {
+                        MessageBox.Show("Cannot get the column for class codes! Please manually set that!");
+                        return;
+                    }
+                }
+                if (ThyFile[1].Split(',')[WhichOne].Length < 2)
+                {
+                    if (MessageBox.Show("Cannot get the column for class codes! Do you still want to continue?", "Warning", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                    {
+                        MessageBox.Show("Please maually set the class code column.");
+                        return;
+                    }
+                }
+
             }
-            foreach(string SingleLine in ThyFile)
+            else
+            {
+                WhichOne = Given;
+            }
+            List<string> ThyThyFile = ThyFile.ToList();
+            ThyThyFile.RemoveAt(0);
+            foreach (string SingleLine in ThyThyFile)
             {
                 string Nope = SingleLine.Split(',')[WhichOne];
-                if (!ClassCodeComboBox.Items.Contains(Nope))
+                foreach (string YUS in Nope.Split(' '))
                 {
-                    ClassCodeComboBox.Items.Add(Nope);
-                    ClassCodeComboBox.AutoCompleteCustomSource.Add(Nope);
+                    if (!ClassCodeComboBox.Items.Contains(YUS))
+                    {
+                        ClassCodeComboBox.Items.Add(YUS);
+                        ClassCodeComboBox.AutoCompleteCustomSource.Add(YUS);
+                    }
                 }
             }
         }
@@ -87,25 +121,80 @@ namespace Attendance_Scanning
 
         private void Yes_Click(object sender, EventArgs e)
         {
-            if(!ClassCodeComboBox.Text.Contains("select"))
+            if (ClassCodeComboBox.Items.Contains(ClassCodeComboBox.Text))
             {
-                stustu = new List<SingleStudent>();
-                foreach (string SingleLine in ThyFile)
+                if (!ClassCodeComboBox.Text.Contains("select"))
                 {
-                    string[] TheLine = SingleLine.Split(',');
-                    if (TheLine[WhichOne] == ClassCodeComboBox.Text)
+                    stustu = new List<SingleStudent>();
+                    foreach (string SingleLine in ThyFile)
                     {
-                        SingleStudent SS = new SingleStudent(TheLine[2], TheLine[1], TheLine[0], TheLine[12]);
-                        stustu.Add(SS);
+                        string[] TheLine = SingleLine.Split(',');
+                        foreach (String SingleClassCode in TheLine[WhichOne].Split(' '))
+                        {
+                            if (SingleClassCode == ClassCodeComboBox.Text)//If the student has this course
+                            {
+                                try
+                                {
+                                    SingleStudent SS = new SingleStudent(
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)],
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0)],
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
+                                    stustu.Add(SS);
+                                }
+                                catch (Exception eee)
+                                {
+                                    MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
+                                }
+                            }
+                        }
+                    }
+                    if (stustu.Count <= 0)
+                    {
+                        MessageBox.Show("No student has this course!");
+                        return;
+                    }
+                    this.DialogResult = DialogResult.OK;
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Your class code does not exist in the possible class code selections! \r\nWould you still like to search for possible students in your given class code? \r\n Note: You can select No and then try select another column.", "Cannot find certain class code", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    foreach (string SingleLine in ThyFile)
+                    {
+                        string[] TheLine = SingleLine.Split(',');
+                        if (SingleLine.Contains(ClassCodeComboBox.Text))//If the student has this course
+                        {
+                            try
+                            {
+                                SingleStudent SS = new SingleStudent(
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)],
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0)],
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
+                                stustu.Add(SS);
+                            }
+                            catch (Exception eee)
+                            {
+                                MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
+                            }
+                        }
+                    }
+                    if (stustu.Count <= 0)
+                    {
+                        MessageBox.Show("No student has this course! Please ensure the file and your class code!");
+                        return;
                     }
                 }
-                if(stustu.Count <= 0)
-                {
-                    MessageBox.Show("No student has this course!");
-                    return;
-                }
-                this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void ColumnComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClassCodeComboBox.Items.Clear();
+            ClassCodeComboBox.AutoCompleteCustomSource.Clear();
+            NoIWouldLikeSpike(ColumnComboBox.SelectedIndex, true);
         }
     }
 }

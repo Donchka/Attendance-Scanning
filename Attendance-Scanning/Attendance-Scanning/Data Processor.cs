@@ -272,5 +272,17 @@ namespace Attendance_Scanning
             String SSS = SSSn.Trim();
             return new DateTime(int.Parse(SSS.Split('-')[0]), int.Parse(SSS.Split('-')[1]), int.Parse(SSS.Split('-')[2]));
         }
+
+        public int FindFirstStringIndexFromAnArray (string[] Array, string target, int StartFrom)
+        {
+            for(int i = StartFrom; i<Array.Length;++i)
+            {
+                if(Array[i].Trim().ToUpper().Contains(target.ToUpper()))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }

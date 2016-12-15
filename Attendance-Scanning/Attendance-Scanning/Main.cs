@@ -96,7 +96,7 @@ namespace Attendance_Scanning
                 //If yes, create new one; if no, go on; if cancel, return.
                 if (DR == DialogResult.Yes)
                 {
-                    ClassCodeSelector CCS = new ClassCodeSelector(Data);
+                    ClassCodeSelector CCS = new ClassCodeSelector(Data,DP);
                     if (CCS.ShowDialog() == DialogResult.OK)
                     {
                         ClassCodeTempelate = CCS.ClassCodeComboBox.Text;
