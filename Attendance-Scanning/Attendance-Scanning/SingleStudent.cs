@@ -47,7 +47,18 @@ namespace Attendance_Scanning
         }
         public bool IsMe(String ThyIndex)
         {
-            return (ThyIndex.Contains(Index));
+            if (ThyIndex.Contains(Index))
+            {
+                return (ThyIndex.Contains(Index));
+            }
+            else if(ThyIndex.Length >= 13)
+            {
+                return (ThyIndex.Substring(6, 7).Contains(Index.Substring(2)));
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
