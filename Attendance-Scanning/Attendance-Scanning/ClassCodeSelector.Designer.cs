@@ -56,17 +56,18 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 107);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 148);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Yes
             // 
             this.Yes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Yes.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Yes.Location = new System.Drawing.Point(2, 55);
+            this.Yes.Location = new System.Drawing.Point(2, 50);
             this.Yes.Margin = new System.Windows.Forms.Padding(2);
             this.Yes.Name = "Yes";
-            this.Yes.Size = new System.Drawing.Size(184, 50);
+            this.Yes.Size = new System.Drawing.Size(184, 44);
             this.Yes.TabIndex = 0;
             this.Yes.Text = "Yes";
             this.Yes.UseVisualStyleBackColor = true;
@@ -77,10 +78,10 @@
             this.No.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.No.Dock = System.Windows.Forms.DockStyle.Fill;
             this.No.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.No.Location = new System.Drawing.Point(190, 55);
+            this.No.Location = new System.Drawing.Point(190, 50);
             this.No.Margin = new System.Windows.Forms.Padding(2);
             this.No.Name = "No";
-            this.No.Size = new System.Drawing.Size(185, 50);
+            this.No.Size = new System.Drawing.Size(185, 44);
             this.No.TabIndex = 1;
             this.No.Text = "No";
             this.No.UseVisualStyleBackColor = true;
@@ -115,9 +116,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 141);
+            this.label1.Location = new System.Drawing.Point(3, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 54);
+            this.label1.Size = new System.Drawing.Size(167, 39);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cannot find your class code?\r\nPlease select the right Column for codes.\r\n";
             // 
@@ -125,9 +126,9 @@
             // 
             this.ColumnComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ColumnComboBox.FormattingEnabled = true;
-            this.ColumnComboBox.Location = new System.Drawing.Point(286, 144);
+            this.ColumnComboBox.Location = new System.Drawing.Point(191, 99);
             this.ColumnComboBox.Name = "ColumnComboBox";
-            this.ColumnComboBox.Size = new System.Drawing.Size(277, 26);
+            this.ColumnComboBox.Size = new System.Drawing.Size(183, 21);
             this.ColumnComboBox.TabIndex = 5;
             this.ColumnComboBox.SelectedIndexChanged += new System.EventHandler(this.ColumnComboBox_SelectedIndexChanged);
             // 
@@ -135,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 107);
+            this.ClientSize = new System.Drawing.Size(377, 148);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClassCodeSelector";
