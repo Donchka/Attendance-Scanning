@@ -33,7 +33,7 @@
             this.No = new System.Windows.Forms.Button();
             this.LAAbe = new System.Windows.Forms.Label();
             this.ClassCodeComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Tip = new System.Windows.Forms.Label();
             this.ColumnComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             this.tableLayoutPanel1.Controls.Add(this.No, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.LAAbe, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.ClassCodeComboBox, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Tip, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.ColumnComboBox, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -108,14 +108,14 @@
             this.ClassCodeComboBox.Enter += new System.EventHandler(this.ClassCodeComboBox_GotFocus);
             this.ClassCodeComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ClassCodeComboBox_KeyDown);
             // 
-            // label1
+            // Tip
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 54);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Cannot find your class code?\r\nPlease select the right Column for codes.\r\n";
+            this.Tip.AutoSize = true;
+            this.Tip.Location = new System.Drawing.Point(3, 141);
+            this.Tip.Name = "Tip";
+            this.Tip.Size = new System.Drawing.Size(260, 54);
+            this.Tip.TabIndex = 4;
+            this.Tip.Text = "Cannot find your class code?\r\nPlease select the right Column for codes.\r\n";
             // 
             // ColumnComboBox
             // 
@@ -148,7 +148,7 @@
         private System.Windows.Forms.Button No;
         private System.Windows.Forms.Label LAAbe;
         public System.Windows.Forms.ComboBox ClassCodeComboBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Tip;
         private System.Windows.Forms.ComboBox ColumnComboBox;
     }
 }
