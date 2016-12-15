@@ -51,22 +51,21 @@
             this.tableLayoutPanel1.Controls.Add(this.ColumnComboBox, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 107);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.3038F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.6962F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(566, 227);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Yes
             // 
             this.Yes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Yes.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Yes.Location = new System.Drawing.Point(2, 55);
-            this.Yes.Margin = new System.Windows.Forms.Padding(2);
+            this.Yes.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Yes.Location = new System.Drawing.Point(3, 73);
             this.Yes.Name = "Yes";
-            this.Yes.Size = new System.Drawing.Size(184, 50);
+            this.Yes.Size = new System.Drawing.Size(277, 82);
             this.Yes.TabIndex = 0;
             this.Yes.Text = "Yes";
             this.Yes.UseVisualStyleBackColor = true;
@@ -76,11 +75,10 @@
             // 
             this.No.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.No.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.No.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.No.Location = new System.Drawing.Point(190, 55);
-            this.No.Margin = new System.Windows.Forms.Padding(2);
+            this.No.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.No.Location = new System.Drawing.Point(286, 73);
             this.No.Name = "No";
-            this.No.Size = new System.Drawing.Size(185, 50);
+            this.No.Size = new System.Drawing.Size(277, 82);
             this.No.TabIndex = 1;
             this.No.Text = "No";
             this.No.UseVisualStyleBackColor = true;
@@ -88,11 +86,10 @@
             // LAAbe
             // 
             this.LAAbe.AutoSize = true;
-            this.LAAbe.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LAAbe.Location = new System.Drawing.Point(2, 0);
-            this.LAAbe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LAAbe.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LAAbe.Location = new System.Drawing.Point(3, 0);
             this.LAAbe.Name = "LAAbe";
-            this.LAAbe.Size = new System.Drawing.Size(162, 40);
+            this.LAAbe.Size = new System.Drawing.Size(244, 56);
             this.LAAbe.TabIndex = 2;
             this.LAAbe.Text = "Please type in or select your class code:\r\n";
             this.LAAbe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,10 +100,9 @@
             this.ClassCodeComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.ClassCodeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ClassCodeComboBox.FormattingEnabled = true;
-            this.ClassCodeComboBox.Location = new System.Drawing.Point(190, 2);
-            this.ClassCodeComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ClassCodeComboBox.Location = new System.Drawing.Point(286, 3);
             this.ClassCodeComboBox.Name = "ClassCodeComboBox";
-            this.ClassCodeComboBox.Size = new System.Drawing.Size(185, 21);
+            this.ClassCodeComboBox.Size = new System.Drawing.Size(277, 26);
             this.ClassCodeComboBox.TabIndex = 3;
             this.ClassCodeComboBox.TextChanged += new System.EventHandler(this.ClassCodeComboBox_TextChanged);
             this.ClassCodeComboBox.Enter += new System.EventHandler(this.ClassCodeComboBox_GotFocus);
@@ -115,7 +111,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 141);
+            this.label1.Location = new System.Drawing.Point(4, 158);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 54);
             this.label1.TabIndex = 4;
@@ -125,19 +122,19 @@
             // 
             this.ColumnComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ColumnComboBox.FormattingEnabled = true;
-            this.ColumnComboBox.Location = new System.Drawing.Point(286, 144);
+            this.ColumnComboBox.Location = new System.Drawing.Point(287, 162);
+            this.ColumnComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.ColumnComboBox.Name = "ColumnComboBox";
-            this.ColumnComboBox.Size = new System.Drawing.Size(277, 26);
+            this.ColumnComboBox.Size = new System.Drawing.Size(272, 26);
             this.ColumnComboBox.TabIndex = 5;
             this.ColumnComboBox.SelectedIndexChanged += new System.EventHandler(this.ColumnComboBox_SelectedIndexChanged);
             // 
             // ClassCodeSelector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 107);
+            this.ClientSize = new System.Drawing.Size(566, 227);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClassCodeSelector";
             this.Text = "ClassCodeSelector";
             this.tableLayoutPanel1.ResumeLayout(false);
