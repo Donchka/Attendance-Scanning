@@ -225,7 +225,6 @@
     <EmbeddedResource Include="TeacherManagementValidater.resx">
       <DependentUpon>TeacherManagementValidater.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Attendance-Scanning_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
