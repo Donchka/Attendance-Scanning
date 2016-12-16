@@ -59,19 +59,19 @@ namespace Attendance_Scanning
             string FinalReturner = "";
             foreach (string Words in NeedToBeReplaced.Split(' '))
             {
-                if (Words == "<StudentName>")
+                if (Words.Contains("<StudentName>"))
                 {
                     FinalReturner += student.FirstName + " " + student.LastName;
                 }
-                else if (Words == "<StudentStatueInfo>")
+                else if (Words.Contains("<StudentStatueInfo>"))
                 {
                     FinalReturner += LateData;
                 }
-                else if (Words == "<ClassCode>")
+                else if (Words.Contains("<ClassCode>"))
                 {
                     FinalReturner += Properties.Settings.Default.ClassCode;
                 }
-                else if (Words == "<TeacherName>")
+                else if (Words.Contains("<TeacherName>"))
                 {
                     FinalReturner += Properties.Settings.Default.TeacherName;
                 }
