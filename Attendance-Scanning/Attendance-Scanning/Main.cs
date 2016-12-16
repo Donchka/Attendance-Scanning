@@ -255,6 +255,8 @@ namespace Attendance_Scanning
             {
                 TeacherManagementPanel.Hide();
                 Button_TeacherManagement.Text = "Show Teacher Management";
+                TimeEditing.Visible = false;
+                PersonalData.Visible = false;
                 IsTeacherManagementOpened = false;
             }
             else
