@@ -141,46 +141,14 @@ namespace Attendance_Scanning
                     foreach (string SingleLine in ThyFile)
                     {
                         string[] TheLine = SingleLine.Split(',');
-                            if (SingleLine.Contains(ClassCodeComboBox.Text))//If the student has this course
-                            {
-                                try
-                                {
-                                    SingleStudent SS = new SingleStudent(
-                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)],
-                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
-                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0)],
-                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
-                                    stustu.Add(SS);
-                                }
-                                catch (Exception eee)
-                                {
-                                    MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
-                                }
-                            }
-                    }
-                    if (stustu.Count <= 0)
-                    {
-                        MessageBox.Show("No student has this course!");
-                        return;
-                    }
-                    this.DialogResult = DialogResult.OK;
-                }
-            }
-            else
-            {
-                if (MessageBox.Show("Your class code does not exist in the possible class code selections! \r\nWould you still like to search for possible students in your given class code? \r\n Note: You can select No and then try select another column.", "Cannot find certain class code", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    foreach (string SingleLine in ThyFile)
-                    {
-                        string[] TheLine = SingleLine.Split(',');
                         if (SingleLine.ToUpper().Contains(ClassCodeComboBox.Text.ToUpper()))//If the student has this course
                         {
                             try
                             {
                                 SingleStudent SS = new SingleStudent(
                                     TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)],
-                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
                                     TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0)],
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
                                     TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
                                 stustu.Add(SS);
                             }
@@ -195,7 +163,37 @@ namespace Attendance_Scanning
                         MessageBox.Show("No student has this course! Please ensure the file and your class code!");
                         return;
                     }
+                    this.DialogResult = DialogResult.OK;
                 }
+            }
+            else
+            {
+                foreach (string SingleLine in ThyFile)
+                {
+                    string[] TheLine = SingleLine.Split(',');
+                    if (SingleLine.ToUpper().Contains(ClassCodeComboBox.Text.ToUpper()))//If the student has this course
+                    {
+                        try
+                        {
+                            SingleStudent SS = new SingleStudent(
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)],
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0)],
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
+                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
+                            stustu.Add(SS);
+                        }
+                        catch (Exception eee)
+                        {
+                            MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
+                        }
+                    }
+                }
+                if (stustu.Count <= 0)
+                {
+                    MessageBox.Show("No student has this course! Please ensure the file and your class code!");
+                    return;
+                }
+                this.DialogResult = DialogResult.OK;
             }
         }
 
