@@ -167,9 +167,9 @@ namespace Attendance_Scanning
             {
                 if (stu.IsMe(Box_StudentIndex.Text))
                 {
-                    foreach (object OBJ in ListView_Uncheck.Items)
+                    foreach (ListViewItem OBJ in ListView_Uncheck.Items)
                     {
-                        if (OBJ.ToString().Contains(stu.LastName))
+                        if (OBJ.SubItems[2].ToString().Contains(stu.Index))
                         {
                             List<String> Meow = new List<string>();
                             stu.AttandanceTime = DateTime.Now;
@@ -177,13 +177,13 @@ namespace Attendance_Scanning
                             Meow.Add(stu.FirstName);
                             Meow.Add(stu.Index);
                             Meow.Add(tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme));
+                            NotCheckedSingleStudents.Remove(stu);
                             stu.State = tk.perform(DateTime.Now, stu, CustomTimmmmmmmmmmmmmmmmmmmmme);
                             StatueLabel.Text = stu.FirstName + " " + stu.LastName + "\r\nhas been checked at\r\n" + DateTime.Now;
                             //Meow.Add(DateTime.Now.TimeOfDay.ToString("00:00"));
                             CheckedListView.Items.Add(new ListViewItem(Meow.ToArray()));
                             CheckedSingleStudents.Add(stu);
-                            NotCheckedSingleStudents.Remove(stu);
-                            ListView_Uncheck.Items.Remove((ListViewItem)OBJ);
+                            ListView_Uncheck.Items.Remove(OBJ);
                             Box_StudentIndex.Text = "";
                             Saved = false;
                             return;
@@ -218,20 +218,20 @@ namespace Attendance_Scanning
         {
             foreach (SingleStudent stu in CheckedSingleStudents.ToArray())
             {
-                foreach (object OBJ in CheckedListView.Items)
+                foreach (ListViewItem OBJ in CheckedListView.Items)
                 {
-                    if (OBJ.ToString().Contains(stu.LastName))
+                    if (OBJ.SubItems[2].ToString().Contains(stu.Index))
                     {
                         List<String> Meow = new List<string>();
                         Meow.Add(stu.LastName);
                         Meow.Add(stu.FirstName);
                         Meow.Add(stu.Index);
+                        CheckedSingleStudents.Remove(stu);
                         stu.AttandanceTime = new DateTime();
                         stu.State = "Unchecked";
                         NotCheckedSingleStudents.Add(stu);
                         ListView_Uncheck.Items.Add((new ListViewItem(Meow.ToArray())));
-                        CheckedListView.Items.Remove((ListViewItem)OBJ);
-                        CheckedSingleStudents.Remove(stu);
+                        CheckedListView.Items.Remove(OBJ);
                         Box_StudentIndex.Text = "";
                     }
                 }
@@ -256,6 +256,8 @@ namespace Attendance_Scanning
                 TeacherManagementPanel.Hide();
                 Button_TeacherManagement.Text = "Show Teacher Management";
                 IsTeacherManagementOpened = false;
+                TimeEditing.Visible = false;
+                PersonalData.Visible = false;
             }
             else
             {

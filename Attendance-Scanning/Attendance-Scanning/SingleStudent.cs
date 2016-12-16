@@ -55,6 +55,10 @@ namespace Attendance_Scanning
             {
                 return (ThyIndex.Substring(6, 7).Contains(Index.Substring(2)));
             }
+            else if (ThyIndex.Length >= 14)
+            {
+                return (ThyIndex.Substring(7, 7).Contains(Index.Substring(2)));
+            }
             else
             {
                 return false;
