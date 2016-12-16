@@ -440,8 +440,17 @@ namespace Attendance_Scanning
 
         private void editTimeLimitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TimeSetter tl = new TimeSetter(true);
-            tl.Show();
+            TimeSetter TSSetStart = new TimeSetter(true);
+            TSSetStart.Show();
+            TSSetStart.NUD_Hrs.Value = CustomTimmmmmmmmmmmmmmmmmmmmme.Hour;
+            TSSetStart.NUD_Min.Value = CustomTimmmmmmmmmmmmmmmmmmmmme.Minute;
+            if (TSSetStart.ShowDialog() == DialogResult.OK)
+            {
+                int Min = (int)TSSetStart.NUD_Min.Value;
+                int Hrs = (int)TSSetStart.NUD_Hrs.Value;
+                CustomTimmmmmmmmmmmmmmmmmmmmme = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, Hrs, Min, 0);
+                CheckedStudentsTimeUpdate();
+            }
         }
         /// <summary>
         /// If user pressed Enter, see it as Check_Click

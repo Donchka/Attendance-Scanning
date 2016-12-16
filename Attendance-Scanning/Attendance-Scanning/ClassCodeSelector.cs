@@ -141,21 +141,49 @@ namespace Attendance_Scanning
                     foreach (string SingleLine in ThyFile)
                     {
                         string[] TheLine = SingleLine.Split(',');
-                        if (SingleLine.ToUpper().Contains(ClassCodeComboBox.Text.ToUpper()))//If the student has this course
+                        if (TheLine.Length > ThyFile[0].Split(',').Length)
                         {
-                            try
+                            if (TheLine[WhichOne].ToUpper() == ClassCodeComboBox.Text.ToUpper())//If the student has this course
                             {
-                                SingleStudent SS = new SingleStudent(
-                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)],
-                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0)],
-                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
-                                    TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
-                                stustu.Add(SS);
+                                TeacherColumnCustomSelector TCCS =
+                                    new TeacherColumnCustomSelector(
+                                        TheLine,
+                                        DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0),
+                                        DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0),
+                                        DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0),
+                                        DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)
+                                        );
+                                if (TCCS.ShowDialog() == DialogResult.OK) 
+                                {
+                                    try
+                                    {
+                                        SingleStudent SS = new SingleStudent(
+                                                TCCS.StudentNumberComboBox.Text,
+                                                TCCS.FirstNameComboBox.Text,
+                                                TCCS.LastNameComboBox.Text,
+                                                TCCS.EmailComboBox.Text);
+                                        stustu.Add(SS);
+                                    }
+                                    catch (Exception eee)
+                                    {
+                                        MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
+                                    }
+                                }
                             }
-                            catch (Exception eee)
-                            {
-                                MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
-                            }
+                            else
+                                try
+                                {
+                                    SingleStudent SS = new SingleStudent(
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "umber", 0)],
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ast", 0)],
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
+                                        TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
+                                    stustu.Add(SS);
+                                }
+                                catch (Exception eee)
+                                {
+                                    MessageBox.Show("ERROR! Please send this to the developers:" + eee.ToString());
+                                }
                         }
                     }
                     if (stustu.Count <= 0)
