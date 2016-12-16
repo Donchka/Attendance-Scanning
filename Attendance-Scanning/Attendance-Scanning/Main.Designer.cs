@@ -113,7 +113,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(804, 140);
+            this.panel1.Size = new System.Drawing.Size(839, 140);
             this.panel1.TabIndex = 0;
             // 
             // StatueLabel
@@ -144,7 +144,7 @@
             this.TeacherManagementPanel.Controls.Add(this.tableLayoutPanel2);
             this.TeacherManagementPanel.Controls.Add(this.TeacherManagementLabel);
             this.TeacherManagementPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.TeacherManagementPanel.Location = new System.Drawing.Point(272, 25);
+            this.TeacherManagementPanel.Location = new System.Drawing.Point(307, 25);
             this.TeacherManagementPanel.Margin = new System.Windows.Forms.Padding(1);
             this.TeacherManagementPanel.Name = "TeacherManagementPanel";
             this.TeacherManagementPanel.Size = new System.Drawing.Size(532, 115);
@@ -284,7 +284,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(804, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(839, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -495,7 +495,7 @@
             this.UncheckPanel.Location = new System.Drawing.Point(1, 1);
             this.UncheckPanel.Margin = new System.Windows.Forms.Padding(1);
             this.UncheckPanel.Name = "UncheckPanel";
-            this.UncheckPanel.Size = new System.Drawing.Size(319, 389);
+            this.UncheckPanel.Size = new System.Drawing.Size(333, 389);
             this.UncheckPanel.TabIndex = 3;
             // 
             // UncheckToolStrip
@@ -510,7 +510,7 @@
             this.toolStripSeparator3});
             this.UncheckToolStrip.Location = new System.Drawing.Point(0, 0);
             this.UncheckToolStrip.Name = "UncheckToolStrip";
-            this.UncheckToolStrip.Size = new System.Drawing.Size(319, 29);
+            this.UncheckToolStrip.Size = new System.Drawing.Size(333, 29);
             this.UncheckToolStrip.TabIndex = 3;
             this.UncheckToolStrip.Text = "toolStrip2";
             // 
@@ -538,7 +538,7 @@
             this.ListView_Uncheck.Margin = new System.Windows.Forms.Padding(1);
             this.ListView_Uncheck.MultiSelect = false;
             this.ListView_Uncheck.Name = "ListView_Uncheck";
-            this.ListView_Uncheck.Size = new System.Drawing.Size(319, 365);
+            this.ListView_Uncheck.Size = new System.Drawing.Size(333, 365);
             this.ListView_Uncheck.TabIndex = 1;
             this.ListView_Uncheck.UseCompatibleStateImageBehavior = false;
             this.ListView_Uncheck.View = System.Windows.Forms.View.Details;
@@ -563,10 +563,10 @@
             this.CheckedPanel.Controls.Add(this.CheckToolStrip);
             this.CheckedPanel.Controls.Add(this.CheckedListView);
             this.CheckedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CheckedPanel.Location = new System.Drawing.Point(322, 1);
+            this.CheckedPanel.Location = new System.Drawing.Point(336, 1);
             this.CheckedPanel.Margin = new System.Windows.Forms.Padding(1);
             this.CheckedPanel.Name = "CheckedPanel";
-            this.CheckedPanel.Size = new System.Drawing.Size(481, 389);
+            this.CheckedPanel.Size = new System.Drawing.Size(502, 389);
             this.CheckedPanel.TabIndex = 2;
             // 
             // CheckToolStrip
@@ -582,7 +582,7 @@
             this.toolStripLabel2});
             this.CheckToolStrip.Location = new System.Drawing.Point(0, 0);
             this.CheckToolStrip.Name = "CheckToolStrip";
-            this.CheckToolStrip.Size = new System.Drawing.Size(481, 29);
+            this.CheckToolStrip.Size = new System.Drawing.Size(502, 29);
             this.CheckToolStrip.TabIndex = 3;
             this.CheckToolStrip.Text = "toolStrip3";
             // 
@@ -616,7 +616,7 @@
             this.CheckedListView.Margin = new System.Windows.Forms.Padding(1);
             this.CheckedListView.MultiSelect = false;
             this.CheckedListView.Name = "CheckedListView";
-            this.CheckedListView.Size = new System.Drawing.Size(481, 365);
+            this.CheckedListView.Size = new System.Drawing.Size(502, 365);
             this.CheckedListView.TabIndex = 2;
             this.CheckedListView.UseCompatibleStateImageBehavior = false;
             this.CheckedListView.View = System.Windows.Forms.View.Details;
@@ -639,7 +639,7 @@
             // AttendedTime
             // 
             this.AttendedTime.Text = "Time";
-            this.AttendedTime.Width = 153;
+            this.AttendedTime.Width = 219;
             // 
             // FYtooltip
             // 
@@ -659,7 +659,7 @@
             this.StudentListPanel.Name = "StudentListPanel";
             this.StudentListPanel.RowCount = 1;
             this.StudentListPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.StudentListPanel.Size = new System.Drawing.Size(804, 391);
+            this.StudentListPanel.Size = new System.Drawing.Size(839, 391);
             this.StudentListPanel.TabIndex = 2;
             // 
             // Main
@@ -667,11 +667,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(804, 535);
+            this.ClientSize = new System.Drawing.Size(839, 535);
             this.Controls.Add(this.StudentListPanel);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(1);
-            this.MinimumSize = new System.Drawing.Size(818, 569);
+            this.MinimumSize = new System.Drawing.Size(855, 569);
             this.Name = "Main";
             this.Text = "Attendance System - If You have any problem about using, please contact ICS4U1 Gr" +
     "oup 1";
