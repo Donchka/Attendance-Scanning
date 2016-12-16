@@ -97,4 +97,4 @@ C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendanc
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\bin\Debug\Attendance Recording System.pdb
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.exe.manifest
 C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance Recording System.application
-C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance-Scanning.csprojResolveAssemblyReference.cache
+C:\Users\Don\Documents\Visual Studio 2015\Projects\Attendance-Scanning\Attendance-Scanning\Attendance-Scanning\obj\Debug\Attendance_Scanning.TeacherColumnCustomSelector.resources

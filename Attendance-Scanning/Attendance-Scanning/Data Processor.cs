@@ -59,19 +59,19 @@ namespace Attendance_Scanning
             string FinalReturner = "";
             foreach (string Words in NeedToBeReplaced.Split(' '))
             {
-                if (Words == "<StudentName>")
+                if (Words.Contains("<StudentName>"))
                 {
                     FinalReturner += student.FirstName + " " + student.LastName;
                 }
-                else if (Words == "<StudentStatueInfo>")
+                else if (Words.Contains("<StudentStatueInfo>"))
                 {
                     FinalReturner += LateData;
                 }
-                else if (Words == "<ClassCode>")
+                else if (Words.Contains("<ClassCode>"))
                 {
                     FinalReturner += Properties.Settings.Default.ClassCode;
                 }
-                else if (Words == "<TeacherName>")
+                else if (Words.Contains("<TeacherName>"))
                 {
                     FinalReturner += Properties.Settings.Default.TeacherName;
                 }
@@ -272,7 +272,13 @@ namespace Attendance_Scanning
             String SSS = SSSn.Trim();
             return new DateTime(int.Parse(SSS.Split('-')[0]), int.Parse(SSS.Split('-')[1]), int.Parse(SSS.Split('-')[2]));
         }
-
+        /// <summary>
+        /// Find the index of a certain text from an array
+        /// </summary>
+        /// <param name="Array">The array you are going to searching from</param>
+        /// <param name="target">The text it might contain</param>
+        /// <param name="StartFrom">There might be more than one index, so start from.</param>
+        /// <returns>-1 for no result, or an index in the array.</returns>
         public int FindFirstStringIndexFromAnArray (string[] Array, string target, int StartFrom)
         {
             for(int i = StartFrom; i<Array.Length;++i)

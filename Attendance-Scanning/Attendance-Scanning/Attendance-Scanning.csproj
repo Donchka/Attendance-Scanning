@@ -14,7 +14,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\Don\Desktop\Attandence Scanning System\</PublishUrl>
+    <PublishUrl>C:\Users\wang_\OneDrive\Grade 12\ICS\faq\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -168,6 +169,12 @@
     </Compile>
     <Compile Include="SingleStudent.cs" />
     <Compile Include="SingleStudentCollection.cs" />
+    <Compile Include="TeacherColumnCustomSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherColumnCustomSelector.Designer.cs">
+      <DependentUpon>TeacherColumnCustomSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="TimeSetter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +222,9 @@
     <EmbeddedResource Include="SendMailSelector.resx">
       <DependentUpon>SendMailSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherColumnCustomSelector.resx">
+      <DependentUpon>TeacherColumnCustomSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TimeSetter.resx">
       <DependentUpon>TimeSetter.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,7 +262,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
