@@ -151,7 +151,6 @@ namespace Attendance_Scanning
                                     TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "irst", 0)],
                                     TheLine[DP.FindFirstStringIndexFromAnArray(ThyFile[0].Split(','), "ianEmai", 0)]);
                                 stustu.Add(SS);
-                                wocao;
                             }
                             catch (Exception eee)
                             {
