@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 18);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             // 
@@ -58,7 +58,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.92092F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
@@ -82,27 +82,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 0);
+            this.label2.Location = new System.Drawing.Point(130, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 18);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Last Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(620, 0);
+            this.label3.Location = new System.Drawing.Point(356, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 18);
+            this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Guaradian Emails";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1070, 0);
+            this.label4.Location = new System.Drawing.Point(656, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 18);
+            this.label4.Size = new System.Drawing.Size(84, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Student Number";
             // 
@@ -113,24 +113,24 @@
             this.FirstNameComboBox.Location = new System.Drawing.Point(2, 54);
             this.FirstNameComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameComboBox.Name = "FirstNameComboBox";
-            this.FirstNameComboBox.Size = new System.Drawing.Size(124, 21);
+            this.FirstNameComboBox.Size = new System.Drawing.Size(123, 21);
             this.FirstNameComboBox.TabIndex = 4;
             // 
             // LastNameComboBox
             // 
             this.LastNameComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LastNameComboBox.FormattingEnabled = true;
-            this.LastNameComboBox.Location = new System.Drawing.Point(130, 54);
+            this.LastNameComboBox.Location = new System.Drawing.Point(129, 54);
             this.LastNameComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameComboBox.Name = "LastNameComboBox";
-            this.LastNameComboBox.Size = new System.Drawing.Size(223, 21);
+            this.LastNameComboBox.Size = new System.Drawing.Size(222, 21);
             this.LastNameComboBox.TabIndex = 5;
             // 
             // EmailComboBox
             // 
             this.EmailComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmailComboBox.FormattingEnabled = true;
-            this.EmailComboBox.Location = new System.Drawing.Point(357, 54);
+            this.EmailComboBox.Location = new System.Drawing.Point(355, 54);
             this.EmailComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmailComboBox.Name = "EmailComboBox";
             this.EmailComboBox.Size = new System.Drawing.Size(296, 21);
@@ -140,7 +140,7 @@
             // 
             this.StudentNumberComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StudentNumberComboBox.FormattingEnabled = true;
-            this.StudentNumberComboBox.Location = new System.Drawing.Point(657, 54);
+            this.StudentNumberComboBox.Location = new System.Drawing.Point(655, 54);
             this.StudentNumberComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.StudentNumberComboBox.Name = "StudentNumberComboBox";
             this.StudentNumberComboBox.Size = new System.Drawing.Size(185, 21);
@@ -149,9 +149,9 @@
             // OK
             // 
             this.OK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OK.Location = new System.Drawing.Point(1353, 3);
+            this.OK.Location = new System.Drawing.Point(845, 3);
             this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(55, 48);
+            this.OK.Size = new System.Drawing.Size(55, 46);
             this.OK.TabIndex = 8;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = true;
@@ -159,10 +159,10 @@
             // Ignore
             // 
             this.Ignore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Ignore.Location = new System.Drawing.Point(846, 54);
+            this.Ignore.Location = new System.Drawing.Point(844, 54);
             this.Ignore.Margin = new System.Windows.Forms.Padding(2);
             this.Ignore.Name = "Ignore";
-            this.Ignore.Size = new System.Drawing.Size(55, 48);
+            this.Ignore.Size = new System.Drawing.Size(57, 48);
             this.Ignore.TabIndex = 9;
             this.Ignore.Text = "Ignore this student";
             this.Ignore.UseVisualStyleBackColor = true;
