@@ -440,6 +440,7 @@ namespace Attendance_Scanning
         {
             TimeSetter tl = new TimeSetter(true);
             tl.Show();
+            gougun;
         }
         /// <summary>
         /// If user pressed Enter, see it as Check_Click
